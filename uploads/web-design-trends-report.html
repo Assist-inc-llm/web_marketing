@@ -1,0 +1,611 @@
+<title>Webデザイントレンド調査 2024–2026</title>
+<style>
+  :root{
+    --bg:#F4F6F7;
+    --card:#FFFFFF;
+    --ink:#161B1E;
+    --muted:#54636B;
+    --faint:#87949B;
+    --border:#DCE2E5;
+    --accent:#0E7A6E;
+    --accent-soft:#E2F1EE;
+    --warn:#B5561F;
+    --warn-soft:#F8ECE2;
+    --code-bg:#EDF1F2;
+    --chip-grow-bg:#E2F1EE; --chip-grow-fg:#0E7A6E;
+    --chip-fixed-bg:#E8EAF2; --chip-fixed-fg:#4A5578;
+    --chip-counter-bg:#F8ECE2; --chip-counter-fg:#B5561F;
+    --chip-fade-bg:#ECEFF0; --chip-fade-fg:#87949B;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#131719; --card:#1B2124; --ink:#E5EAEC; --muted:#9BA8AE; --faint:#6E7B82;
+      --border:#2C3438; --accent:#5BC8B8; --accent-soft:#1C3330; --warn:#E0925C; --warn-soft:#3A2A1E;
+      --code-bg:#232B2E;
+      --chip-grow-bg:#1C3330; --chip-grow-fg:#5BC8B8;
+      --chip-fixed-bg:#252B3D; --chip-fixed-fg:#9AA6D4;
+      --chip-counter-bg:#3A2A1E; --chip-counter-fg:#E0925C;
+      --chip-fade-bg:#252B2E; --chip-fade-fg:#8B979D;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#131719; --card:#1B2124; --ink:#E5EAEC; --muted:#9BA8AE; --faint:#6E7B82;
+    --border:#2C3438; --accent:#5BC8B8; --accent-soft:#1C3330; --warn:#E0925C; --warn-soft:#3A2A1E;
+    --code-bg:#232B2E;
+    --chip-grow-bg:#1C3330; --chip-grow-fg:#5BC8B8;
+    --chip-fixed-bg:#252B3D; --chip-fixed-fg:#9AA6D4;
+    --chip-counter-bg:#3A2A1E; --chip-counter-fg:#E0925C;
+    --chip-fade-bg:#252B2E; --chip-fade-fg:#8B979D;
+  }
+  :root[data-theme="light"]{
+    --bg:#F4F6F7; --card:#FFFFFF; --ink:#161B1E; --muted:#54636B; --faint:#87949B;
+    --border:#DCE2E5; --accent:#0E7A6E; --accent-soft:#E2F1EE; --warn:#B5561F; --warn-soft:#F8ECE2;
+    --code-bg:#EDF1F2;
+    --chip-grow-bg:#E2F1EE; --chip-grow-fg:#0E7A6E;
+    --chip-fixed-bg:#E8EAF2; --chip-fixed-fg:#4A5578;
+    --chip-counter-bg:#F8ECE2; --chip-counter-fg:#B5561F;
+    --chip-fade-bg:#ECEFF0; --chip-fade-fg:#87949B;
+  }
+
+  html{background:var(--bg);scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto;}}
+  body{
+    background:var(--bg);color:var(--ink);
+    font-family:"Segoe UI","Yu Gothic Medium","Yu Gothic","Hiragino Kaku Gothic ProN","Hiragino Sans",Meiryo,sans-serif;
+    line-height:1.85;font-size:16px;margin:0;
+  }
+  .page{max-width:46rem;margin:0 auto;padding:3.5rem 1.4rem 5rem;}
+
+  h1,h2,h3{font-weight:700;line-height:1.4;text-wrap:balance;margin:0;letter-spacing:.01em;}
+  h1{font-size:1.9rem;}
+  h2{font-size:1.4rem;margin-top:.4rem;}
+  h3{font-size:1.08rem;margin:2.2rem 0 .6rem;}
+  p{margin:.9rem 0;}
+  a{color:var(--accent);text-decoration:none;border-bottom:1px solid transparent;}
+  a:hover,a:focus-visible{border-bottom-color:var(--accent);}
+  a:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:2px;}
+  ul,ol{padding-left:1.4em;margin:.8rem 0;}
+  li{margin:.35rem 0;}
+  strong{font-weight:700;}
+  code{
+    font-family:Consolas,"Courier New",monospace;font-size:.85em;
+    background:var(--code-bg);border-radius:4px;padding:.08em .35em;
+  }
+  pre{
+    background:var(--code-bg);border:1px solid var(--border);border-radius:8px;
+    padding: .9rem 1.1rem;overflow-x:auto;font-size:.82rem;line-height:1.6;margin:1rem 0;
+  }
+  pre code{background:none;padding:0;font-size:1em;}
+
+  .eyebrow{
+    font-family:Consolas,"Courier New",monospace;
+    font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--accent);font-weight:700;
+  }
+  .lede{color:var(--muted);margin-top:.6rem;}
+
+  header.report-head{border-bottom:1px solid var(--border);padding-bottom:2rem;margin-bottom:2.5rem;}
+  .head-meta{display:flex;flex-wrap:wrap;gap:.4rem 1.6rem;color:var(--faint);font-size:.85rem;margin-top:1.2rem;}
+
+  nav.toc{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:1.2rem 1.4rem;margin:0 0 3rem;}
+  nav.toc .eyebrow{color:var(--faint);}
+  nav.toc .toc-part{font-size:.8rem;font-weight:700;color:var(--muted);margin:.9rem 0 .2rem;letter-spacing:.06em;}
+  nav.toc ol{margin:.2rem 0 0;padding-left:1.4em;font-size:.92rem;}
+  nav.toc ol li{margin:.2rem 0;}
+
+  .part-head{margin-top:4rem;padding:1rem 1.4rem;background:var(--accent-soft);border-radius:10px;}
+  .part-head h2{font-size:1.2rem;margin-top:.2rem;}
+
+  section.chapter{border-top:1px solid var(--border);padding-top:2.4rem;margin-top:3rem;}
+  .ch-eyebrow{display:flex;align-items:baseline;gap:.8rem;}
+
+  .chip{
+    display:inline-block;border-radius:999px;padding:.05rem .6rem;
+    font-size:.72rem;font-weight:700;letter-spacing:.05em;vertical-align:.12em;white-space:nowrap;
+  }
+  .chip.grow{background:var(--chip-grow-bg);color:var(--chip-grow-fg);}
+  .chip.fixed{background:var(--chip-fixed-bg);color:var(--chip-fixed-fg);}
+  .chip.counter{background:var(--chip-counter-bg);color:var(--chip-counter-fg);}
+  .chip.fade{background:var(--chip-fade-bg);color:var(--chip-fade-fg);}
+
+  .fact-card{
+    background:var(--card);border:1px solid var(--border);border-radius:10px;
+    padding:1rem 1.3rem;margin:1.4rem 0;
+    display:grid;grid-template-columns:6.5em 1fr;gap:.35rem .8rem;font-size:.92rem;
+  }
+  .fact-card dt{color:var(--faint);font-weight:600;}
+  .fact-card dd{margin:0;}
+  @media (max-width:480px){.fact-card{grid-template-columns:1fr;}.fact-card dt{margin-top:.3rem;}}
+
+  .table-wrap{overflow-x:auto;margin:1.4rem 0;border:1px solid var(--border);border-radius:10px;background:var(--card);}
+  table{border-collapse:collapse;width:100%;font-size:.88rem;min-width:640px;}
+  th,td{padding:.6rem .9rem;text-align:left;vertical-align:top;border-top:1px solid var(--border);line-height:1.6;}
+  thead th{border-top:none;background:var(--code-bg);color:var(--muted);font-size:.78rem;letter-spacing:.06em;font-weight:700;}
+  td:first-child,th:first-child{padding-left:1.1rem;}
+  .nowrap{white-space:nowrap;}
+  td.mark{font-weight:700;white-space:nowrap;}
+
+  .caveat{
+    background:var(--card);border:1px solid var(--border);border-left:3px solid var(--warn);
+    border-radius:8px;padding:.9rem 1.2rem;margin:1rem 0;font-size:.92rem;
+  }
+
+  details.sources{margin:1.2rem 0;background:var(--card);border:1px solid var(--border);border-radius:10px;padding:.7rem 1.2rem;}
+  details.sources summary{cursor:pointer;color:var(--muted);font-size:.88rem;font-weight:600;list-style-position:inside;}
+  details.sources ul{font-size:.86rem;margin:.6rem 0 .4rem;}
+  details.sources li{margin:.3rem 0;}
+
+  footer.method{border-top:1px solid var(--border);margin-top:3.5rem;padding-top:1.6rem;color:var(--muted);font-size:.88rem;}
+
+  /* ------ トレンド見本帳 ------ */
+  .specimen-board{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem;margin:1.5rem 0;
+  }
+  @media (max-width:640px){.specimen-board{grid-template-columns:repeat(2,1fr);}}
+  .specimen{
+    border-radius:12px;overflow:hidden;position:relative;
+    aspect-ratio:4/3.4;border:1px solid var(--border);
+  }
+  .specimen .sp-label{
+    position:absolute;left:.65rem;bottom:.5rem;z-index:3;
+    font-family:Consolas,"Courier New",monospace;font-size:.68rem;font-weight:700;letter-spacing:.06em;
+    background:rgba(0,0,0,.55);color:#fff;border-radius:4px;padding:.1rem .45rem;
+  }
+  /* 1. Bento */
+  .sp-bento{background:#EFF1F4;display:grid;grid-template-columns:1.6fr 1fr;grid-template-rows:1fr 1fr;gap:6px;padding:10px;}
+  .sp-bento div{background:#fff;border-radius:8px;border:1px solid #E2E5EA;}
+  .sp-bento div:first-child{grid-row:span 2;background:linear-gradient(160deg,#fff, #E8ECF3);}
+  /* 2. Glass */
+  .sp-glass{background:radial-gradient(circle at 30% 20%, #7BD8C8, transparent 60%),radial-gradient(circle at 75% 75%, #5B8DEF, transparent 55%),#22304A;display:flex;align-items:center;justify-content:center;}
+  .sp-glass .pane{
+    width:64%;height:46%;border-radius:12px;
+    background:rgba(255,255,255,.14);
+    backdrop-filter:blur(9px);-webkit-backdrop-filter:blur(9px);
+    border:1px solid rgba(255,255,255,.35);
+    box-shadow:0 6px 22px rgba(0,0,0,.25);
+  }
+  /* 3. Aurora + grain */
+  .sp-aurora{
+    background:
+      url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/><feColorMatrix type='saturate' values='0'/></filter><rect width='120' height='120' filter='url(%23n)' opacity='0.16'/></svg>"),
+      radial-gradient(ellipse at 20% 30%, #35D0A0, transparent 55%),
+      radial-gradient(ellipse at 80% 20%, #3E7DF0, transparent 55%),
+      radial-gradient(ellipse at 60% 85%, #B44FD8, transparent 55%),
+      #101825;
+  }
+  /* 4. Neo-brutalism */
+  .sp-brutal{background:#FFE84A;display:flex;align-items:center;justify-content:center;}
+  .sp-brutal .btn{
+    font-family:Consolas,"Courier New",monospace;font-weight:700;font-size:.8rem;color:#111;
+    background:#fff;border:3px solid #111;border-radius:6px;padding:.45rem .9rem;
+    box-shadow:5px 5px 0 #111;
+  }
+  /* 5. Big type */
+  .sp-type{background:#F4F1EC;display:flex;align-items:flex-end;overflow:hidden;}
+  .sp-type span{font-weight:900;font-size:5.2rem;line-height:.8;color:#1B1B1B;letter-spacing:-.04em;transform:translateY(12%);padding-left:.4rem;font-family:"Segoe UI","Yu Gothic",sans-serif;}
+  /* 6. Dark SaaS */
+  .sp-dark{background:#0B0D12;display:flex;flex-direction:column;justify-content:center;gap:8px;padding:14px;}
+  .sp-dark .grad-line{height:12px;width:78%;border-radius:3px;background:linear-gradient(90deg,#7B8CFF,#4FD1C0);}
+  .sp-dark .dim-line{height:7px;width:55%;border-radius:3px;background:#2A2F3C;}
+  .sp-dark .row{display:flex;gap:6px;margin-top:6px;}
+  .sp-dark .row div{flex:1;height:26px;border-radius:6px;background:#161A23;border:1px solid #242A36;}
+</style>
+
+<div class="page">
+
+<header class="report-head">
+  <div class="eyebrow">Design Trends Report</div>
+  <h1>Webデザイントレンド調査 2024–2026<br>— 見た目の潮流とWixでの再現ガイド</h1>
+  <p class="lede">ベントグリッド、Liquid Glass、ネオブルータリズム、AI生成デザインへの反動——世界と日本、そしてBtoBサイトの「見た目」のトレンドを整理し、それぞれをWix/Wix Studioでどこまで再現できるかを実装レシピ付きでまとめる。</p>
+  <div class="head-meta">
+    <span>2026年7月8日 調査</span>
+    <span>調査手法:マルチエージェント調査+ファクトチェック(巻末参照)</span>
+  </div>
+</header>
+
+<nav class="toc" aria-label="目次">
+  <div class="eyebrow">目次</div>
+  <div class="toc-part"><a href="#summary">エグゼクティブサマリー</a> / <a href="#specimens">トレンド見本帳</a></div>
+  <div class="toc-part">第I部 世界のビジュアルトレンド</div>
+  <ol start="1">
+    <li><a href="#overview">ビジュアルトレンド総覧(状態つき)</a></li>
+    <li><a href="#deepdive">注目トレンド深掘り</a></li>
+  </ol>
+  <div class="toc-part">第II部 手法・システム面</div>
+  <ol start="3">
+    <li><a href="#system">デザインシステムとAI制作 — 均質化とその反動</a></li>
+    <li><a href="#rules">「ルール」になった外部制約 — アクセシビリティと速度</a></li>
+  </ol>
+  <div class="toc-part">第III部 日本とBtoB</div>
+  <ol start="5">
+    <li><a href="#japan">日本のWebデザイン</a></li>
+    <li><a href="#b2b">BtoB・SaaSサイトのデザイン</a></li>
+  </ol>
+  <div class="toc-part">第IV部 Wix再現ガイド</div>
+  <ol start="7">
+    <li><a href="#wix-basics">Wixの基礎知識 — 無印とStudioの違い</a></li>
+    <li><a href="#wix-matrix">トレンド別 再現性マトリクス</a></li>
+    <li><a href="#wix-recipes">実装レシピ</a></li>
+  </ol>
+  <div class="toc-part">まとめ</div>
+  <ol start="10">
+    <li><a href="#conclusion">総括 — 2026年にサイトを作るなら</a></li>
+    <li><a href="#caveats">留保事項(要確認ポイント)</a></li>
+  </ol>
+</nav>
+
+<section id="summary">
+  <div class="eyebrow">Executive Summary</div>
+  <h2>エグゼクティブサマリー</h2>
+  <ul>
+    <li><strong>振り子が「個性」側に振れ始めた。</strong>2024年までの主流だった「フラットで均質なミニマリズム+ベントグリッド+ダーク×グラデーション」は完全に定着した結果、2025年後半から「どこも同じ見た目」への反動——ネオブルータリズム、マキシマリズム、ノイズ・グレインなどの質感表現、手描き風——が明確なトレンドとして立ち上がっている。</li>
+    <li><strong>2025年はプラットフォーマーの刷新の年。</strong>Appleは6月のWWDCで「Liquid Glass」(iOS 26等に導入、iOS 7以来最大級のUI刷新)を、Googleは5月に「Material 3 Expressive」を発表。両者とも均質化への対抗としての「表現性」を掲げており、ガラス質感と弾むモーションがWebにも波及している。</li>
+    <li><strong>見た目の裏で「ルール化」が進んだ。</strong>WCAG 2.2(2023年勧告)、欧州アクセシビリティ法(EAA、2025年6月28日適用開始・すでに訴訟事例あり)、Core Web VitalsのINP指標(2024年3月導入)により、アクセシビリティとパフォーマンスは「好み」から「法務・指標」の問題になった。</li>
+    <li><strong>BtoBサイトは二正面作戦へ。</strong>「Linear/Stripe風」ダークSaaSデザインとベントグリッドはコモディティ化し差別化要因ではなくなった。次の課題は、編集的デザインや脱テンプレートによる「差別化」と、AI検索に引用されるための構造化・FAQ設計(AEO)という「AI可読性」の2つ。日本のBtoBでは見た目のインパクトより情報探索性・信頼性(実績ロゴ・認証)が引き続き効く。</li>
+    <li><strong>Wixでの再現性は「大半が可能、ただし条件つき」。</strong>Wix Studio(2023年発表)のカスタムCSS・グラス効果・アニメーション機能・Velo(JavaScript)・iframe埋め込みを組み合わせれば、主要トレンドの見た目はほぼ再現できる。弱点はCore Web Vitals(良好サイト比率52%と競合比で劣後)、ページ全体と連動する本格3D、OS連動の自動ダークモード。第8章のマトリクスと第9章のレシピを参照。</li>
+  </ul>
+</section>
+
+<section id="specimens" class="chapter">
+  <div class="eyebrow">Specimens</div>
+  <h2>トレンド見本帳 — 6つの「見た目」をCSSで再現</h2>
+  <p>本文に入る前に、主要トレンドの「見た目」をこのページ上のCSSだけで再現した見本を示す(装飾はイメージ)。</p>
+  <div class="specimen-board">
+    <div class="specimen sp-bento" role="img" aria-label="ベントグリッドの見本"><div></div><div></div><div></div><span class="sp-label">01 Bento Grid</span></div>
+    <div class="specimen sp-glass" role="img" aria-label="グラスモーフィズムの見本"><div class="pane"></div><span class="sp-label">02 Glass</span></div>
+    <div class="specimen sp-aurora" role="img" aria-label="オーロラグラデーションとグレインの見本"><span class="sp-label">03 Aurora+Grain</span></div>
+    <div class="specimen sp-brutal" role="img" aria-label="ネオブルータリズムの見本"><span class="btn">CLICK ME →</span><span class="sp-label">04 Neo-Brutalism</span></div>
+    <div class="specimen sp-type" role="img" aria-label="超大型タイポグラフィの見本"><span>Aa</span><span class="sp-label">05 Big Type</span></div>
+    <div class="specimen sp-dark" role="img" aria-label="ダークSaaSデザインの見本"><div class="grad-line"></div><div class="dim-line"></div><div class="row"><div></div><div></div><div></div></div><span class="sp-label">06 Dark SaaS</span></div>
+  </div>
+</section>
+
+<div class="part-head">
+  <div class="eyebrow">Part I</div>
+  <h2>第I部 世界のビジュアルトレンド</h2>
+</div>
+
+<section id="overview" class="chapter">
+  <div class="ch-eyebrow"><span class="eyebrow">第1章</span></div>
+  <h2>ビジュアルトレンド総覧</h2>
+  <p>2024〜2026年の主要トレンドを、現在の状態(<span class="chip fixed">定着</span> <span class="chip grow">拡大中</span> <span class="chip counter">反動・新芽</span> <span class="chip fade">退潮ぎみ</span>)つきで一覧化する。</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th class="nowrap">トレンド</th><th class="nowrap">起点</th><th class="nowrap">状態</th><th>要点</th></tr></thead>
+      <tbody>
+        <tr><td class="nowrap"><strong>ベントグリッド</strong></td><td class="nowrap">Apple(2022〜23年)</td><td><span class="chip fixed">定着</span></td><td>サイズ違いのカードで優先度を見せる。「例外ではなくデフォルト」化し、あえて枠を崩す進化系も登場</td></tr>
+        <tr><td class="nowrap"><strong>グラスモーフィズム→Liquid Glass</strong></td><td class="nowrap">命名2020年→Apple「Liquid Glass」2025年6月</td><td><span class="chip grow">拡大中</span></td><td>すりガラスから「光を屈折させる液体ガラス」へ。OS標準となりWebにも波及</td></tr>
+        <tr><td class="nowrap"><strong>ネオブルータリズム</strong></td><td class="nowrap">2020年代前半〜</td><td><span class="chip counter">反動・新芽</span></td><td>太枠・硬い影・モノスペース。均質化への対抗としてニッチから主流へ拡大中</td></tr>
+        <tr><td class="nowrap"><strong>マキシマリズム/タクタイル</strong></td><td class="nowrap">2026年予測記事で台頭</td><td><span class="chip counter">反動・新芽</span></td><td>色の衝突・情報レイヤー・太字。ミニマリズムは「ネオミニマリズム」として併存</td></tr>
+        <tr><td class="nowrap"><strong>超大型・キネティックタイポ</strong></td><td class="nowrap">2020年代前半〜</td><td><span class="chip fixed">定着</span></td><td>巨大見出し+スクロール連動の動く文字がヒーローの定番に</td></tr>
+        <tr><td class="nowrap"><strong>バリアブルフォント</strong></td><td class="nowrap">技術は2016年〜、普及は2024〜25年</td><td><span class="chip fixed">定着</span></td><td>1ファイルで太さ・幅を連続変化。転送量削減で「ベストプラクティス」化</td></tr>
+        <tr><td class="nowrap"><strong>オーロラ/メッシュグラデーション</strong></td><td class="nowrap">2020年代前半〜</td><td><span class="chip fixed">定着</span></td><td>SaaS・AI系の背景の定番。「AIっぽい紫グラデ」の量産で食傷ぎみの面も</td></tr>
+        <tr><td class="nowrap"><strong>ノイズ・グレイン質感</strong></td><td class="nowrap">2024年〜拡大</td><td><span class="chip counter">反動・新芽</span></td><td>AI生成のツルツル感への反動。フィルム的な質感で「手仕事感」を出す</td></tr>
+        <tr><td class="nowrap"><strong>3D/WebGL(Spline・Three.js)</strong></td><td class="nowrap">ツール民主化は2020年代前半〜</td><td><span class="chip grow">拡大中</span></td><td>アワード系サイトでの存在感が拡大。ノーコード(Spline)で敷居が低下</td></tr>
+        <tr><td class="nowrap"><strong>スクロールテリング</strong></td><td class="nowrap">CSSネイティブ化は2023年〜(Chrome先行)</td><td><span class="chip grow">拡大中</span></td><td>CSS Scroll-driven AnimationsでJS不要に。全ブラウザ相互運用は途上</td></tr>
+        <tr><td class="nowrap"><strong>ダークモード</strong></td><td class="nowrap">2019年〜</td><td><span class="chip fixed">定着</span></td><td>「目新しさ」から「必須機能」へ。時間帯連動の動的切替も登場</td></tr>
+        <tr><td class="nowrap"><strong>AI生成ビジュアル</strong></td><td class="nowrap">2022年〜</td><td><span class="chip fade">退潮ぎみ(無加工では)</span></td><td>「AIらしい見た目」(紫グラデ・対称構図)が識別・忌避され、加工・質感付与が前提に</td></tr>
+        <tr><td class="nowrap"><strong>カスタムカーソル/マイクロインタラクション</strong></td><td class="nowrap">2024年〜定番化</td><td><span class="chip fixed">定着</span></td><td>「あれば良い」から「必須要素」へ。ただしモーション過多はアクセシビリティと衝突</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="deepdive" class="chapter">
+  <div class="ch-eyebrow"><span class="eyebrow">第2章</span></div>
+  <h2>注目トレンド深掘り</h2>
+
+  <h3>Apple「Liquid Glass」— 2025年最大のデザインイベント</h3>
+  <dl class="fact-card">
+    <dt>発表</dt><dd>2025年6月9日、WWDC25</dd>
+    <dt>適用</dt><dd>iOS 26 / iPadOS 26 / macOS Tahoe / watchOS 26 / tvOS 26 / visionOS 26</dd>
+    <dt>ひとことで</dt><dd>背景を動的に反射・屈折させる「液体ガラス」質感の統一デザイン言語。iOS 7以来最大級の刷新</dd>
+  </dl>
+  <p>系譜としては、Windows Aero(2007)→iOS 7の半透明(2013)→Fluent Design(2017)→「Glassmorphism」命名(2020年、Michał Malewicz氏)→Liquid Glass(2025)という「デジタルガラス」表現の到達点。従来のすりガラス(ぼかし)と違い、リアルタイムレンダリングによるレンズ効果(光の屈折・集光)が特徴で、Webでも「より本物のガラスに近い」表現がCSS/WebGLで模索されている。Googleも2025年5月に弾性アニメーションとパーソナライズを掲げた「Material 3 Expressive」を発表しており、2大プラットフォームが揃って「表現性」に舵を切った年として記憶される。</p>
+
+  <h3>ベントグリッド — デフォルト化とその先</h3>
+  <p>日本の弁当箱に由来する名前のとおり、サイズの異なるカードを敷き詰めて情報の優先度を視覚化するレイアウト。Appleが2022〜2023年の製品ページ・キーノートで多用して一般化し、Vercel・Linear・FramerなどのSaaSに波及、2025〜2026年には「例外ではなくデフォルト」と言われるまで定着した。定着しきった結果、あえて枠からはみ出す「崩しベント」などの進化系が次の差別化として登場している。</p>
+
+  <h3>「AIらしさ」への反動 — 質感と不完全さの復権</h3>
+  <p>AI画像生成の普及で、紫〜青のグラデーション、金色がかったトーン、対称的すぎる構図といった「AIらしい見た目」がテンプレート化し、ユーザーに識別・忌避されるようになった。その反動として2025〜2026年に強まっているのが、ノイズ・グレイン(フィルム質感)、手描き風イラスト、コラージュ、非対称な構図など「人間の手仕事感」を演出する表現である。ネオブルータリズム(太い輪郭線・硬い影・生っぽいHTML感)も同じ文脈の対抗運動で、複数のトレンド予測が「2026年後半以降の中心的議論になる」と見ている。</p>
+
+  <h3>技術面 — 演出がJSからCSSネイティブへ</h3>
+  <p>スクロール連動アニメーションは、GSAP等のJSライブラリ依存から、CSS Scroll-driven Animations(<code>animation-timeline: scroll()</code> / <code>view()</code>)によるブラウザネイティブ実装へ移行が進む(Chrome先行、Safari/Firefoxは追従中で完全な相互運用は途上)。バリアブルフォントも転送量を大幅に削減できる実用面からトレンドを超えて標準実務になった。「演出の実装コストとパフォーマンス負荷が下がった」ことが、モーション豊かなデザインの追い風になっている。</p>
+
+  <details class="sources"><summary>主な出典(第I部)</summary>
+    <ul>
+      <li><a href="https://www.apple.com/newsroom/2025/06/apple-introduces-a-delightful-and-elegant-new-software-design/" target="_blank" rel="noopener">Apple introduces a delightful and elegant new software design(Apple Newsroom)</a></li>
+      <li><a href="https://developer.apple.com/videos/play/wwdc2025/219/" target="_blank" rel="noopener">Meet Liquid Glass — WWDC25(Apple Developer)</a></li>
+      <li><a href="https://blog.google/products-and-platforms/platforms/android/material-3-expressive-android-wearos-launch/" target="_blank" rel="noopener">Material 3 Expressive redesign(Google)</a></li>
+      <li><a href="https://developer.chrome.com/blog/scroll-triggered-animations" target="_blank" rel="noopener">CSS scroll-triggered animations are coming!(Chrome for Developers)</a></li>
+      <li><a href="https://scroll-driven-animations.style/" target="_blank" rel="noopener">Scroll-driven Animations(解説サイト)</a></li>
+      <li><a href="https://www.creativebloq.com/design/graphic-design/texture-warmth-and-tactile-rebellion-the-big-graphic-design-trends-for-2026" target="_blank" rel="noopener">Texture, warmth and tactile rebellion: 2026 trends(Creative Bloq)</a></li>
+      <li><a href="https://www.awwwards.com/inspiration/trends-artlist-trend-report-2025" target="_blank" rel="noopener">Awwwards Trends(Artlist Trend Report 2025)</a></li>
+      <li><a href="https://studiomeyer.io/en/blog/webdesign-trends-2026-reality-check" target="_blank" rel="noopener">Web Design Trends 2026: What Actually Held Up(Studio Meyer)</a></li>
+    </ul>
+  </details>
+</section>
+
+<div class="part-head">
+  <div class="eyebrow">Part II</div>
+  <h2>第II部 手法・システム面 — 見た目を支える(縛る)もの</h2>
+</div>
+
+<section id="system" class="chapter">
+  <div class="ch-eyebrow"><span class="eyebrow">第3章</span></div>
+  <h2>デザインシステムとAI制作 — 均質化とその反動</h2>
+  <ul>
+    <li><strong>デザイントークンの標準化</strong> — Figmaの「Variables」(2023年)で実務浸透が進み、2025年10月にはW3C Design Tokens仕様がv1.0に到達(Adobe・Google・Microsoft・Figma等が支持)。色・余白・タイポをトークンとして一元管理し、ライト/ダークのモード切替まで扱うのが標準になった。日本ではデジタル庁デザインシステム(DADS)が代表例。</li>
+    <li><strong>「均質の海(Sea of Sameness)」問題</strong> — Tailwind CSS/shadcn/uiとAIサイトビルダー(v0、Lovable等)の普及で、インディゴのグラデーション・角丸カード・予測可能な余白という「平均値のデザイン」が量産される状況が批判の的に。2025年8月にはTailwind作者Adam Wathan氏の「全ボタンをindigo-500にしたことを謝る」という投稿が大きな反響を呼んだ。カスタムテーマ・独自トークンへの回帰が対抗トレンド。</li>
+    <li><strong>AIは制作の前提になった</strong> — Figmaの調査ではデザイナーの72%が生成AIをワークフローに活用。プロンプトからUIを生成するツール群が実務インフラ化し、デザイナーの役割は「手を動かす」から「ブランドに合うものを選び取るキュレーション」へ移行しつつある。さらにVercelの「Generative UI」やGoogleの「A2UI」など、対話から動的にUIを生成する仕組みも立ち上がっている。</li>
+  </ul>
+</section>
+
+<section id="rules" class="chapter">
+  <div class="ch-eyebrow"><span class="eyebrow">第4章</span></div>
+  <h2>「ルール」になった外部制約 — アクセシビリティと速度</h2>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th class="nowrap">制約</th><th class="nowrap">時期</th><th>デザインへの影響</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="nowrap"><strong>WCAG 2.2</strong></td>
+          <td class="nowrap">2023年10月 W3C勧告</td>
+          <td>フォーカス表示・認証方法など9つの達成基準を追加。コントラスト・フォーカスリングの設計が必須要件に</td>
+        </tr>
+        <tr>
+          <td class="nowrap"><strong>欧州アクセシビリティ法(EAA)</strong></td>
+          <td class="nowrap">2025年6月28日 適用開始</td>
+          <td>EC・銀行・運輸等のサイト/アプリにアクセシビリティを義務化(EN 301 549 ≒ WCAG 2.1 AA)。2025年11月に仏で初訴訟、蘭でも執行開始——「努力目標」から「法的リスク」へ</td>
+        </tr>
+        <tr>
+          <td class="nowrap"><strong>Core Web Vitals / INP</strong></td>
+          <td class="nowrap">2024年3月 INPがFIDを置換</td>
+          <td>全インタラクションの応答性を評価。重いJS演出・モーダル多用が敬遠され、軽量CSSアニメーションへの移行を後押し</td>
+        </tr>
+        <tr>
+          <td class="nowrap"><strong>prefers-reduced-motion</strong></td>
+          <td class="nowrap">主要ブラウザ対応済み</td>
+          <td>前庭障害・てんかん等への配慮としてアニメーション抑制を実装するのがベストプラクティスに。「動きで魅せる」トレンドと対の関係</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p>要するに、2025年以降の「良いデザイン」は<strong>派手さと配慮の両立</strong>が前提になった。Liquid Glass的なモーション豊かな表現を採るなら、reduced-motion対応・コントラスト確保・軽量実装をセットで設計する必要がある。</p>
+
+  <details class="sources"><summary>主な出典(第II部)</summary>
+    <ul>
+      <li><a href="https://www.w3.org/WAI/news/2023-10-05/wcag22rec/" target="_blank" rel="noopener">WCAG 2.2 is a W3C Recommendation(W3C WAI)</a></li>
+      <li><a href="https://accessible-eu-centre.ec.europa.eu/content-corner/news/eaa-comes-effect-june-2025-are-you-ready-2025-01-31_en" target="_blank" rel="noopener">The EAA comes into effect in June 2025(AccessibleEU)</a></li>
+      <li><a href="https://web.dev/blog/inp-cwv-march-12" target="_blank" rel="noopener">INP becomes a Core Web Vital on March 12(web.dev)</a></li>
+      <li><a href="https://www.figma.com/blog/schema-2025-design-systems-recap/" target="_blank" rel="noopener">Schema 2025: Design Systems For A New Era(Figma Blog)</a></li>
+      <li><a href="https://www.designsystemscollective.com/is-anyone-else-tired-of-every-tailwind-shadcn-app-looking-the-same-69c545e73114" target="_blank" rel="noopener">Is Anyone Else Tired of Every Tailwind/shadcn App Looking the Same?(Design Systems Collective)</a></li>
+      <li><a href="https://design.digital.go.jp/dads/" target="_blank" rel="noopener">デジタル庁デザインシステムβ版</a></li>
+      <li><a href="https://developers.googleblog.com/introducing-a2ui-an-open-project-for-agent-driven-interfaces/" target="_blank" rel="noopener">Introducing A2UI(Google Developers Blog)</a></li>
+    </ul>
+  </details>
+</section>
+
+<div class="part-head">
+  <div class="eyebrow">Part III</div>
+  <h2>第III部 日本とBtoB</h2>
+</div>
+
+<section id="japan" class="chapter">
+  <div class="ch-eyebrow"><span class="eyebrow">第5章</span></div>
+  <h2>日本のWebデザイン — 文化的土台×海外トレンドのハイブリッド</h2>
+  <ul>
+    <li><strong>情報量・安心感重視の土台は不変</strong> — 詳細説明・保証情報を厚く載せる「多階層・多要素型」の設計が日本のコーポレートサイトの基調。欧米の「余白と要点」型とは対照的で、BtoB製造業・金融・地方企業で顕著。2025年以降は、この情報量を維持したまま<strong>AIに読ませやすく構造化する</strong>(見出し・箇条書き・FAQ化)方向にシフトしている。</li>
+    <li><strong>イラスト・キャラクター文化</strong> — キャラクターを前面に出す訴求は採用サイト・toCサービス・自治体で定着。生成AIによる制作コスト低下でむしろ活用が広がる可能性がある。</li>
+    <li><strong>和モダン・縦書きはニッチだが健在</strong> — ギャラリーサイトMUUUUU.ORGには縦書き・縦組みカテゴリ(163件)があり、飲食・伝統工芸・和ブランドで根強い。ただし主流は横組み+グリッドで、話題の中心はベントグリッドやグラスモーフィズムなど海外発トレンド。</li>
+    <li><strong>国内制作会社の2025〜2026年共通項</strong> — 「意味を持つカーソルUI」「グラスモーフィズム」「Bento UI」「文字主役のヒーロー」「ダークモード」「AIO/LLMO配慮の構造化」が複数社のトレンド記事で共通して挙げられ、2026年予測では手描き風・コラージュなどの「ハンドクラフト」系が新芽として登場。</li>
+    <li><strong>日本語Webフォント事情</strong> — Google Fontsの日本語ファミリーは2018年の8件→2025年末66件に拡充。モリサワも低価格プラン(2025年)を追加。ただし日本語フォントは文字数ゆえに重く、サブセット化・ウェイト絞り込み・<code>font-display</code>設定などの最適化が実務必須のまま。</li>
+    <li><strong>デジタル庁デザインシステム(DADS)</strong> — アクセシビリティ最優先の設計思想で継続更新中(2024年度グッドデザイン・ベスト100)。e-Gov等で採用が進み、官公庁サイトの標準化を主導。民間の意匠系トレンドとは別文脈の影響力を持つ。</li>
+  </ul>
+
+  <details class="sources"><summary>主な出典(日本)</summary>
+    <ul>
+      <li><a href="https://coosy.co.jp/blog/2025_webdesign_trend_review/" target="_blank" rel="noopener">2025年Webデザイントレンド振り返り(クーシー)</a></li>
+      <li><a href="https://coosy.co.jp/blog/2026_webdesign_trend/" target="_blank" rel="noopener">2026年版 最新Webデザイントレンド(クーシー)</a></li>
+      <li><a href="https://muuuuu.org/category/taglist/japan" target="_blank" rel="noopener">MUUUUU.ORG 和風カテゴリ</a></li>
+      <li><a href="https://zenn.dev/yhay81/articles/202512-webfont" target="_blank" rel="noopener">Google Fontsの日本語フォント、いつの間に増えた?(Zenn)</a></li>
+      <li><a href="https://digital-agency-news.digital.go.jp/articles/2024-10-17" target="_blank" rel="noopener">アクセシビリティファーストで推進する「デジタル庁デザインシステム」の現在地(デジタル庁ニュース)</a></li>
+      <li><a href="https://coosy.co.jp/blog/website-overseas-difference/" target="_blank" rel="noopener">日本と海外(欧米)のWebデザイン事情(クーシー)</a></li>
+    </ul>
+  </details>
+</section>
+
+<section id="b2b" class="chapter">
+  <div class="ch-eyebrow"><span class="eyebrow">第6章</span></div>
+  <h2>BtoB・SaaSサイトのデザイン — コモディティ化と次の一手</h2>
+
+  <h3>「Linear/Stripe風」の完全コモディティ化</h3>
+  <p>「ダーク基調+アクセントグラデーション+巨大タイポ+ベントグリッド」というLinear/Stripe/Vercel発の様式は、FramerテンプレートやAI生成ツールに組み込まれて完全にコモディティ化した。SaaS LPの定番構成——<strong>ヒーロー → 導入企業ロゴウォール → ベントグリッド型機能紹介 → 顧客事例 → CTA</strong>——も事実上の業界標準。ある調査ではProduct Hunt上位サイトの67%がベントグリッドを採用と報告される(ブログ推計値)。つまりこの様式は「やって当たり前、やっても差別化にならない」段階にある。</p>
+
+  <h3>差別化の2路線</h3>
+  <ul>
+    <li><strong>編集的・脱テンプレート路線</strong> — Notion・PostHog・Anthropicのように、雑誌的レイアウトや余白・タイポグラフィ中心のミニマルで「量産型SaaS」と距離を置く。AI企業風の装飾を削いだデザインもこの系譜。</li>
+    <li><strong>あえて崩す路線</strong> — ネオブルータリズムや手描き感で「人間がつくった感」を出す。2026年後半に向けた新芽。</li>
+  </ul>
+
+  <h3>変わらず効く「地味な基本」と新要件AEO</h3>
+  <ul>
+    <li><strong>信頼性の設計は不変</strong> — ロゴウォール、導入社数などの数値、第三者認証(Pマーク・ISMS)、顧客事例。トレンドではなく必須要件。</li>
+    <li><strong>日本のBtoB評価は実用性重視</strong> — トライベック「BtoBサイト調査2025」(有力197サイト・ユーザー7,700人)では三菱電機(FA)が3年連続総合1位。ナビゲーション・サイト内検索など情報探索性が最重要視され、欧米型の「見た目のインパクト」より実用が効く。ベイジも「クリエイティブは目的達成の手段」という立場で装飾を削いだ設計を提唱。</li>
+    <li><strong>プロダクトの見せ方</strong> — 静的スクリーンショット+デバイスモックから、ブラウザフレームでのアニメーション動画・操作可能な埋め込みデモへ移行中。</li>
+    <li><strong>AEO(AI検索対応)が「見た目」と同格の要件に</strong> — 質問形式の見出し、冒頭での直接回答、FAQ・構造化データ(JSON-LD)の実装が、AI回答への引用可否を左右する。構造化データを欠くサイトはAI経由流入で不可視化されるとの実測報告もあり、2026年の「隠れた勝者」領域とされる。</li>
+    <li><strong>フォーム(EFO)</strong> — 長い一覧型から一問一答のチャット型へ。BtoBでは商談・受注まで見据えた必須項目の絞り込みが重視される。</li>
+  </ul>
+
+  <details class="sources"><summary>主な出典(BtoB・SaaS)</summary>
+    <ul>
+      <li><a href="https://www.saasframe.io/blog/10-saas-landing-page-trends-for-2026-with-real-examples" target="_blank" rel="noopener">10 SaaS Landing Page Trends for 2026(SaaSFrame)</a></li>
+      <li><a href="https://www.pravinkumar.co/blog/bento-grids-b2b-saas-homepage-design-trend-2026" target="_blank" rel="noopener">Bento Grids Are Quietly Winning B2B SaaS Homepages(Pravin Kumar)</a></li>
+      <li><a href="https://www.tribeck.jp/newsrelease/2025/20250612.html" target="_blank" rel="noopener">BtoBサイト調査2025 三菱電機(FA)が3年連続トップ(トライベック)</a></li>
+      <li><a href="https://studio.design/ja/interview/baigie" target="_blank" rel="noopener">デザインの本質は"映え"にあらず — 枌谷力インタビュー(Studio Blog)</a></li>
+      <li><a href="https://cxl.com/blog/answer-engine-optimization-aeo-the-comprehensive-guide/" target="_blank" rel="noopener">Answer Engine Optimization (AEO): The comprehensive guide(CXL)</a></li>
+      <li><a href="https://stock-sun.com/column/lp-efo/" target="_blank" rel="noopener">EFO(入力フォーム最適化)とは(StockSun)</a></li>
+    </ul>
+  </details>
+</section>
+
+<div class="part-head">
+  <div class="eyebrow">Part IV</div>
+  <h2>第IV部 Wix再現ガイド — トレンドをWixでどこまで作れるか</h2>
+</div>
+
+<section id="wix-basics" class="chapter">
+  <div class="ch-eyebrow"><span class="eyebrow">第7章</span></div>
+  <h2>Wixの基礎知識 — 無印エディタとWix Studioの違い</h2>
+  <p>最初に押さえるべきは、<strong>「どちらのエディタを使うか」で再現できる範囲が大きく変わる</strong>ことである。トレンド再現を狙うなら実質的にWix Studio一択と考えてよい。</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th class="nowrap">項目</th><th>Wixエディタ(無印)</th><th>Wix Studio</th></tr></thead>
+      <tbody>
+        <tr><td class="nowrap">位置づけ</td><td>従来型の一般向けエディタ</td><td>2023年発表の上位エディタ(Editor Xの後継。2025年1月に移行完了)。プロ・制作会社向け</td></tr>
+        <tr><td class="nowrap">カスタムCSS</td><td><strong>不可</strong></td><td><strong>可</strong>(グローバルCSS+クラス単位のスタイル指定。2024年以降本格提供)</td></tr>
+        <tr><td class="nowrap">レスポンシブ</td><td>PC/モバイルの2種を個別調整</td><td>既定3ブレイクポイント+最大6段階の独自定義、AIによる自動レスポンシブ化</td></tr>
+        <tr><td class="nowrap">アニメーション</td><td>基本のスクロール/ホバー効果</td><td>スクロールエフェクト・マウス追従パララックス+アニメーションライブラリ「Wix Interact」</td></tr>
+        <tr><td class="nowrap">グラス効果</td><td>—</td><td>「Apply glass effect」をノーコードで適用可</td></tr>
+        <tr><td class="nowrap">コード拡張</td><td>Velo(JavaScript)利用可</td><td>Velo+カスタムCSS+HTML埋め込み(iframe)</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>共通の注意点として、(1)<strong>無料プラン</strong>はWixサブドメイン+Wix広告表示+外部解析ツール制限があり実務利用は有料プラン前提、(2)<strong>パフォーマンス</strong>はCore Web Vitals良好サイト比率52%との第三者調査があり、Duda(71%)・Squarespace(58%)に劣後(WordPress 38%よりは良い)。画像圧縮・フォント軽量化・アプリ追加の抑制など運用側の節制が重要になる。なお2026年にはAIエージェントによるサイト生成「Wix Harmony」の投入が報じられており、AI機能は急速に高度化している。</p>
+</section>
+
+<section id="wix-matrix" class="chapter">
+  <div class="ch-eyebrow"><span class="eyebrow">第8章</span></div>
+  <h2>トレンド別 再現性マトリクス</h2>
+  <p>凡例: <strong>◎</strong>=標準機能で再現可 / <strong>○</strong>=Wix Studioの機能で再現可 / <strong>△</strong>=カスタムCSS・Velo・埋め込みなど工夫すれば可 / <strong>×</strong>=実質困難。</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th class="nowrap">トレンド</th><th class="nowrap">再現性</th><th>やり方・注意点</th></tr></thead>
+      <tbody>
+        <tr><td class="nowrap">ベントグリッド</td><td class="mark">◎</td><td>Studioのグリッドレイアウトで素直に組める。ギャップを全カード共通にし、主役カードだけ2マス分に(レシピ1)</td></tr>
+        <tr><td class="nowrap">グラスモーフィズム</td><td class="mark">◎〜○</td><td>Studioの「Apply glass effect」でノーコード適用。ぼかし量・枠線の微調整はカスタムCSSの<code>backdrop-filter</code>で(レシピ2)</td></tr>
+        <tr><td class="nowrap">Liquid Glass風(屈折・レンズ)</td><td class="mark">△</td><td>本物の屈折表現はWebGLが必要でWix単体では不可。グラス効果+ハイライト・影の重ねで「らしく」見せるか、Spline等で作ってiframe埋め込み</td></tr>
+        <tr><td class="nowrap">オーロラ/メッシュグラデ+グレイン</td><td class="mark">○</td><td>推奨は画像として書き出して背景に敷く(軽くて確実)。CSS実装ならカスタムCSSで多層radial-gradient+ノイズ画像を重ねる(レシピ3)</td></tr>
+        <tr><td class="nowrap">ネオブルータリズム</td><td class="mark">◎</td><td>太枠・無彩ぼかしゼロの影(オフセットのみ)・原色ベタはエディタ標準の枠線/影設定で再現できる。フォントはモノスペース系を指定</td></tr>
+        <tr><td class="nowrap">超大型タイポグラフィ</td><td class="mark">◎</td><td>テキスト要素の拡大で対応。ブレイクポイントごとのサイズ調整を忘れずに</td></tr>
+        <tr><td class="nowrap">キネティックタイポ(文字が動く)</td><td class="mark">△</td><td>スクロール連動の変形はWix Interact+スクロールアニメーションで一部可。文字単位の高度な分解アニメは埋め込み(Lottie等)が現実的</td></tr>
+        <tr><td class="nowrap">バリアブルフォント(可変軸)</td><td class="mark">△</td><td>WOFF2のアップロードは可。ただし標準UIは可変軸を触れないため、カスタムCSSで<code>font-variation-settings</code>を直接指定(レシピ4)</td></tr>
+        <tr><td class="nowrap">日本語Webフォント</td><td class="mark">○</td><td>カスタムフォントのアップロード対応(TTF/OTF/WOFF2等)。4MB超は速度に響くため<strong>サブセット化が必須</strong>。不具合はサポート対象外の点に注意</td></tr>
+        <tr><td class="nowrap">3D(Spline/Three.js)</td><td class="mark">△</td><td>Spline公式にWix埋め込み手順あり。iframe経由のためページ内の他要素と連動する演出は不可。読み込みの重さに注意(レシピ5)</td></tr>
+        <tr><td class="nowrap">Lottieアニメーション</td><td class="mark">◎</td><td>専用のLottie要素が用意されており標準対応</td></tr>
+        <tr><td class="nowrap">スクロールテリング/パララックス</td><td class="mark">○</td><td>要素のスクロールアニメーション・背景パララックス・マウス追従は標準/Studio機能。<strong>背景パララックスはモバイルでは無効</strong>になる点に注意</td></tr>
+        <tr><td class="nowrap">マイクロインタラクション</td><td class="mark">○</td><td>ホバー・クリック時のアニメーションはStudio/Interactで設定可</td></tr>
+        <tr><td class="nowrap">カスタムカーソル</td><td class="mark">△</td><td>標準機能はなく、カスタムCSSで<code>cursor: url(...)</code>を指定する方式。タッチ端末では無意味なので割り切りを</td></tr>
+        <tr><td class="nowrap">ダークモード(OS連動自動切替)</td><td class="mark">×〜△</td><td>prefers-color-scheme連動の自動テーマ切替の標準機能は確認できない。Veloで切替ボタンを自作する事例はあるが工数大(要検証)。ダーク基調で最初から作る方が現実的</td></tr>
+        <tr><td class="nowrap">動画デモ・ブラウザモック</td><td class="mark">◎</td><td>動画要素・画像で普通に対応可能。ヒーロー背景動画も標準</td></tr>
+        <tr><td class="nowrap">FAQ構造化データ(AEO対応)</td><td class="mark">○</td><td>SEO設定パネルからJSON-LDを手動追加(7,000文字制限)。パンくず等は自動出力されないため手動記述(レシピ6)</td></tr>
+        <tr><td class="nowrap">アクセシビリティ配慮(モーション抑制)</td><td class="mark">△</td><td><code>prefers-reduced-motion</code>連動の一括制御は標準UIになし。そもそもアニメーションを控えめに設計するのが現実解</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="wix-recipes" class="chapter">
+  <div class="ch-eyebrow"><span class="eyebrow">第9章</span></div>
+  <h2>実装レシピ — 代表6パターン</h2>
+
+  <h3>レシピ1: ベントグリッド</h3>
+  <p>Studioエディタでセクションに<strong>グリッドレイアウト</strong>を適用し、列を4分割・行を2分割、ギャップを全体で統一(12〜16px)。主役のカード1枚だけ2列×2行にスパンさせ、他は1マスに。カードの角丸(12〜16px)と背景色のトーンを揃えると「弁当箱」らしくまとまる。モバイルのブレイクポイントでは1〜2列に自動カスケードされるが、順序は手動で確認する。</p>
+
+  <h3>レシピ2: グラスカード</h3>
+  <p>まずStudioのInspectorから「<strong>Apply glass effect</strong>」を試す(ぼかし強度と背景色をノーコード調整)。細かく制御したい場合はコードパネルのグローバルCSSでカスタムクラスを作り、要素に割り当てる:</p>
+  <pre><code>.glass-card {
+  background: rgba(255, 255, 255, 0.10);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px); /* Safari用 */
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 16px;
+}</code></pre>
+  <p>背景に色の変化(グラデーションや写真)がないとガラス感が出ないので、必ず賑やかな背景の上に置くこと。</p>
+
+  <h3>レシピ3: オーロラ背景+グレイン</h3>
+  <p>確実で軽いのは、FigmaなどでオーロラグラデーションをWebP画像(1枚・200KB以下目安)に書き出して背景に敷く方法。CSSでやるならグローバルCSSで:</p>
+  <pre><code>.aurora-bg {
+  background:
+    radial-gradient(ellipse at 20% 30%, #35d0a0 0%, transparent 55%),
+    radial-gradient(ellipse at 80% 20%, #3e7df0 0%, transparent 55%),
+    radial-gradient(ellipse at 60% 85%, #b44fd8 0%, transparent 55%),
+    #101825;
+}</code></pre>
+  <p>グレインは小さなノイズ画像(PNG/SVG)を半透明で重ねる。「AIっぽい紫グラデ」に寄りすぎないよう、ブランドカラー由来の配色に変えるのがポイント。</p>
+
+  <h3>レシピ4: バリアブルフォントの可変軸</h3>
+  <p>WOFF2形式のバリアブルフォントをアップロード後、グローバルCSSで軸を直接指定する:</p>
+  <pre><code>.hero-title {
+  font-variation-settings: "wght" 850, "wdth" 110;
+}</code></pre>
+  <p>日本語フォントは容量が大きいため、見出し用にサブセット化(使用する文字だけに絞る)してから使う。本文は標準提供フォントに任せるのが速度面で安全。</p>
+
+  <h3>レシピ5: Spline(3D)の埋め込み</h3>
+  <p>Spline側でシーンを「Export → Viewer/Embed」で公開URL化し、Wixの<strong>HTML iframe要素</strong>にURLを設定(Spline公式にWix向け手順あり)。注意点は2つ: (1)iframeサンドボックス内で動くため、ページのスクロールや他要素と連動させる演出は不可。(2)3Dは読み込みが重いので、ファーストビュー直下には置かずINP/LCPへの影響を確認する。</p>
+
+  <h3>レシピ6: FAQ構造化データ(AEO対応)</h3>
+  <p>ページのSEO設定 →「構造化データマークアップ」からJSON-LDを追加する(7,000文字以内):</p>
+  <pre><code>{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{
+    "@type": "Question",
+    "name": "導入までの期間はどのくらいですか?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "標準プランで約2週間です。..."
+    }
+  }]
+}</code></pre>
+  <p>ページ本文側も「質問形式の見出し+冒頭で直接回答」の構造に揃えると、AI検索(AI Overviews・ChatGPT等)に引用されやすくなる。BtoBサイトではこれが第6章で述べた「AI可読性」対応の第一歩になる。</p>
+
+  <details class="sources"><summary>主な出典(Wix)</summary>
+    <ul>
+      <li><a href="https://support.wix.com/en/article/studio-editor-about-css-editing" target="_blank" rel="noopener">Studio Editor: About CSS Editing(Wix公式ヘルプ)</a></li>
+      <li><a href="https://support.wix.com/en/article/studio-editor-applying-a-glass-effect" target="_blank" rel="noopener">Studio Editor: Applying a Glass Effect(Wix公式ヘルプ)</a></li>
+      <li><a href="https://support.wix.com/en/article/studio-editor-managing-breakpoints" target="_blank" rel="noopener">Studio Editor: Managing Breakpoints(Wix公式ヘルプ)</a></li>
+      <li><a href="https://wix.github.io/interact/" target="_blank" rel="noopener">Wix Interact — Animation Library</a></li>
+      <li><a href="https://dev.wix.com/docs/velo" target="_blank" rel="noopener">Velo Docs(Wix開発者ドキュメント)</a></li>
+      <li><a href="https://docs.spline.design/doc/integrating-with-wix/docZkO0ulgBo" target="_blank" rel="noopener">Integrating with Wix(Spline公式)</a></li>
+      <li><a href="https://support.wix.com/en/article/wix-editor-uploading-and-using-your-own-fonts" target="_blank" rel="noopener">Uploading and Using Your Own Fonts(Wix公式ヘルプ)</a></li>
+      <li><a href="https://support.wix.com/en/article/adding-structured-data-markup-to-your-sites-pages-2546962" target="_blank" rel="noopener">Adding Structured Data Markup(Wix公式ヘルプ)</a></li>
+      <li><a href="https://support.wix.com/en/article/wix-studio-faqs-transitioning-from-editor-x" target="_blank" rel="noopener">Wix Studio FAQs: Transition from Editor X(Wix公式ヘルプ)</a></li>
+      <li><a href="https://support.wix.com/en/article/site-performance-about-core-web-vitals" target="_blank" rel="noopener">Site Performance: About Core Web Vitals(Wix公式ヘルプ)</a></li>
+    </ul>
+  </details>
+</section>
+
+<div class="part-head">
+  <div class="eyebrow">Conclusion</div>
+  <h2>まとめ</h2>
+</div>
+
+<section id="conclusion" class="chapter">
+  <div class="ch-eyebrow"><span class="eyebrow">第10章</span></div>
+  <h2>総括 — 2026年にサイトを作るなら</h2>
+  <ul>
+    <li><strong>「定着済み」は土台として使い、差別化を上乗せする。</strong>ベントグリッド・ダークモード・マイクロインタラクションはもう「当たり前」で、やっても目立たないがやらないと古く見える。差別化は質感(グレイン・手描き感)、編集的レイアウト、ブランド固有の色・書体で作る。トレンドの紫グラデ・indigo系の配色は「AI量産感」と受け取られるリスクがあるため避けるのが無難。</li>
+    <li><strong>派手さは配慮とセットで。</strong>モーション豊かな演出を入れるなら、コントラスト・フォーカス表示・モーション抑制・表示速度(INP)を同時に設計する。EAA施行以降、アクセシビリティは欧州向けビジネスでは法的要件でもある。</li>
+    <li><strong>BtoBは「見た目の様式」より「信頼と可読性」。</strong>ロゴウォール・数字・事例・探しやすいナビという基本を固めた上で、AI検索に引用される構造化(質問見出し+直接回答+JSON-LD)を新しい必須要件として組み込む。</li>
+    <li><strong>Wixで作るなら:Studio+3つの逃げ道。</strong>グラス効果・グリッド・Interactなどの標準機能でトレンドの8割は形になり、残りはカスタムCSS/Velo/iframe埋め込みで補える。ただしパフォーマンスが弱点なので、画像・フォント・埋め込みの「足し算」を節制し、3Dや重い演出は本当に必要な1箇所に絞るのが成功パターン。</li>
+  </ul>
+</section>
+
+<section id="caveats" class="chapter">
+  <div class="ch-eyebrow"><span class="eyebrow">第11章</span></div>
+  <h2>留保事項(要確認ポイント)</h2>
+  <div class="caveat"><strong>数値データの多くはブログ推計</strong> — 「Product Hunt上位の67%がベント採用」「滞在時間47%増」「Awwwards掲載サイトの3D採用率28%」「マイクロインタラクションで体感速度37%向上」などの数字は業界ブログ発の推計・引用で、一次調査データは未検証。傾向の参考にとどめること。</div>
+  <div class="caveat"><strong>Wix Studioの発表時期</strong> — 情報源により2023年8月/10月と揺れがあるため本文では「2023年発表」とした。Editor Xからの移行完了(2025年1月)はWix公式FAQで確認済み。</div>
+  <div class="caveat"><strong>Wix Harmony/AIエージェント「Aria」</strong> — 2026年投入として第三者レビューで報じられているが、機能詳細・パフォーマンスへの影響は未検証。</div>
+  <div class="caveat"><strong>ダークモード自動切替・無料プランでのVelo利用範囲</strong> — Wixでのprefers-color-scheme連動切替の可否、無料プランでのVelo利用の細部は公式情報で確定できておらず要検証。実案件では事前にテストサイトで確認を推奨。</div>
+  <div class="caveat"><strong>CSSスクロール駆動アニメーションのブラウザ対応</strong> — Chrome先行で、Safari/Firefoxの対応状況は執筆時点で流動的。本番採用時はフォールバック(JSライブラリ or 演出なし)を用意すること。</div>
+  <div class="caveat"><strong>トレンド予測の性質</strong> — 「2026年後半はブルータリズムが中心的議論になる」等の記述は業界ブログの予測であり、確定した事実ではない。</div>
+</section>
+
+<footer class="method">
+  <h3 style="margin-top:0;">調査方法</h3>
+  <p>2026年7月8日実施。5テーマ(グローバルビジュアル/手法・システム/日本/BtoB・SaaS/Wix再現性)を調査エージェント(Claude Sonnet 5)が並行してWeb調査し(Wixの機能は公式ヘルプ・開発者ドキュメントで確認)、レビュー・検証・統合・見本帳の作成はClaude Fable 5が直接実施した。各章末の「主な出典」は実際に参照したソースの抜粋。冒頭の「トレンド見本帳」は本ページのCSSのみで作成したイメージ再現である。</p>
+</footer>
+
+</div>
