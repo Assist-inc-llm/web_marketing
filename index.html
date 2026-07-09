@@ -26,6 +26,8 @@ a:hover{color:var(--acc,#FF5C38);text-decoration-color:currentColor;}
 @keyframes pulseDot{0%,100%{box-shadow:0 0 0 0 rgba(255,92,56,.5);}50%{box-shadow:0 0 0 9px rgba(255,92,56,0);}}
 @keyframes cue{0%,100%{transform:translateY(0);}50%{transform:translateY(9px);}}
 @keyframes bob{0%,100%{transform:rotate(-3deg) translateY(0);}50%{transform:rotate(3deg) translateY(-5px);}}
+@keyframes wiggle{0%,100%{transform:rotate(-9deg);}50%{transform:rotate(11deg);}}
+@keyframes driftX{0%,100%{transform:translate(0,0);}50%{transform:translate(46px,-20px);}}
 </style>
 </helmet>
 
@@ -52,7 +54,7 @@ a:hover{color:var(--acc,#FF5C38);text-decoration-color:currentColor;}
 <sc-if value="{{ is0 }}" hint-placeholder-val="{{ true }}">
 <div id="home" data-screen-label="ホーム" style="animation:pageIn .6s cubic-bezier(.22,1,.36,1) both;animation-duration:var(--adur,.6s);">
 
-  <div style="position:relative;overflow:hidden;padding:150px 28px 60px;">
+  <div style="position:relative;overflow:hidden;padding:80px 28px 60px;">
     <div style="position:absolute;width:340px;height:340px;border-radius:46% 54% 60% 40% / 50% 44% 56% 50%;background:#FFD43A;opacity:.55;top:-90px;right:-70px;animation:floatA 16s ease-in-out infinite;animation-play-state:var(--play,running);"></div>
     <div style="position:absolute;width:420px;height:420px;border-radius:56% 44% 40% 60% / 46% 58% 42% 54%;background:#B9E6FF;opacity:.6;bottom:-160px;left:-120px;animation:floatB 20s ease-in-out infinite;animation-play-state:var(--play,running);"></div>
     <div style="position:absolute;width:220px;height:220px;border-radius:50% 50% 44% 56% / 56% 44% 56% 44%;background:var(--accSoft,#FFE3D8);top:30%;right:14%;animation:floatB 24s ease-in-out infinite;animation-play-state:var(--play,running);"></div>
@@ -309,7 +311,7 @@ a:hover{color:var(--acc,#FF5C38);text-decoration-color:currentColor;}
             <a href="#dt-japan" style="text-decoration:none;font-size:12px;font-weight:700;color:#241E1A;background:#FFEFF5;border:1.5px solid #241E1A;border-radius:999px;padding:5px 12px;">日本とBtoB</a>
             <a href="#dt-wix-matrix" style="text-decoration:none;font-size:12px;font-weight:700;color:#241E1A;background:#FFEFF5;border:1.5px solid #241E1A;border-radius:999px;padding:5px 12px;">Wix再現マトリクス</a>
           </div>
-          <button onClick="{{ go6 }}" style-hover="transform:translate(-2px,-2px);box-shadow:5px 5px 0 #241E1A" style="appearance:none;cursor:pointer;background:var(--acc,#FF5C38);color:#FFFFFF;font-family:'Zen Maru Gothic',sans-serif;font-size:14px;font-weight:900;border:2px solid #241E1A;border-radius:999px;padding:11px 22px;letter-spacing:.04em;box-shadow:3px 3px 0 #241E1A;transition:transform .2s,box-shadow .2s;">トレンド編を読む →</button>
+          <button onClick="{{ go6 }}" style-hover="transform:translate(-2px,-2px);box-shadow:5px 5px 0 #241E1A" style="appearance:none;cursor:pointer;background:var(--acc,#FF5C38);color:#FFFFFF;font-family:'Zen Maru Gothic',sans-serif;font-size:14px;font-weight:900;border:2px solid #241E1A;border-radius:999px;padding:11px 22px;letter-spacing:.04em;box-shadow:3px 3px 0 #241E1A;transition:transform .2s,box-shadow .2s;">デザイン編を読む →</button>
         </div>
       </div>
       <div data-reveal="0.18" style-hover="transform:translate(-3px,-3px);box-shadow:8px 8px 0 #241E1A" style="position:relative;overflow:hidden;background:#FFFFFF;border:2px solid #241E1A;border-radius:20px;box-shadow:5px 5px 0 #241E1A;padding:28px;transition:transform .25s,box-shadow .25s;">
@@ -340,7 +342,7 @@ a:hover{color:var(--acc,#FF5C38);text-decoration-color:currentColor;}
 
 <sc-if value="{{ is1 }}" hint-placeholder-val="{{ false }}">
 <div id="part1" data-screen-label="第I部 基本理論編" style="animation:pageIn .6s cubic-bezier(.22,1,.36,1) both;animation-duration:var(--adur,.6s);">
-  <div style="background:#FFF0D9;border-bottom:2px solid #241E1A;padding:130px 28px 44px;">
+  <div style="background:#FFF0D9;border-bottom:2px solid #241E1A;padding:70px 28px 44px;">
     <div style="max-width:860px;margin:0 auto;">
       <div style="display:inline-block;font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:13px;background:#FFE066;border:2px solid #241E1A;border-radius:999px;padding:5px 16px;box-shadow:3px 3px 0 #241E1A;transform:rotate(-2deg);">PART I ・ 第1〜6章</div>
       <h1 style="font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:clamp(28px,3.4vw,42px);line-height:1.5;margin:18px 0 0;">基本理論編<span style="display:block;font-size:clamp(16px,1.8vw,20px);color:#6B635C;margin-top:8px;">まずはド定番から。スマホ・SNS時代の代表理論</span></h1>
@@ -764,7 +766,7 @@ a:hover{color:var(--acc,#FF5C38);text-decoration-color:currentColor;}
 
 <sc-if value="{{ is2 }}" hint-placeholder-val="{{ false }}">
 <div id="part2" data-screen-label="第II部 企業・研究機関の最新研究" style="animation:pageIn .6s cubic-bezier(.22,1,.36,1) both;animation-duration:var(--adur,.6s);">
-  <div style="background:#E4F3FF;border-bottom:2px solid #241E1A;padding:130px 28px 44px;">
+  <div style="background:#E4F3FF;border-bottom:2px solid #241E1A;padding:70px 28px 44px;">
     <div style="max-width:860px;margin:0 auto;">
       <div style="display:inline-block;font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:13px;background:#B9E6FF;border:2px solid #241E1A;border-radius:999px;padding:5px 16px;box-shadow:3px 3px 0 #241E1A;transform:rotate(1.5deg);">PART II ・ 第7〜10章</div>
       <h1 style="font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:clamp(28px,3.4vw,42px);line-height:1.5;margin:18px 0 0;">企業・研究機関の最新研究<span style="display:block;font-size:clamp(16px,1.8vw,20px);color:#6B635C;margin-top:8px;">大手、いま何を言ってる?を発信元別に整理</span></h1>
@@ -1017,7 +1019,7 @@ a:hover{color:var(--acc,#FF5C38);text-decoration-color:currentColor;}
 
 <sc-if value="{{ is3 }}" hint-placeholder-val="{{ false }}">
 <div id="part3" data-screen-label="第III部 消費者行動の今" style="animation:pageIn .6s cubic-bezier(.22,1,.36,1) both;animation-duration:var(--adur,.6s);">
-  <div style="background:#E8FBF3;border-bottom:2px solid #241E1A;padding:130px 28px 44px;">
+  <div style="background:#E8FBF3;border-bottom:2px solid #241E1A;padding:70px 28px 44px;">
     <div style="max-width:860px;margin:0 auto;">
       <div style="display:inline-block;font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:13px;background:#C9F2E4;border:2px solid #241E1A;border-radius:999px;padding:5px 16px;box-shadow:3px 3px 0 #241E1A;transform:rotate(-1.5deg);">PART III ・ 第11〜13章</div>
       <h1 style="font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:clamp(28px,3.4vw,42px);line-height:1.5;margin:18px 0 0;">消費者行動のいま<span style="display:block;font-size:clamp(16px,1.8vw,20px);color:#6B635C;margin-top:8px;">2024〜2026年、地殻変動が起きてる</span></h1>
@@ -1206,7 +1208,7 @@ a:hover{color:var(--acc,#FF5C38);text-decoration-color:currentColor;}
 
 <sc-if value="{{ is4 }}" hint-placeholder-val="{{ false }}">
 <div id="part4" data-screen-label="第IV部 BtoBの購買行動" style="animation:pageIn .6s cubic-bezier(.22,1,.36,1) both;animation-duration:var(--adur,.6s);">
-  <div style="background:#F1EBFF;border-bottom:2px solid #241E1A;padding:130px 28px 44px;">
+  <div style="background:#F1EBFF;border-bottom:2px solid #241E1A;padding:70px 28px 44px;">
     <div style="max-width:860px;margin:0 auto;">
       <div style="display:inline-block;font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:13px;background:#DCCFFF;border:2px solid #241E1A;border-radius:999px;padding:5px 16px;box-shadow:3px 3px 0 #241E1A;transform:rotate(1.5deg);">PART IV ・ 第14〜18章</div>
       <h1 style="font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:clamp(28px,3.4vw,42px);line-height:1.5;margin:18px 0 0;">BtoB編 — 会社の買い物も激変中<span style="display:block;font-size:clamp(16px,1.8vw,20px);color:#6B635C;margin-top:8px;">組織はどう買うようになったか</span></h1>
@@ -1502,7 +1504,7 @@ a:hover{color:var(--acc,#FF5C38);text-decoration-color:currentColor;}
 
 <sc-if value="{{ is5 }}" hint-placeholder-val="{{ false }}">
 <div id="part5" data-screen-label="まとめ" style="animation:pageIn .6s cubic-bezier(.22,1,.36,1) both;animation-duration:var(--adur,.6s);">
-  <div style="background:#241E1A;border-bottom:2px solid #241E1A;padding:130px 28px 44px;color:#FFF6E9;">
+  <div style="background:#241E1A;border-bottom:2px solid #241E1A;padding:70px 28px 44px;color:#FFF6E9;">
     <div style="max-width:860px;margin:0 auto;">
       <div style="display:inline-block;font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:13px;color:#241E1A;background:#FFE066;border:2px solid #FFE066;border-radius:999px;padding:5px 16px;box-shadow:3px 3px 0 #6B635C;transform:rotate(-2deg);">CONCLUSION ・ 第19〜21章</div>
       <h1 style="font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:clamp(28px,3.4vw,42px);line-height:1.5;margin:18px 0 0;">結局、この<span style="color:var(--acc,#FF5C38);">5つの流れ</span>。<span style="display:block;font-size:clamp(16px,1.8vw,20px);color:#C9BFB6;margin-top:8px;">総括・実務での使い分け・うのみ注意ポイント</span></h1>
@@ -1657,7 +1659,7 @@ a:hover{color:var(--acc,#FF5C38);text-decoration-color:currentColor;}
 
 <sc-if value="{{ is6 }}" hint-placeholder-val="{{ false }}">
 <div id="part6" data-screen-label="デザイントレンド編" style="animation:pageIn .6s cubic-bezier(.22,1,.36,1) both;animation-duration:var(--adur,.6s);">
-  <div style="background:#FFEFF5;border-bottom:2px solid #241E1A;padding:130px 28px 44px;">
+  <div style="background:#FFEFF5;border-bottom:2px solid #241E1A;padding:70px 28px 44px;">
     <div style="max-width:860px;margin:0 auto;">
       <div style="display:inline-block;font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:13px;background:#FFD9E8;border:2px solid #241E1A;border-radius:999px;padding:5px 16px;box-shadow:3px 3px 0 #241E1A;transform:rotate(-2deg);">EXTRA ・ デザイントレンド編(DT.01〜11)</div>
       <h1 style="font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:clamp(28px,3.4vw,42px);line-height:1.5;margin:18px 0 0;">最近のWebって、こんな見た目。<span style="display:block;font-size:clamp(16px,1.8vw,20px);color:#6B635C;margin-top:8px;">Webデザイントレンド2024–2026 — 潮流の整理とWix再現ガイド(2026年7月8日調査)</span></h1>
@@ -2556,7 +2558,7 @@ a:hover{color:var(--acc,#FF5C38);text-decoration-color:currentColor;}
 
 <sc-if value="{{ is7 }}" hint-placeholder-val="{{ false }}">
 <div id="part7" data-screen-label="業種別イメージ図" style="animation:pageIn .6s cubic-bezier(.22,1,.36,1) both;animation-duration:var(--adur,.6s);">
-  <div style="background:#FFF3DF;border-bottom:2px solid #241E1A;padding:130px 28px 44px;">
+  <div style="background:#FFF3DF;border-bottom:2px solid #241E1A;padding:70px 28px 44px;">
     <div style="max-width:1000px;margin:0 auto;">
       <div style="display:inline-block;font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:13px;background:#FFE9C7;border:2px solid #241E1A;border-radius:999px;padding:5px 16px;box-shadow:3px 3px 0 #241E1A;transform:rotate(-2deg);">EXTRA ・ 業種別イメージ図(8業種)</div>
       <h1 style="font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:clamp(28px,3.4vw,42px);line-height:1.5;margin:18px 0 0;">もし、日本の中小企業がやるなら?<span style="display:block;font-size:clamp(16px,1.8vw,20px);color:#6B635C;margin-top:8px;">流行りの要素を"自然に"取り入れたら、こんな感じ。というイメージ図</span></h1>
@@ -2952,6 +2954,329 @@ a:hover{color:var(--acc,#FF5C38);text-decoration-color:currentColor;}
 </div>
 </sc-if>
 
+<sc-if value="{{ is8 }}" hint-placeholder-val="{{ true }}">
+<div id="intro" data-screen-label="はじめに — なぜこのデザインが効くのか" style="position:relative;overflow:hidden;background:radial-gradient(rgba(36,30,26,.05) 1.4px,transparent 1.4px) 0 0/26px 26px;animation:pageIn .6s cubic-bezier(.22,1,.36,1) both;animation-duration:var(--adur,.6s);">
+  <div aria-hidden="true" style="position:absolute;inset:0;pointer-events:none;z-index:-1;">
+    <span style="position:absolute;top:26%;left:2.5%;width:13px;height:13px;transform:rotate(45deg);background:#FFE066;border:1.5px solid #241E1A;animation:cue 2s ease-in-out infinite;animation-play-state:var(--play,running);"></span>
+    <span style="position:absolute;top:36%;right:2%;width:64px;height:64px;border-radius:46% 54% 60% 40% / 50% 44% 56% 50%;background:#FFD9E8;opacity:.75;animation:floatA 9s ease-in-out infinite;animation-play-state:var(--play,running);"></span>
+    <span style="position:absolute;top:50%;left:1.8%;width:46px;height:46px;border-radius:50%;border:2px dashed rgba(36,30,26,.35);animation:spinSlow 16s linear infinite;animation-play-state:var(--play,running);display:block;"></span>
+    <span style="position:absolute;top:63%;right:3.5%;font-size:22px;color:var(--acc,#FF5C38);animation:wiggle 2.6s ease-in-out infinite;animation-play-state:var(--play,running);">✦</span>
+    <span style="position:absolute;top:76%;left:3%;width:54px;height:54px;border-radius:56% 44% 40% 60% / 46% 58% 42% 54%;background:#C9F2E4;opacity:.75;animation:floatB 11s ease-in-out infinite;animation-play-state:var(--play,running);"></span>
+    <span style="position:absolute;top:88%;right:2.5%;width:12px;height:12px;border-radius:50%;background:#4D7CFE;border:1.5px solid #241E1A;animation:pulseDot 2s ease-in-out infinite;animation-play-state:var(--play,running);"></span>
+    <span style="position:absolute;top:14%;right:4%;font-size:15px;color:#4D7CFE;animation:cue 2.4s ease-in-out infinite;animation-play-state:var(--play,running);">✦</span>
+  </div>
+  <div style="position:relative;overflow:hidden;background:radial-gradient(rgba(36,30,26,.09) 1.5px,transparent 1.5px) 0 0/22px 22px,#E4F3FF;border-bottom:2px solid #241E1A;padding:70px 28px 44px;">
+    <div aria-hidden="true" style="position:absolute;inset:0;pointer-events:none;">
+      <div style="position:absolute;top:13%;right:7%;background:#FFFFFF;border:2px solid #241E1A;border-radius:999px;padding:6px 13px;font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:12px;box-shadow:3px 3px 0 #241E1A;animation:bob 2.2s ease-in-out infinite;animation-play-state:var(--play,running);"><span style="color:var(--acc,#FF5C38);">♥</span> 1,024</div>
+      <div style="position:absolute;top:46%;right:13%;width:58px;height:58px;border-radius:50%;background:#FFD43A;border:2px solid #241E1A;box-shadow:3px 3px 0 #241E1A;display:flex;align-items:center;justify-content:center;font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:14px;animation:wiggle 2.6s ease-in-out infinite;animation-play-state:var(--play,running);">CV!</div>
+      <div style="position:absolute;bottom:13%;right:6%;background:#FFFFFF;border:2px solid #241E1A;border-radius:12px 12px 12px 3px;padding:5px 12px;font-size:11px;font-weight:700;box-shadow:3px 3px 0 #241E1A;animation:bob 2.8s ease-in-out infinite;animation-play-state:var(--play,running);">保存した!</div>
+      <div style="position:absolute;top:22%;left:4%;animation:driftX 4.2s ease-in-out infinite;animation-play-state:var(--play,running);">
+        <span style="display:block;width:0;height:0;border-left:10px solid transparent;border-right:10px solid transparent;border-bottom:19px solid #241E1A;transform:rotate(-36deg);"></span>
+        <span style="display:inline-block;margin:2px 0 0 14px;background:#241E1A;color:#FFF6E9;border-radius:999px;font-size:9.5px;font-weight:700;padding:2px 9px;">クリック!</span>
+      </div>
+      <div style="position:absolute;bottom:20%;left:6%;font-size:20px;color:var(--acc,#FF5C38);animation:wiggle 2.1s ease-in-out infinite;animation-play-state:var(--play,running);">✦</div>
+      <div style="position:absolute;top:58%;left:2.5%;width:12px;height:12px;border-radius:50%;background:#4D7CFE;border:1.5px solid #241E1A;animation:pulseDot 1.8s ease-in-out infinite;animation-play-state:var(--play,running);"></div>
+      <div style="position:absolute;top:8%;left:38%;width:11px;height:11px;transform:rotate(45deg);background:#C9F2E4;border:1.5px solid #241E1A;animation:cue 2.1s ease-in-out infinite;animation-play-state:var(--play,running);"></div>
+    </div>
+    <div style="position:relative;max-width:860px;margin:0 auto;">
+      <div style="animation:fadeUp .8s cubic-bezier(.22,1,.36,1) .05s both;animation-duration:var(--adur,.8s);"><div style="display:inline-block;font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:13px;background:#B9E6FF;border:2px solid #241E1A;border-radius:999px;padding:5px 16px;box-shadow:3px 3px 0 #241E1A;transform:rotate(-2deg);">FOR DESIGNERS ・ はじめに</div></div>
+      <h1 style="font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:clamp(28px,3.6vw,44px);line-height:1.5;margin:18px 0 0;animation:fadeUp .9s cubic-bezier(.22,1,.36,1) .18s both;animation-duration:var(--adur,.9s);">なぜ、"あのデザイン"は<span style="background:linear-gradient(transparent 62%,#FFE066 62%);">効く</span>のか。<span style="display:block;font-size:clamp(16px,1.8vw,20px);color:#6B635C;margin-top:8px;">消費・検索行動の変化からトレンドの「理由」をひも解く、デザイナー向け解説+テッパンの作り方集</span></h1>
+      <p style="max-width:720px;margin:16px 0 0;font-size:14px;line-height:2;color:#4A433D;animation:fadeUp .9s cubic-bezier(.22,1,.36,1) .32s both;animation-duration:var(--adur,.9s);">今日の制作にそのまま足せる小ワザ〜ページ構成の実戦カタログ。<a href="#part6">デザイン編</a>のトレンドと<a href="#part7">業種別イメージ図</a>の手法に、「最近こういう傾向だから効く」というマーケ側の理由(<a href="#part1">第I〜IV部</a>)を1つずつ付けています。</p>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:24px;animation:fadeUp .9s cubic-bezier(.22,1,.36,1) .45s both;animation-duration:var(--adur,.9s);">
+        <a href="#waza" style="text-decoration:none;font-size:12.5px;font-weight:700;color:#241E1A;background:#FFFFFF;border:1.5px solid #241E1A;border-radius:999px;padding:7px 15px;">01 効く小ワザ図鑑</a>
+        <a href="#copy-formula" style="text-decoration:none;font-size:12.5px;font-weight:700;color:#241E1A;background:#FFFFFF;border:1.5px solid #241E1A;border-radius:999px;padding:7px 15px;">02 コピーの型</a>
+        <a href="#content-writing" style="text-decoration:none;font-size:12.5px;font-weight:700;color:#241E1A;background:#FFFFFF;border:1.5px solid #241E1A;border-radius:999px;padding:7px 15px;">03 コンテンツと検索</a>
+        <a href="#cv-structure" style="text-decoration:none;font-size:12.5px;font-weight:700;color:#241E1A;background:#FFFFFF;border:1.5px solid #241E1A;border-radius:999px;padding:7px 15px;">04 CVにつながる構成</a>
+        <a href="#section-layout" style="text-decoration:none;font-size:12.5px;font-weight:700;color:#241E1A;background:#FFFFFF;border:1.5px solid #241E1A;border-radius:999px;padding:7px 15px;">05 レイアウトの型</a>
+      </div>
+    </div>
+  </div>
+  <div style="max-width:860px;margin:0 auto;padding:20px 28px 60px;">
+
+    <section id="waza" style="padding-top:56px;">
+      <div data-reveal="0">
+        <div style="display:inline-block;font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:12px;background:#B9E6FF;border:2px solid #241E1A;border-radius:8px;padding:2px 10px;">INTRO.01</div>
+        <h2 style="font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:clamp(23px,2.6vw,31px);line-height:1.6;margin:12px 0 0;">効く小ワザ図鑑<span style="display:block;font-size:16px;color:#6B635C;margin-top:4px;">「最近こういう傾向だから効きます」という理由つきで、1つずつ。今日の制作からそのまま使えます。</span></h2>
+      </div>
+      <p style="font-size:15.5px;line-height:2.05;color:#4A433D;margin:18px 0 12px;">業種別イメージ図(<a href="#part7">業種例</a>)で使った手法も、ここに理由つきで並べました。数字や根拠の出どころは、各リンク先の章末「▸ 出典まとめ」をどうぞ。</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin:22px 0;">
+        <div data-reveal="0" style="background:#FFFFFF;border:2px solid #241E1A;border-radius:16px;box-shadow:4px 4px 0 #241E1A;padding:20px 22px;">
+          <h4 style="margin:0 0 10px;font-family:'Zen Maru Gothic',sans-serif;font-size:15.5px;font-weight:900;">① 価格を最初から見せる</h4>
+          <div aria-hidden="true" style="background:#FBF7F0;border:1.5px solid #241E1A;border-radius:12px;padding:10px;margin:0 0 4px;"><div style="display:flex;align-items:center;justify-content:space-between;gap:8px;background:#FFFFFF;border:1.5px solid #241E1A;border-radius:8px;padding:7px 10px;"><span style="font-size:10px;font-weight:700;">初回カット+カラー</span><span style="font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:15px;color:var(--accDark,#D8451F);">¥4,900〜</span><span style="font-size:9px;color:#8A817A;">追加料金なし</span></div></div>
+          <div style="font-size:9.5px;font-weight:900;color:#8A817A;text-align:right;margin:0 2px 8px 0;">↑ こういうやつ(イメージ)</div>
+          <p style="margin:0 0 10px;font-size:13.5px;line-height:1.9;color:#4A433D;">料金表や目安の価格を、ページの前半に載せます。「料金は要問合せ」で隠さないようにします。</p>
+          <div style="font-size:12.5px;line-height:1.9;font-weight:700;color:var(--accDark,#D8451F);">▶ 効く理由:「値段が書いてないと、問い合わせるのは面倒だな…」と自分でも思いませんか。いまの買い手は「よい選択」より<strong>「失敗しない選択」</strong>を重視します(ロジカル消費・<a href="#thinktank">第10章</a>)。価格がわからないだけで、候補から外されやすくなっています。</div>
+        </div>
+        <div data-reveal="0" style="background:#FFFFFF;border:2px solid #241E1A;border-radius:16px;box-shadow:4px 4px 0 #241E1A;padding:20px 22px;">
+          <h4 style="margin:0 0 10px;font-family:'Zen Maru Gothic',sans-serif;font-size:15.5px;font-weight:900;">② 下部固定の追従CTA</h4>
+          <div aria-hidden="true" style="background:#FBF7F0;border:1.5px solid #241E1A;border-radius:12px;padding:10px;margin:0 0 4px;"><div style="position:relative;height:62px;background:#FFFFFF;border:1.5px solid #241E1A;border-radius:8px;overflow:hidden;"><div style="height:5px;width:70%;background:#E8E0D2;border-radius:3px;margin:9px 10px 5px;"></div><div style="height:5px;width:52%;background:#E8E0D2;border-radius:3px;margin:0 10px;"></div><div style="position:absolute;bottom:5px;left:6px;right:6px;background:var(--acc,#FF5C38);color:#FFFFFF;border:1.5px solid #241E1A;border-radius:999px;text-align:center;font-size:9.5px;font-weight:900;font-family:'Zen Maru Gothic',sans-serif;padding:3px 0;">今すぐ予約する</div></div></div>
+          <div style="font-size:9.5px;font-weight:900;color:#8A817A;text-align:right;margin:0 2px 8px 0;">↑ こういうやつ(イメージ)</div>
+          <p style="margin:0 0 10px;font-size:13.5px;line-height:1.9;color:#4A433D;">スマホでは画面の下に「予約する」「見積依頼」のボタンを出したままにします。</p>
+          <div style="font-size:12.5px;line-height:1.9;font-weight:700;color:var(--accDark,#D8451F);">▶ 効く理由:「ほしい」という気持ちは、読んでいる途中のふとした瞬間に生まれます(パルス消費・<a href="#pulse">第2章</a>)。その瞬間に押せる場所にボタンがあるかどうかで、結果が変わります。</div>
+        </div>
+        <div data-reveal="0" style="background:#FFFFFF;border:2px solid #241E1A;border-radius:16px;box-shadow:4px 4px 0 #241E1A;padding:20px 22px;">
+          <h4 style="margin:0 0 10px;font-family:'Zen Maru Gothic',sans-serif;font-size:15.5px;font-weight:900;">③ フォームはチャット型で1問ずつ</h4>
+          <div aria-hidden="true" style="background:#FBF7F0;border:1.5px solid #241E1A;border-radius:12px;padding:10px;margin:0 0 4px;"><div style="display:flex;flex-direction:column;gap:5px;"><span style="align-self:flex-start;background:#FFFFFF;border:1.5px solid #241E1A;border-radius:9px 9px 9px 3px;padding:4px 10px;font-size:9.5px;">ご相談はどちらについてですか?</span><span style="align-self:flex-end;background:var(--acc,#FF5C38);color:#FFFFFF;border:1.5px solid #241E1A;border-radius:9px 9px 3px 9px;padding:4px 10px;font-size:9.5px;font-weight:700;">確定申告について</span></div></div>
+          <div style="font-size:9.5px;font-weight:900;color:#8A817A;text-align:right;margin:0 2px 8px 0;">↑ こういうやつ(イメージ)</div>
+          <p style="margin:0 0 10px;font-size:13.5px;line-height:1.9;color:#4A433D;">長い入力欄を並べるのをやめて、1問ずつ聞く形にします。選択肢はボタンで選べるようにします。</p>
+          <div style="font-size:12.5px;line-height:1.9;font-weight:700;color:var(--accDark,#D8451F);">▶ 効く理由:長いフォームを見て「あとでいいや」と閉じたこと、ありませんか。選ぶ・入力する手間は、そのまま離脱につながります(メンパ・<a href="#genz">第11章</a>)。手間を減らした分だけ完了率が上がります。実例は<a href="#sme-zeirishi">税理士サンプル</a>。</div>
+        </div>
+        <div data-reveal="0" style="background:#FFFFFF;border:2px solid #241E1A;border-radius:16px;box-shadow:4px 4px 0 #241E1A;padding:20px 22px;">
+          <h4 style="margin:0 0 10px;font-family:'Zen Maru Gothic',sans-serif;font-size:15.5px;font-weight:900;">④ レビューは主張のすぐ隣に</h4>
+          <div aria-hidden="true" style="background:#FBF7F0;border:1.5px solid #241E1A;border-radius:12px;padding:10px;margin:0 0 4px;"><div><div style="font-size:11px;font-weight:900;font-family:'Zen Maru Gothic',sans-serif;">仕上がりには自信があります</div><div style="margin-top:5px;background:#FFFFFF;border:1.5px solid #241E1A;border-radius:8px;padding:5px 9px;font-size:9.5px;line-height:1.6;"><span style="color:#E8A000;">★★★★★</span> 「想像以上の仕上がりでした」— 40代・女性</div></div></div>
+          <div style="font-size:9.5px;font-weight:900;color:#8A817A;text-align:right;margin:0 2px 8px 0;">↑ こういうやつ(イメージ)</div>
+          <p style="margin:0 0 10px;font-size:13.5px;line-height:1.9;color:#4A433D;">「技術に自信あり」と書いたすぐ下にお客様の声を載せます。レビューだけの別ページにまとめないようにします。</p>
+          <div style="font-size:12.5px;line-height:1.9;font-weight:700;color:var(--accDark,#D8451F);">▶ 効く理由:自分が買うときも、まず口コミから見ていませんか。買い手は「調べる⇄比べる」を何度も繰り返します(メッシーミドル・<a href="#platform">第9章</a>)。第三者の声(社会的証明)は、その迷いを購入の方向へ後押しする一番の材料です。</div>
+        </div>
+        <div data-reveal="0" style="background:#FFFFFF;border:2px solid #241E1A;border-radius:16px;box-shadow:4px 4px 0 #241E1A;padding:20px 22px;">
+          <h4 style="margin:0 0 10px;font-family:'Zen Maru Gothic',sans-serif;font-size:15.5px;font-weight:900;">⑤ 数字カードは3つまで</h4>
+          <div aria-hidden="true" style="background:#FBF7F0;border:1.5px solid #241E1A;border-radius:12px;padding:10px;margin:0 0 4px;"><div style="display:flex;gap:6px;"><span style="flex:1;background:#FFFFFF;border:1.5px solid #241E1A;border-radius:8px;text-align:center;padding:6px 2px;"><span style="display:block;font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:13px;">42年</span><span style="font-size:8.5px;color:#8A817A;">創業</span></span><span style="flex:1;background:#FFFFFF;border:1.5px solid #241E1A;border-radius:8px;text-align:center;padding:6px 2px;"><span style="display:block;font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:13px;">1,200棟</span><span style="font-size:8.5px;color:#8A817A;">施工実績</span></span><span style="flex:1;background:#FFFFFF;border:1.5px solid #241E1A;border-radius:8px;text-align:center;padding:6px 2px;"><span style="display:block;font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:13px;">97%</span><span style="font-size:8.5px;color:#8A817A;">満足度</span></span></div></div>
+          <div style="font-size:9.5px;font-weight:900;color:#8A817A;text-align:right;margin:0 2px 8px 0;">↑ こういうやつ(イメージ)</div>
+          <p style="margin:0 0 10px;font-size:13.5px;line-height:1.9;color:#4A433D;">「創業42年・施工1,200棟・満足度97%」のような数字を、ページ上部に横並びにします。多くても3つまで。</p>
+          <div style="font-size:12.5px;line-height:1.9;font-weight:700;color:var(--accDark,#D8451F);">▶ 効く理由:比較の段階にいる人には、気分を盛り上げる言葉より数字のほうが伝わります。検索の目的に合わせた出し分けで、反応率が約2.6倍という調査もあります(<a href="#butterfly">第1章</a>)。</div>
+        </div>
+        <div data-reveal="0" style="background:#FFFFFF;border:2px solid #241E1A;border-radius:16px;box-shadow:4px 4px 0 #241E1A;padding:20px 22px;">
+          <h4 style="margin:0 0 10px;font-family:'Zen Maru Gothic',sans-serif;font-size:15.5px;font-weight:900;">⑥ ロゴウォールと認証バッジ</h4>
+          <div aria-hidden="true" style="background:#FBF7F0;border:1.5px solid #241E1A;border-radius:12px;padding:10px;margin:0 0 4px;"><div style="display:flex;gap:6px;align-items:center;"><span style="flex:1;height:22px;background:#E8E0D2;border-radius:5px;"></span><span style="flex:1;height:22px;background:#E8E0D2;border-radius:5px;"></span><span style="flex:1;height:22px;background:#E8E0D2;border-radius:5px;"></span><span style="flex:none;background:#FFFFFF;border:1.5px solid #241E1A;border-radius:999px;font-size:9px;font-weight:900;padding:4px 9px;">ISO 9001</span></div></div>
+          <div style="font-size:9.5px;font-weight:900;color:#8A817A;text-align:right;margin:0 2px 8px 0;">↑ こういうやつ(イメージ)</div>
+          <p style="margin:0 0 10px;font-size:13.5px;line-height:1.9;color:#4A433D;">取引先のロゴやISO・Pマークなどの認証を、1つのセクションにまとめて載せます。</p>
+          <div style="font-size:12.5px;line-height:1.9;font-weight:700;color:var(--accDark,#D8451F);">▶ 効く理由:BtoBの買い手は、営業と会う前に候補を3社ほどまで絞り込みます(<a href="#b2b-buyer">第15章</a>)。会えない期間に信頼を伝えられるのは、ページだけです。</div>
+        </div>
+        <div data-reveal="0" style="background:#FFFFFF;border:2px solid #241E1A;border-radius:16px;box-shadow:4px 4px 0 #241E1A;padding:20px 22px;">
+          <h4 style="margin:0 0 10px;font-family:'Zen Maru Gothic',sans-serif;font-size:15.5px;font-weight:900;">⑦ FAQは質問の見出し+すぐ答える</h4>
+          <div aria-hidden="true" style="background:#FBF7F0;border:1.5px solid #241E1A;border-radius:12px;padding:10px;margin:0 0 4px;"><div style="background:#FFFFFF;border:1.5px solid #241E1A;border-radius:8px;padding:7px 10px;"><div style="font-size:10px;font-weight:900;">Q. 費用はいくらから?</div><div style="font-size:9.5px;color:#4A433D;margin-top:3px;line-height:1.6;">A. <strong style="background:linear-gradient(transparent 60%,#FFE066 60%);">月額3万円からです。</strong>内訳は…</div></div></div>
+          <div style="font-size:9.5px;font-weight:900;color:#8A817A;text-align:right;margin:0 2px 8px 0;">↑ こういうやつ(イメージ)</div>
+          <p style="margin:0 0 10px;font-size:13.5px;line-height:1.9;color:#4A433D;">「Q. 費用は?」に対して、1文目で答えを書きます。JSON-LDでの構造化もあわせて設定します(<a href="#dt-wix-recipes">レシピ6</a>)。</p>
+          <div style="font-size:12.5px;line-height:1.9;font-weight:700;color:var(--accDark,#D8451F);">▶ 効く理由:検索しても、結局どのページも開かずに済ませること、増えていませんか。検索の約6割はクリックなしで終わり、人間より先にAIがページを読みに来ます(<a href="#ai-commerce">第12章</a>)。AIの回答に引用されないサイトは、見つけてもらう機会そのものが減っていきます。</div>
+        </div>
+        <div data-reveal="0" style="background:#FFFFFF;border:2px solid #241E1A;border-radius:16px;box-shadow:4px 4px 0 #241E1A;padding:20px 22px;">
+          <h4 style="margin:0 0 10px;font-family:'Zen Maru Gothic',sans-serif;font-size:15.5px;font-weight:900;">⑧ インスタの最新投稿を目立つ場所に</h4>
+          <div aria-hidden="true" style="background:#FBF7F0;border:1.5px solid #241E1A;border-radius:12px;padding:10px;margin:0 0 4px;"><div style="display:flex;gap:6px;align-items:center;"><span style="flex:1;aspect-ratio:1;background:repeating-linear-gradient(45deg,#EBDDC4 0 8px,#F5EBD8 8px 16px);border:1.5px solid #C9BFB6;border-radius:6px;"></span><span style="flex:1;aspect-ratio:1;background:repeating-linear-gradient(45deg,#EBDDC4 0 8px,#F5EBD8 8px 16px);border:1.5px solid #C9BFB6;border-radius:6px;"></span><span style="flex:1;aspect-ratio:1;background:repeating-linear-gradient(45deg,#EBDDC4 0 8px,#F5EBD8 8px 16px);border:1.5px solid #C9BFB6;border-radius:6px;"></span><span style="flex:none;font-size:9px;font-weight:900;color:#6B635C;">最新の投稿↗</span></div></div>
+          <div style="font-size:9.5px;font-weight:900;color:#8A817A;text-align:right;margin:0 2px 8px 0;">↑ こういうやつ(イメージ)</div>
+          <p style="margin:0 0 10px;font-size:13.5px;line-height:1.9;color:#4A433D;">最新投稿3枚をトップの見える位置に埋め込みます。写真の新しさはSNS投稿に任せます。</p>
+          <div style="font-size:12.5px;line-height:1.9;font-weight:700;color:var(--accDark,#D8451F);">▶ 効く理由:お店選びのとき、公式サイトよりインスタを先に見ること、ありませんか。口コミや投稿が買い物の入り口になっています(ULSSAS・<a href="#ulssas">第3章</a>)。「今も動いているお店」だと伝わること自体が安心材料です(<a href="#kaiwai">第4章</a>)。</div>
+        </div>
+        <div data-reveal="0" style="background:#FFFFFF;border:2px solid #241E1A;border-radius:16px;box-shadow:4px 4px 0 #241E1A;padding:20px 22px;">
+          <h4 style="margin:0 0 10px;font-family:'Zen Maru Gothic',sans-serif;font-size:15.5px;font-weight:900;">⑨ 顔を出す</h4>
+          <div aria-hidden="true" style="background:#FBF7F0;border:1.5px solid #241E1A;border-radius:12px;padding:10px;margin:0 0 4px;"><div style="display:flex;align-items:center;gap:8px;"><span style="width:30px;height:30px;border-radius:50%;background:repeating-linear-gradient(45deg,#EBDDC4 0 6px,#F5EBD8 6px 12px);border:1.5px solid #241E1A;flex:none;"></span><span style="font-size:10px;font-weight:700;line-height:1.6;">店主の田中です。豆の焙煎は、ぜんぶ私がやっています。</span></div></div>
+          <div style="font-size:9.5px;font-weight:900;color:#8A817A;text-align:right;margin:0 2px 8px 0;">↑ こういうやつ(イメージ)</div>
+          <p style="margin:0 0 10px;font-size:13.5px;line-height:1.9;color:#4A433D;">店主・スタッフ・製造現場の写真かイラストを、必ず1か所は載せます。</p>
+          <div style="font-size:12.5px;line-height:1.9;font-weight:700;color:var(--accDark,#D8451F);">▶ 効く理由:AIで作ったような画像やページが増えた反動で、<strong>「人がやっている」とわかること</strong>自体が信頼の理由になっています(<a href="#dt-deepdive">DT.02</a>)。</div>
+        </div>
+        <div data-reveal="0" style="background:#FFFFFF;border:2px solid #241E1A;border-radius:16px;box-shadow:4px 4px 0 #241E1A;padding:20px 22px;">
+          <h4 style="margin:0 0 10px;font-family:'Zen Maru Gothic',sans-serif;font-size:15.5px;font-weight:900;">⑩ 質感はひとつまみだけ</h4>
+          <div aria-hidden="true" style="background:#FBF7F0;border:1.5px solid #241E1A;border-radius:12px;padding:10px;margin:0 0 4px;"><div style="position:relative;height:56px;border-radius:8px;background:repeating-linear-gradient(0deg,rgba(74,59,46,.07) 0 1px,transparent 1px 3px),#FFF6E3;border:1.5px solid #241E1A;"><span style="position:absolute;top:8px;left:10px;font-size:9.5px;font-weight:900;font-family:'Zen Maru Gothic',sans-serif;background:#FFD43A;border:1.5px solid #241E1A;border-radius:999px;padding:2px 9px;transform:rotate(-4deg);">自家焙煎</span><span style="position:absolute;bottom:6px;right:10px;font-size:8.5px;color:#8A7A62;">紙っぽい質感+ちょい傾き</span></div></div>
+          <div style="font-size:9.5px;font-weight:900;color:#8A817A;text-align:right;margin:0 2px 8px 0;">↑ こういうやつ(イメージ)</div>
+          <p style="margin:0 0 10px;font-size:13.5px;line-height:1.9;color:#4A433D;">紙のようなざらつき、手描きの線、少し傾けたバッジなどを、飾りとして少しだけ使います。全面には使いません。</p>
+          <div style="font-size:12.5px;line-height:1.9;font-weight:700;color:var(--accDark,#D8451F);">▶ 効く理由:どこも同じに見える、つるっとしたデザインに、見る側が飽きはじめています(<a href="#dt-deepdive">DT.02</a>)。ただし入れすぎると読みにくくなるので、あくまで少しだけ。</div>
+        </div>
+        <div data-reveal="0" style="background:#FFFFFF;border:2px solid #241E1A;border-radius:16px;box-shadow:4px 4px 0 #241E1A;padding:20px 22px;">
+          <h4 style="margin:0 0 10px;font-family:'Zen Maru Gothic',sans-serif;font-size:15.5px;font-weight:900;">⑪ ハードルの低い連絡先を1つだけ</h4>
+          <div aria-hidden="true" style="background:#FBF7F0;border:1.5px solid #241E1A;border-radius:12px;padding:10px;margin:0 0 4px;"><div style="display:flex;flex-direction:column;gap:5px;align-items:center;"><span style="width:100%;background:var(--acc,#FF5C38);color:#FFFFFF;border:1.5px solid #241E1A;border-radius:999px;text-align:center;font-size:10px;font-weight:900;font-family:'Zen Maru Gothic',sans-serif;padding:5px 0;">無料相談を予約する</span><span style="font-size:9.5px;font-weight:700;color:#4A433D;text-decoration:underline;">まずはLINEで気軽に聞いてみる</span></div></div>
+          <div style="font-size:9.5px;font-weight:900;color:#8A817A;text-align:right;margin:0 2px 8px 0;">↑ こういうやつ(イメージ)</div>
+          <p style="margin:0 0 10px;font-size:13.5px;line-height:1.9;color:#4A433D;">メインのボタンの下に「LINEで気軽に」「資料だけもらう」のような選択肢を1つ添えます。2つ以上は並べません。</p>
+          <div style="font-size:12.5px;line-height:1.9;font-weight:700;color:var(--accDark,#D8451F);">▶ 効く理由:今すぐ買う人は5%しかいません(95:5・<a href="#b2b-theory">第14章</a>)。残り95%の「まだ買わない人」と、ゆるくつながっておくための受け皿になります。</div>
+        </div>
+        <div data-reveal="0" style="background:#FFFFFF;border:2px solid #241E1A;border-radius:16px;box-shadow:4px 4px 0 #241E1A;padding:20px 22px;">
+          <h4 style="margin:0 0 10px;font-family:'Zen Maru Gothic',sans-serif;font-size:15.5px;font-weight:900;">⑫ 「はじめての方へ」の入り口</h4>
+          <div aria-hidden="true" style="background:#FBF7F0;border:1.5px solid #241E1A;border-radius:12px;padding:10px;margin:0 0 4px;"><div style="display:flex;gap:5px;flex-wrap:wrap;"><span style="background:var(--accSoft,#FFE3D8);border:1.5px solid #241E1A;border-radius:999px;font-size:9.5px;font-weight:900;padding:3px 10px;">はじめての方へ</span><span style="background:#FFFFFF;border:1.5px solid #C9BFB6;border-radius:999px;font-size:9.5px;padding:3px 10px;color:#8A817A;">メニュー</span><span style="background:#FFFFFF;border:1.5px solid #C9BFB6;border-radius:999px;font-size:9.5px;padding:3px 10px;color:#8A817A;">アクセス</span></div></div>
+          <div style="font-size:9.5px;font-weight:900;color:#8A817A;text-align:right;margin:0 2px 8px 0;">↑ こういうやつ(イメージ)</div>
+          <p style="margin:0 0 10px;font-size:13.5px;line-height:1.9;color:#4A433D;">ナビかページ上部に初心者向けの入り口を作り、料金・流れ・FAQへ案内します。</p>
+          <div style="font-size:12.5px;line-height:1.9;font-weight:700;color:var(--accDark,#D8451F);">▶ 効く理由:比較を始める前の人には、機能の説明より「わかってくれている」と感じられる言葉が届きます(<a href="#butterfly">第1章</a>)。この受け皿がないと、初めての人を逃してしまいます。</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="copy-formula" style="padding-top:88px;">
+      <div data-reveal="0">
+        <div style="display:inline-block;font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:12px;background:#B9E6FF;border:2px solid #241E1A;border-radius:8px;padding:2px 10px;">INTRO.02</div>
+        <h2 style="font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:clamp(23px,2.6vw,31px);line-height:1.6;margin:12px 0 0;">テッパンのコピーの作り方<span style="display:block;font-size:16px;color:#6B635C;margin-top:4px;">基本は「短く、はっきり」。読む人は最初の3秒で「自分に関係があるか」を決めています。</span></h2>
+      </div>
+      <h3 style="display:flex;align-items:center;gap:10px;font-family:'Zen Maru Gothic',sans-serif;font-size:18px;font-weight:900;margin:32px 0 6px;"><span style="width:12px;height:12px;border-radius:50%;background:var(--acc,#FF5C38);border:2px solid #241E1A;flex:none;"></span>言い切り型ヒーローコピー</h3>
+      <p style="font-size:15.5px;line-height:2.05;color:#4A433D;margin:12px 0;">「家を、直す。」「季節を、ひと粒に。」のように、<strong>名詞+読点+動詞</strong>の短い文で言い切ります。3秒で伝わることが第一です(パルス消費・<a href="#pulse">第2章</a>)。説明したいことはサブコピー1行に回します。最初の画面に2文以上書きたくなったら、伝えたいことが絞れていないサインです。</p>
+      <h3 style="display:flex;align-items:center;gap:10px;font-family:'Zen Maru Gothic',sans-serif;font-size:18px;font-weight:900;margin:32px 0 6px;"><span style="width:12px;height:12px;border-radius:50%;background:var(--acc,#FF5C38);border:2px solid #241E1A;flex:none;"></span>ベネフィット変換 — ただし「出し分け」前提</h3>
+      <p style="font-size:15.5px;line-height:2.05;color:#4A433D;margin:12px 0;">前提として、Googleの<strong>「バタフライサーキット」</strong>(<a href="#butterfly">第1章</a>)の話を少しだけ。人は買う前に、選択肢を広げる<strong>「さぐる」</strong>検索と、絞り込む<strong>「かためる」</strong>検索を、8の字を描くように何度も行き来しています。いまページを見ている人がどちらのモードなのか——それによって、届く言葉が変わります。</p>
+      <div data-reveal="0" style="background:#FFFFFF;border:2px solid #241E1A;border-radius:16px;box-shadow:4px 4px 0 #241E1A;padding:22px 20px 14px;margin:16px 0;">
+        <div style="display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;">
+          <div style="width:132px;height:86px;border:2.5px solid var(--acc,#FF5C38);border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;background:var(--accSoft,#FFE3D8);">
+            <span style="font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:16px;color:var(--accDark,#D8451F);">さぐる</span>
+            <span style="font-size:10px;font-weight:700;color:#6B635C;">選択肢を広げる</span>
+          </div>
+          <div style="display:flex;flex-direction:column;align-items:center;gap:2px;">
+            <span style="font-size:18px;color:var(--acc,#FF5C38);">⇢</span>
+            <span style="font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:10px;color:#8A817A;">何度も行き来</span>
+            <span style="font-size:18px;color:#4D7CFE;">⇠</span>
+          </div>
+          <div style="width:132px;height:86px;border:2.5px solid #4D7CFE;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#E2EAFF;">
+            <span style="font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:16px;color:#2F55C9;">かためる</span>
+            <span style="font-size:10px;font-weight:700;color:#6B635C;">選択肢を絞る</span>
+          </div>
+        </div>
+        <div style="text-align:center;font-size:11.5px;font-weight:700;color:#8A817A;margin-top:12px;">さぐる=感情・体験の言葉が届く/かためる=機能・数字が届く。相手のモードで言葉を選びます</div>
+      </div>
+      <div data-reveal="0" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;margin:16px 0;">
+        <div style="background:var(--accSoft,#FFE3D8);border:2px solid #241E1A;border-radius:16px;padding:18px 20px;">
+          <div style="font-family:'Zen Maru Gothic',sans-serif;font-size:13px;font-weight:900;color:var(--accDark,#D8451F);margin-bottom:8px;">さぐる層(まだ比較前)には → 感情・体験</div>
+          <div style="font-size:13.5px;line-height:1.9;color:#4A433D;">「試作のやり直しが、消える。」<br>「月曜の朝が、ちょっとラクになる。」</div>
+        </div>
+        <div style="background:#E2EAFF;border:2px solid #241E1A;border-radius:16px;padding:18px 20px;">
+          <div style="font-family:'Zen Maru Gothic',sans-serif;font-size:13px;font-weight:900;color:#2F55C9;margin-bottom:8px;">かためる層(比較中)には → 機能・数字</div>
+          <div style="font-size:13.5px;line-height:1.9;color:#4A433D;">「±0.001mm・最短3日・ISO 9001」<br>「初回カット+カラー ¥4,900〜」</div>
+        </div>
+      </div>
+      <p style="font-size:15.5px;line-height:2.05;color:#4A433D;margin:12px 0;">同じ商品でも、検索の目的によって届くコピーは変わります。Google×ヴァリューズの調査では、目的に合わせた出し分けで反応率が約2.6倍でした(<a href="#butterfly">第1章</a>)。ページを2種類作れないときは、最初の画面に感情、その下に機能・数字の順で並べるのが定番です。</p>
+      <h3 style="display:flex;align-items:center;gap:10px;font-family:'Zen Maru Gothic',sans-serif;font-size:18px;font-weight:900;margin:32px 0 6px;"><span style="width:12px;height:12px;border-radius:50%;background:var(--acc,#FF5C38);border:2px solid #241E1A;flex:none;"></span>数字・不安・マイクロコピー</h3>
+      <ul style="margin:12px 0;padding-left:22px;font-size:15px;line-height:2.05;color:#4A433D;">
+        <li style="margin:8px 0;"><strong>数字は1画面3つまで</strong> — 「創業42年・施工1,200棟・満足度97%」のように、主張のすぐ近くに載せます。盛った数字はAI検索の時代、すぐに照合されて信頼まで失います。</li>
+        <li style="margin:8px 0;"><strong>不安を先に言葉にする</strong> — いまの買い手は「よい選択」より「失敗しない選択」を重視します(ロジカル消費・<a href="#thinktank">第10章</a>、BtoBの無決定・<a href="#b2b-buyer">第15章</a>)。「初めてでも大丈夫?」「あとから追加料金は?」に先回りして答えておくと安心されます。</li>
+        <li style="margin:8px 0;"><strong>マイクロコピーがいちばん割に合う</strong> — ボタンは「送信」ではなく、<strong>動詞+得られるもの</strong>(「無料で相談する」「資料をもらう」)にします。ボタンのすぐ下には「営業電話はしません」「入力30秒」のような一言を添えます。成果への影響が大きいわりに、いちばん見落とされている場所です。</li>
+        <li style="margin:8px 0;"><strong>型の定番・新PASONA</strong> — 問題→共感→解決→提案→絞込→行動の流れは、LPで今も現役です。ただし今は共感パートが主役。問題を煽るより、「わかります、それ困りますよね」を先に伝えます。煽るタイプのコピーは、SNSで悪い意味で広まるリスクのほうが大きくなっています。</li>
+      </ul>
+    </section>
+
+    <section id="content-writing" style="padding-top:88px;">
+      <div data-reveal="0">
+        <div style="display:inline-block;font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:12px;background:#B9E6FF;border:2px solid #241E1A;border-radius:8px;padding:2px 10px;">INTRO.03</div>
+        <h2 style="font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:clamp(23px,2.6vw,31px);line-height:1.6;margin:12px 0 0;">ウケる&検索される(=AIに引用される)コンテンツ<span style="display:block;font-size:16px;color:#6B635C;margin-top:4px;">読み手は人間とAIの2種類になりました。両方に届く書き方です。</span></h2>
+      </div>
+      <ul style="margin:18px 0;padding-left:22px;font-size:15px;line-height:2.05;color:#4A433D;">
+        <li style="margin:8px 0;"><strong>結論を最初に(逆三角形)</strong> — 見出しで問いを立て、最初の一文で答え、そのあとに理由と詳細を書きます。時間のない人にも、答えを引用したいAIにも届きます(<a href="#dt-b2b">DT.06</a>)。</li>
+        <li style="margin:8px 0;"><strong>一次情報がいちばん強い</strong> — 自分で測った・作った・失敗した話のことです。「そこにしかない情報」だけがAIの回答に引用され、社名での検索につながります。まとめ記事の量産は、AIのほうが速いので今後は価値が残りません。</li>
+        <li style="margin:8px 0;"><strong>質問の見出し+すぐ答える+構造化</strong> — 「Q. 導入までの期間は?」→「A. 標準プランで約2週間です。」の形にそろえ、JSON-LDのFAQ構造化データもあわせて設定します(<a href="#dt-wix-recipes">レシピ6</a>)。</li>
+        <li style="margin:8px 0;"><strong>「保存される」を狙う</strong> — 「あとで見よう」と保存した投稿、たまっていませんか。SNSではいいねより保存が重視されます。見返したくなるチェックリストや一覧が拡散の起点になり、口コミ(UGC)の種になります(<a href="#ulssas">ULSSAS・第3章</a>)。</li>
+        <li style="margin:8px 0;"><strong>覚えてもらう記事を混ぜる</strong> — すぐCVを狙う記事だけでなく、「この会社おもしろい」と社名を覚えてもらう記事(独自調査・読み物)も混ぜます。買い手の95%はまだ買う予定のない人で(<a href="#b2b-theory">第14章</a>)、必要になった日に思い出してもらえるかが分かれ目です。社名で検索してもらえることが、いちばん強いSEOになります。</li>
+        <li style="margin:8px 0;"><strong>タイトルの型</strong> — 数字+具体+ベネフィットで32字前後、結論を隠さないこと。もったいぶるタイトルは、AIの要約で中身が先に出てしまい逆効果になりつつあります。</li>
+      </ul>
+    </section>
+
+    <section id="cv-structure" style="padding-top:88px;">
+      <div data-reveal="0">
+        <div style="display:inline-block;font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:12px;background:#B9E6FF;border:2px solid #241E1A;border-radius:8px;padding:2px 10px;">INTRO.04</div>
+        <h2 style="font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:clamp(23px,2.6vw,31px);line-height:1.6;margin:12px 0 0;">どの入口から来てもCVにつながる、現代のページ構成<span style="display:block;font-size:16px;color:#6B635C;margin-top:4px;">トップページから来る人は、もう少数派。どのページも入り口です。</span></h2>
+      </div>
+      <p style="font-size:15.5px;line-height:2.05;color:#4A433D;margin:18px 0 12px;">自分が調べものをするときも、検索やSNSからいきなり途中のページに着地していませんか。いまは、どのページも玄関です。</p>
+      <div data-reveal="0" style="background:#FFFFFF;border:2px solid #241E1A;border-radius:16px;box-shadow:4px 4px 0 #241E1A;padding:24px 18px 16px;margin:22px 0;">
+        <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:14px;">
+          <div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:center;">
+            <div style="display:flex;flex-direction:column;align-items:center;gap:5px;width:66px;">
+              <span style="width:46px;height:46px;border-radius:50%;background:#FFF0D9;border:2px solid #241E1A;display:flex;align-items:center;justify-content:center;"><span style="position:relative;width:15px;height:15px;border:2.5px solid #241E1A;border-radius:50%;display:block;"><span style="position:absolute;width:9px;height:2.5px;background:#241E1A;bottom:-4px;right:-6px;transform:rotate(45deg);border-radius:2px;"></span></span></span>
+              <span style="font-size:9.5px;font-weight:900;text-align:center;line-height:1.4;">ふつうの<br>検索</span>
+            </div>
+            <div style="display:flex;flex-direction:column;align-items:center;gap:5px;width:66px;">
+              <span style="width:46px;height:46px;border-radius:12px 12px 12px 3px;background:#FFF0D9;border:2px solid #241E1A;display:flex;align-items:center;justify-content:center;"><span style="font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:19px;">?</span></span>
+              <span style="font-size:9.5px;font-weight:900;text-align:center;line-height:1.4;">質問・音声<br>の検索</span>
+            </div>
+            <div style="display:flex;flex-direction:column;align-items:center;gap:5px;width:66px;">
+              <span style="width:46px;height:46px;border-radius:50%;background:#FFF0D9;border:2px solid #241E1A;display:flex;align-items:center;justify-content:center;"><span style="width:26px;height:19px;background:#B9E6FF;border:2px solid #241E1A;border-radius:6px;display:flex;align-items:center;justify-content:center;gap:4px;"><span style="width:4px;height:6px;border-radius:2px;background:#241E1A;"></span><span style="width:4px;height:6px;border-radius:2px;background:#241E1A;"></span></span></span>
+              <span style="font-size:9.5px;font-weight:900;text-align:center;line-height:1.4;">AI検索の<br>回答から</span>
+            </div>
+            <div style="display:flex;flex-direction:column;align-items:center;gap:5px;width:66px;">
+              <span style="width:46px;height:46px;border-radius:50%;background:#FFF0D9;border:2px solid #241E1A;display:flex;align-items:center;justify-content:center;"><span style="color:var(--acc,#FF5C38);font-size:19px;">♥</span></span>
+              <span style="font-size:9.5px;font-weight:900;text-align:center;line-height:1.4;">SNS・界隈<br>の口コミ</span>
+            </div>
+            <div style="display:flex;flex-direction:column;align-items:center;gap:5px;width:66px;">
+              <span style="width:46px;height:46px;border-radius:50%;background:#FFF0D9;border:2px solid #241E1A;display:flex;align-items:center;justify-content:center;"><span style="font-size:9px;font-weight:900;background:#FFE066;border:1.5px solid #241E1A;border-radius:4px;padding:2px 5px;">AD</span></span>
+              <span style="font-size:9.5px;font-weight:900;text-align:center;line-height:1.4;">広告・<br>紹介リンク</span>
+            </div>
+          </div>
+          <span style="font-size:20px;color:#8A817A;">→</span>
+          <div style="display:flex;flex-direction:column;align-items:center;gap:5px;">
+            <div style="width:88px;background:#FFFFFF;border:2px solid #241E1A;border-radius:8px;padding:6px;box-shadow:2px 2px 0 #241E1A;display:flex;flex-direction:column;gap:4px;">
+              <span style="background:#FFE066;border:1px solid #241E1A;border-radius:4px;font-size:8.5px;font-weight:900;text-align:center;padding:2px 0;">結論</span>
+              <span style="background:#E2EAFF;border:1px solid #241E1A;border-radius:4px;font-size:8.5px;font-weight:900;text-align:center;padding:2px 0;">証拠</span>
+              <span style="background:var(--acc,#FF5C38);color:#FFFFFF;border:1px solid #241E1A;border-radius:999px;font-size:8.5px;font-weight:900;text-align:center;padding:2px 0;">CTA</span>
+            </div>
+            <span style="font-size:9.5px;font-weight:900;color:#8A817A;">着地したページ</span>
+          </div>
+          <span style="font-size:20px;color:#8A817A;">→</span>
+          <span style="width:52px;height:52px;border-radius:50%;background:#FFD43A;border:2px solid #241E1A;box-shadow:3px 3px 0 #241E1A;display:flex;align-items:center;justify-content:center;font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:13px;animation:wiggle 2.6s ease-in-out infinite;animation-play-state:var(--play,running);flex:none;">CV!</span>
+        </div>
+        <div style="text-align:center;font-size:12px;font-weight:700;color:#8A817A;margin-top:14px;">図A — 入口はバラバラ。でも着地ページに「結論→証拠→CTA」がそろっていれば、どこからでもCVに届きます</div>
+      </div>
+      <div data-reveal="0" style="background:#FFFFFF;border:2px solid #241E1A;border-radius:16px;box-shadow:4px 4px 0 #241E1A;padding:24px 18px 16px;margin:16px 0;">
+        <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:20px;">
+          <div style="display:flex;flex-direction:column;align-items:center;gap:7px;">
+            <div style="background:#FFF6E9;border:2px solid #241E1A;border-radius:14px 14px 3px 14px;padding:8px 12px;font-size:11px;font-weight:700;line-height:1.7;box-shadow:2px 2px 0 #241E1A;">外壁の塗り替えって<br>いくらかかる?</div>
+            <span style="width:34px;height:34px;border-radius:50%;background:var(--accSoft,#FFE3D8);border:2px solid #241E1A;display:flex;align-items:center;justify-content:center;gap:5px;"><span style="width:4px;height:6px;border-radius:2px;background:#241E1A;"></span><span style="width:4px;height:6px;border-radius:2px;background:#241E1A;"></span></span>
+            <span style="font-size:9.5px;font-weight:900;color:#8A817A;">質問した人</span>
+          </div>
+          <span style="font-size:20px;color:#8A817A;">⇠</span>
+          <div style="display:flex;flex-direction:column;align-items:center;gap:2px;animation:driftX 4.2s ease-in-out infinite;animation-play-state:var(--play,running);">
+            <span style="width:9px;height:9px;border-radius:50%;background:var(--acc,#FF5C38);border:1.5px solid #241E1A;display:block;"></span>
+            <span style="width:2.5px;height:6px;background:#241E1A;display:block;"></span>
+            <div style="width:54px;height:38px;background:#B9E6FF;border:2px solid #241E1A;border-radius:12px;display:flex;align-items:center;justify-content:center;gap:9px;">
+              <span style="width:7px;height:11px;border-radius:4px;background:#241E1A;"></span>
+              <span style="width:7px;height:11px;border-radius:4px;background:#241E1A;"></span>
+            </div>
+            <div style="margin-top:-3px;transform:rotate(-6deg);width:84px;background:#FFFFFF;border:2px solid var(--acc,#FF5C38);border-radius:7px;padding:5px 7px;box-shadow:2px 2px 0 #241E1A;">
+              <div style="font-size:8.5px;font-weight:900;line-height:1.4;">FAQ:外壁塗装の費用</div>
+              <div style="height:3.5px;background:#E8E0D2;border-radius:2px;margin-top:4px;"></div>
+              <div style="height:3.5px;width:70%;background:#E8E0D2;border-radius:2px;margin-top:3px;"></div>
+            </div>
+            <span style="font-size:9.5px;font-weight:900;color:var(--accDark,#D8451F);margin-top:4px;">AIが「答えの1ページ」だけ運ぶ</span>
+          </div>
+          <span style="font-size:20px;color:#8A817A;">⇠</span>
+          <div style="display:flex;flex-direction:column;align-items:center;gap:7px;">
+            <div style="display:grid;grid-template-columns:repeat(2,72px);gap:6px;">
+              <span style="width:72px;height:48px;background:#FBF7F0;border:1.5px solid #241E1A;border-radius:7px;padding:5px 6px;display:flex;flex-direction:column;gap:3px;box-sizing:border-box;"><span style="font-size:8.5px;font-weight:900;">トップページ</span><span style="height:3.5px;background:#E0D8C8;border-radius:2px;"></span><span style="height:3.5px;width:70%;background:#E0D8C8;border-radius:2px;"></span></span>
+              <span style="width:72px;height:48px;background:#FBF7F0;border:1.5px solid #241E1A;border-radius:7px;padding:5px 6px;display:flex;flex-direction:column;gap:3px;box-sizing:border-box;"><span style="font-size:8.5px;font-weight:900;">サービス紹介</span><span style="height:3.5px;background:#E0D8C8;border-radius:2px;"></span><span style="height:3.5px;width:70%;background:#E0D8C8;border-radius:2px;"></span></span>
+              <span style="width:72px;height:48px;background:#FBF7F0;border:1.5px solid #241E1A;border-radius:7px;padding:5px 6px;display:flex;flex-direction:column;gap:3px;box-sizing:border-box;"><span style="font-size:8.5px;font-weight:900;">施工事例</span><span style="height:3.5px;background:#E0D8C8;border-radius:2px;"></span><span style="height:3.5px;width:70%;background:#E0D8C8;border-radius:2px;"></span></span>
+              <span style="width:72px;height:48px;border:2px dashed var(--acc,#FF5C38);border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:8.5px;font-weight:900;color:var(--accDark,#D8451F);text-align:center;line-height:1.5;box-sizing:border-box;">FAQ<br>持ち出し中!</span>
+            </div>
+            <span style="font-size:9.5px;font-weight:900;color:#8A817A;">あなたのサイト(ほかのページは置いたまま)</span>
+          </div>
+        </div>
+        <div style="text-align:center;font-size:12px;font-weight:700;color:#8A817A;margin-top:14px;">図B — AI検索は、質問に合う1ページだけを抜いて届けます。トップページは経由しません</div>
+      </div>
+      <p style="font-size:15.5px;line-height:2.05;color:#4A433D;margin:12px 0;">検索そのものも変わっています。キーワードの羅列ではなく<strong>「外壁の塗り替えっていくらかかる?」のような質問文</strong>で検索する人が増え、その答えはAIが要約して返すようになりました(ゼロクリック化・<a href="#ai-commerce">第12章</a>)。質問に答えるFAQや記事が入り口になり、SNSの投稿から事例ページへ直行する人もいます。つまり、<strong>どのページから入ってくるかは、もう選べません</strong>。どこに着地しても「結論→証拠→CTA」がそろっていて、そのページだけで用件が済む——これが現代の構成の考え方です。</p>
+      <ul style="margin:12px 0;padding-left:22px;font-size:15px;line-height:2.05;color:#4A433D;">
+        <li style="margin:8px 0;"><strong>全ページにミニヒーロー</strong> — 記事でも事例ページでも、冒頭に「何のページで、次に何をすればいいか」がわかる一言とボタンを1つ。どのページも「通過するだけ」の作りにしないことです。</li>
+        <li style="margin:8px 0;"><strong>CTAは1種類+ゆるい選択肢</strong> — メインのCTA(予約・相談)は1つに絞ります(迷わせないため・<a href="#genz">第11章</a>)。あわせて、まだ迷っている人向けに資料ダウンロードやLINE登録を1つだけ添えます。今すぐ買う人は5%だけなので(<a href="#b2b-theory">第14章</a>)、残り95%とつながる形にしておきます。</li>
+        <li style="margin:8px 0;"><strong>追従CTA</strong> — スマホでは画面下の固定バーにします。どこで読むのをやめても、そのまま押せるようにしておきます。</li>
+        <li style="margin:8px 0;"><strong>回遊の三角形</strong> — 記事→関連事例→CVページの三角形の導線にします。行き止まりのページを作らないこと。内部リンクは「次に知りたくなること」の順に並べます。</li>
+        <li style="margin:8px 0;"><strong>フォームは1問ずつ</strong> — チャット型にすると完了率が上がります(<a href="#sme-zeirishi">税理士サンプル</a>)。項目は、本当に必要なものだけに減らします。</li>
+        <li style="margin:8px 0;"><strong>縦の並びの定番</strong> — 結論(ヒーロー)→証拠(数字・ロゴ・レビュー)→中身(サービス・事例)→不安の解消(FAQ・料金)→後押し(CTA+マイクロコピー)の順番です。途中から読まれても意味が通るよう、それぞれのブロックだけで話が完結するようにします。</li>
+      </ul>
+    </section>
+
+    <section id="section-layout" style="padding-top:88px;">
+      <div data-reveal="0">
+        <div style="display:inline-block;font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:12px;background:#B9E6FF;border:2px solid #241E1A;border-radius:8px;padding:2px 10px;">INTRO.05</div>
+        <h2 style="font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:clamp(23px,2.6vw,31px);line-height:1.6;margin:12px 0 0;">セクション内レイアウトの型<span style="display:block;font-size:16px;color:#6B635C;margin-top:4px;">中身は毎回違っても、骨格はこの4点セットで大丈夫です。</span></h2>
+      </div>
+      <div data-reveal="0" style="display:flex;flex-wrap:wrap;gap:20px;align-items:flex-start;margin:22px 0;">
+        <div style="flex:1 1 260px;max-width:340px;background:#FFFFFF;border:2px solid #241E1A;border-radius:16px;box-shadow:4px 4px 0 #241E1A;padding:18px;">
+          <div style="font-size:10.5px;font-weight:900;color:#8A817A;font-family:'Zen Maru Gothic',sans-serif;margin-bottom:10px;">1セクションの骨格(ワイヤー)</div>
+          <div style="background:#FFF0D9;border:1.5px solid #241E1A;border-radius:10px;padding:12px 14px;font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:16px;">① 見出し:言い切る</div>
+          <div style="background:#FFFFFF;border:1.5px solid #241E1A;border-radius:10px;padding:8px 14px;font-size:11.5px;color:#6B635C;margin-top:8px;">② 補足は1行だけ</div>
+          <div style="display:flex;gap:8px;margin-top:8px;">
+            <div style="flex:1;background:repeating-linear-gradient(45deg,#EFE8DD 0 8px,#F7F2E9 8px 16px);border:1.5px solid #241E1A;border-radius:10px;height:52px;display:flex;align-items:center;justify-content:center;font-size:10px;color:#8A817A;">③ 証拠:写真</div>
+            <div style="flex:1;background:#E2EAFF;border:1.5px solid #241E1A;border-radius:10px;height:52px;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:900;color:#2F55C9;">③ 証拠:数字・レビュー</div>
+          </div>
+          <div style="margin-top:8px;text-align:right;"><span style="display:inline-block;background:var(--acc,#FF5C38);color:#FFFFFF;font-size:11px;font-weight:900;font-family:'Zen Maru Gothic',sans-serif;border:1.5px solid #241E1A;border-radius:999px;padding:5px 14px;box-shadow:2px 2px 0 #241E1A;">④ 小さなCTA →</span></div>
+        </div>
+        <div style="flex:1.2 1 300px;min-width:280px;">
+          <ul style="margin:0;padding-left:22px;font-size:15px;line-height:2.05;color:#4A433D;">
+            <li style="margin:8px 0;"><strong>1セクション=1メッセージ</strong> — 言いたいことが2つあるなら、2つのセクションに分けます。詰め込むほど読まれなくなります。</li>
+            <li style="margin:8px 0;"><strong>見出しは本文の3倍</strong> — ページは拾い読みされる前提で、見出しだけ読んで話が通るかを毎回確かめます。</li>
+            <li style="margin:8px 0;"><strong>余白のルール</strong> — グループ内の余白<グループ間の余白。これを守るだけで、ぐっと整って見えます。</li>
+            <li style="margin:8px 0;"><strong>証拠は主張のすぐ後に</strong> — 「高精度です」の隣に「±0.001mm」。離れた場所にある証拠は、読み手に届きません。</li>
+          </ul>
+        </div>
+      </div>
+      <ul style="margin:12px 0;padding-left:22px;font-size:15px;line-height:2.05;color:#4A433D;">
+        <li style="margin:8px 0;"><strong>スマホは縦積みが前提</strong> — PCで画像を左右交互に置く場合は、スマホで縦一列になったときの順番が正しいかを必ず確認します。</li>
+        <li style="margin:8px 0;"><strong>ベントグリッドは「一覧」のときだけ</strong> — 優先度をつけて、たくさん見せたいとき専用です(<a href="#dt-deepdive">DT.02</a>)。流れのある内容を無理にグリッドにすると、読む順番が伝わらなくなります。</li>
+        <li style="margin:8px 0;"><strong>動きには意味を持たせる</strong> — アニメーションは「注目してほしい場所」だけ、1画面につき1つまで。オフ設定(reduced-motion)にも配慮します(<a href="#dt-rules">DT.04</a>)。全部が動くページでは、どれも目立ちません。</li>
+      </ul>
+    </section>
+
+    
+
+  </div>
+</div>
+</sc-if>
+
 <div style="max-width:1160px;margin:0 auto;padding:10px 28px 70px;">
   <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;border-top:2px solid #241E1A;padding-top:24px;">
     <sc-if value="{{ hasPrev }}" hint-placeholder-val="{{ false }}">
@@ -2973,7 +3298,7 @@ a:hover{color:var(--acc,#FF5C38);text-decoration-color:currentColor;}
   &quot;sourcesOpen&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: false, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;出典&quot;}
 }">
 class Component extends DCLogic {
-  state = { page: 0, spec: 0 };
+  state = { page: 8, spec: 0 };
 
   componentDidMount() {
     this._map = {
@@ -2986,7 +3311,8 @@ class Component extends DCLogic {
       part6: 6, 'dt-summary': 6, 'dt-specimens': 6, 'dt-overview': 6, 'dt-deepdive': 6, 'dt-system': 6, 'dt-rules': 6, 'dt-japan': 6, 'dt-b2b': 6, 'dt-wix-basics': 6, 'dt-wix-matrix': 6, 'dt-wix-recipes': 6, 'dt-conclusion': 6, 'dt-caveats': 6, 'dt-method': 6,
       part7: 7, 'sme-intro': 7, 'sme-koumuten': 7, 'sme-cafe': 7, 'sme-salon': 7, 'sme-factory': 7, 'sme-zeirishi': 7, 'sme-wagashi': 7, 'sme-saas': 7, 'sme-shosha': 7, 'sme-howto': 7
     };
-    this._topIds = { home: 1, part1: 1, part2: 1, part3: 1, part4: 1, part5: 1, part6: 1, part7: 1 };
+    Object.assign(this._map, { intro: 8, waza: 8, 'copy-formula': 8, 'content-writing': 8, 'cv-structure': 8, 'section-layout': 8 });
+    this._topIds = { home: 1, part1: 1, part2: 1, part3: 1, part4: 1, part5: 1, part6: 1, part7: 1, intro: 1 };
     this._specLabels = ['ベントグリッドの見本', 'グラスモーフィズムの見本', 'オーロラグラデーションとグレインの見本', 'ネオブルータリズムの見本', '超大型タイポグラフィの見本', 'ダークSaaSデザインの見本', 'マキシマリズムの見本', 'バリアブルフォントの見本', 'ノイズ・グレイン質感の見本', '3D・WebGLの見本', 'スクロールテリングの見本', 'ダークモードの見本', 'AI生成っぽいビジュアルの見本', 'カスタムカーソルとマイクロインタラクションの見本'];
     this._specTitles = ['01 ベントグリッド', '02 グラスモーフィズム', '03 オーロラ+グレイン', '04 ネオブルータリズム', '05 超大型タイポ', '06 ダークSaaS', '07 マキシマリズム', '08 バリアブルフォント', '09 ノイズ・グレイン', '10 3D / WebGL', '11 スクロールテリング', '12 ダークモード', '13 AIルック(反面教師)', '14 カーソル/マイクロ'];
     this._onHash = () => this.route(false);
@@ -3109,29 +3435,31 @@ class Component extends DCLogic {
   renderVals() {
     const p = this.state.page;
     const s = this.state.spec;
-    const ids = ['home', 'part1', 'part2', 'part3', 'part4', 'part5', 'part6', 'part7'];
-    const labels = ['ホーム', '第I部 基本理論編', '第II部 大手の最新研究', '第III部 消費のいま', '第IV部 BtoB編', 'まとめ — 5つの流れ', 'デザイントレンド編', '業種別イメージ図'];
+    const ids = ['home', 'part1', 'part2', 'part3', 'part4', 'part5', 'part6', 'part7', 'intro'];
+    const labels = ['ホーム', '第I部 基本理論編', '第II部 大手の最新研究', '第III部 消費のいま', '第IV部 BtoB編', 'まとめ — 5つの流れ', 'デザイン編', '業種別イメージ図', 'はじめに — なぜ効く?'];
+    const order = [8, 0, 1, 2, 3, 4, 5, 6, 7];
+    const pos = order.indexOf(p);
     const mk = (i) => () => this.jump(ids[i]);
-    const navItems = ['ホーム', '第I部', '第II部', '第III部', '第IV部', 'まとめ', 'トレンド', '業種例'].map((label, i) => ({
-      label,
-      go: mk(i),
-      color: p === i ? '#241E1A' : '#8A817A',
+    const navItems = [[8, 'はじめに'], [0, 'ホーム'], [1, '第I部'], [2, '第II部'], [3, '第III部'], [4, '第IV部'], [5, 'まとめ'], [6, 'デザイン'], [7, '業種例']].map((pair) => ({
+      label: pair[1],
+      go: mk(pair[0]),
+      color: p === pair[0] ? '#241E1A' : '#8A817A',
       bar: {
         display: 'block', height: '3px', marginTop: '4px', borderRadius: '3px',
         background: 'var(--acc,#FF5C38)',
-        width: p === i ? '100%' : '0%',
+        width: p === pair[0] ? '100%' : '0%',
         transition: 'width .35s cubic-bezier(.22,1,.36,1)'
       }
     }));
     return {
-      is0: p === 0, is1: p === 1, is2: p === 2, is3: p === 3, is4: p === 4, is5: p === 5, is6: p === 6, is7: p === 7,
+      is0: p === 0, is1: p === 1, is2: p === 2, is3: p === 3, is4: p === 4, is5: p === 5, is6: p === 6, is7: p === 7, is8: p === 8,
       navItems,
-      go0: mk(0), go1: mk(1), go2: mk(2), go3: mk(3), go4: mk(4), go5: mk(5), go6: mk(6), go7: mk(7),
-      hasPrev: p > 0, hasNext: p < 7,
-      prevLabel: p > 0 ? labels[p - 1] : '',
-      nextLabel: p < 7 ? labels[p + 1] : '',
-      goPrev: () => { if (p > 0) this.jump(ids[p - 1]); },
-      goNext: () => { if (p < 7) this.jump(ids[p + 1]); },
+      go0: mk(0), go1: mk(1), go2: mk(2), go3: mk(3), go4: mk(4), go5: mk(5), go6: mk(6), go7: mk(7), go8: mk(8),
+      hasPrev: pos > 0, hasNext: pos < order.length - 1,
+      prevLabel: pos > 0 ? labels[order[pos - 1]] : '',
+      nextLabel: pos < order.length - 1 ? labels[order[pos + 1]] : '',
+      goPrev: () => { if (pos > 0) this.jump(ids[order[pos - 1]]); },
+      goNext: () => { if (pos < order.length - 1) this.jump(ids[order[pos + 1]]); },
       progressRef: (el) => { this._progress = el; },
       specClick: (e) => {
         const el = e.target && e.target.closest ? e.target.closest('[aria-label]') : null;
