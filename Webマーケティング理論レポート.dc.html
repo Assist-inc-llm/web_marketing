@@ -28,6 +28,16 @@ a:hover{color:var(--acc,#FF5C38);text-decoration-color:currentColor;}
 @keyframes bob{0%,100%{transform:rotate(-3deg) translateY(0);}50%{transform:rotate(3deg) translateY(-5px);}}
 @keyframes wiggle{0%,100%{transform:rotate(-9deg);}50%{transform:rotate(11deg);}}
 @keyframes driftX{0%,100%{transform:translate(0,0);}50%{transform:translate(46px,-20px);}}
+@media (max-width:700px){
+[data-deco="hide-sm"]{display:none !important;}
+header nav{flex-wrap:nowrap !important;overflow-x:auto;max-width:100%;scrollbar-width:none;}
+header nav::-webkit-scrollbar{display:none;}
+header nav button{font-size:11.5px !important;padding:7px 8px 5px !important;white-space:nowrap;}
+[data-logo]{font-size:12px !important;}
+[data-fv="h1"]{font-size:25px !important;letter-spacing:0 !important;}
+[data-fv="sub"]{font-size:13.5px !important;}
+[data-fv="lead"]{font-size:12.5px !important;}
+}
 </style>
 </helmet>
 
@@ -35,7 +45,7 @@ a:hover{color:var(--acc,#FF5C38);text-decoration-color:currentColor;}
   <div style="max-width:1240px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;gap:8px 16px;flex-wrap:wrap;min-height:58px;">
     <a href="#home" style="display:flex;align-items:center;gap:10px;text-decoration:none;color:#241E1A;padding:9px 0;">
       <span style="width:14px;height:14px;border-radius:50%;background:var(--acc,#FF5C38);border:2px solid #241E1A;display:block;flex:none;"></span>
-      <span style="font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:15.5px;letter-spacing:.03em;">Webマーケ理論、ぜんぶ入り。</span>
+      <span data-logo style="font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:15.5px;letter-spacing:.03em;">Webマーケ理論、ぜんぶ入り。</span>
     </a>
     <nav style="display:flex;flex-wrap:wrap;gap:2px;">
       <sc-for list="{{ navItems }}" as="ni" hint-placeholder-count="6">
@@ -65,11 +75,11 @@ a:hover{color:var(--acc,#FF5C38);text-decoration-color:currentColor;}
     <div style="position:relative;max-width:1080px;margin:0 auto;">
       <div style="display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.22em;color:#241E1A;background:#FFFFFF;border:2px solid #241E1A;border-radius:999px;padding:7px 16px;box-shadow:3px 3px 0 #241E1A;animation:fadeUp .8s cubic-bezier(.22,1,.36,1) .05s both;animation-duration:var(--adur,.8s);">RESEARCH REPORT — 2026.07 増補版</div>
       <h1 style="font-family:'Zen Maru Gothic',sans-serif;font-weight:900;margin:30px 0 0;line-height:1.42;letter-spacing:.01em;">
-        <span style="display:block;font-size:clamp(30px,4.6vw,56px);animation:fadeUp .9s cubic-bezier(.22,1,.36,1) .15s both;animation-duration:var(--adur,.9s);">「いま、<span style="background:linear-gradient(transparent 62%,#FFE066 62%);">なんで売れる?</span>」を</span>
-        <span style="display:block;font-size:clamp(30px,4.6vw,56px);margin-top:4px;animation:fadeUp .9s cubic-bezier(.22,1,.36,1) .3s both;animation-duration:var(--adur,.9s);">ぜんぶ<span style="color:var(--acc,#FF5C38);">まとめた</span>。</span>
+        <span data-fv="h1" style="display:block;font-size:clamp(30px,4.6vw,56px);animation:fadeUp .9s cubic-bezier(.22,1,.36,1) .15s both;animation-duration:var(--adur,.9s);">「いま、<span style="background:linear-gradient(transparent 62%,#FFE066 62%);white-space:nowrap;">なんで売れる?</span>」を</span>
+        <span data-fv="h1" style="display:block;font-size:clamp(30px,4.6vw,56px);margin-top:4px;animation:fadeUp .9s cubic-bezier(.22,1,.36,1) .3s both;animation-duration:var(--adur,.9s);">ぜんぶ<span style="color:var(--acc,#FF5C38);">まとめた</span>。</span>
       </h1>
       <p style="margin:18px 0 0;font-size:14px;font-weight:700;color:#6B635C;animation:fadeUp .9s cubic-bezier(.22,1,.36,1) .4s both;animation-duration:var(--adur,.9s);">新しいウェブマーケティング理論と「消費者行動の今」+ Webデザイントレンド2024–2026 調査レポート</p>
-      <p style="max-width:780px;margin:18px 0 0;font-size:14.5px;line-height:2.1;color:#4A433D;animation:fadeUp .9s cubic-bezier(.22,1,.36,1) .45s both;animation-duration:var(--adur,.9s);">バタフライサーキット、パルス消費、界隈消費といった理論の整理に加え、博報堂・電通・Google・TikTok・シンクタンク・学術界が発信する最新の消費者研究、AIエージェント時代の購買行動、さらにBtoBの購買行動とマーケティング理論まで——2026年7月時点の「買い手行動の今」を体系的にまとめる。</p>
+      <p data-fv="lead" style="max-width:780px;margin:18px 0 0;font-size:14.5px;line-height:2.1;color:#4A433D;animation:fadeUp .9s cubic-bezier(.22,1,.36,1) .45s both;animation-duration:var(--adur,.9s);">バタフライサーキット、パルス消費、界隈消費といった理論の整理に加え、博報堂・電通・Google・TikTok・シンクタンク・学術界が発信する最新の消費者研究、AIエージェント時代の購買行動、さらにBtoBの購買行動とマーケティング理論まで——2026年7月時点の「買い手行動の今」を体系的にまとめる。</p>
       <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:24px;animation:fadeUp .9s cubic-bezier(.22,1,.36,1) .55s both;animation-duration:var(--adur,.9s);">
         <span style="font-size:12px;font-weight:700;color:#241E1A;background:#FFFFFF;border:2px solid #241E1A;border-radius:999px;padding:6px 14px;">2026年7月7〜8日 調査(第3次調査まで)</span>
         <span style="font-size:12px;font-weight:700;color:#241E1A;background:#FFFFFF;border:2px solid #241E1A;border-radius:999px;padding:6px 14px;">マルチエージェント調査+ファクトチェック済み</span>
@@ -2967,10 +2977,10 @@ a:hover{color:var(--acc,#FF5C38);text-decoration-color:currentColor;}
   </div>
   <div style="position:relative;overflow:hidden;background:radial-gradient(rgba(36,30,26,.09) 1.5px,transparent 1.5px) 0 0/22px 22px,#E4F3FF;border-bottom:2px solid #241E1A;padding:70px 28px 44px;">
     <div aria-hidden="true" style="position:absolute;inset:0;pointer-events:none;">
-      <div style="position:absolute;top:13%;right:7%;background:#FFFFFF;border:2px solid #241E1A;border-radius:999px;padding:6px 13px;font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:12px;box-shadow:3px 3px 0 #241E1A;animation:bob 2.2s ease-in-out infinite;animation-play-state:var(--play,running);"><span style="color:var(--acc,#FF5C38);">♥</span> 1,024</div>
-      <div style="position:absolute;top:46%;right:13%;width:58px;height:58px;border-radius:50%;background:#FFD43A;border:2px solid #241E1A;box-shadow:3px 3px 0 #241E1A;display:flex;align-items:center;justify-content:center;font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:14px;animation:wiggle 2.6s ease-in-out infinite;animation-play-state:var(--play,running);">CV!</div>
-      <div style="position:absolute;bottom:13%;right:6%;background:#FFFFFF;border:2px solid #241E1A;border-radius:12px 12px 12px 3px;padding:5px 12px;font-size:11px;font-weight:700;box-shadow:3px 3px 0 #241E1A;animation:bob 2.8s ease-in-out infinite;animation-play-state:var(--play,running);">保存した!</div>
-      <div style="position:absolute;top:22%;left:4%;animation:driftX 4.2s ease-in-out infinite;animation-play-state:var(--play,running);">
+      <div data-deco="hide-sm" style="position:absolute;top:13%;right:7%;background:#FFFFFF;border:2px solid #241E1A;border-radius:999px;padding:6px 13px;font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:12px;box-shadow:3px 3px 0 #241E1A;animation:bob 2.2s ease-in-out infinite;animation-play-state:var(--play,running);"><span style="color:var(--acc,#FF5C38);">♥</span> 1,024</div>
+      <div data-deco="hide-sm" style="position:absolute;top:46%;right:13%;width:58px;height:58px;border-radius:50%;background:#FFD43A;border:2px solid #241E1A;box-shadow:3px 3px 0 #241E1A;display:flex;align-items:center;justify-content:center;font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:14px;animation:wiggle 2.6s ease-in-out infinite;animation-play-state:var(--play,running);">CV!</div>
+      <div data-deco="hide-sm" style="position:absolute;bottom:13%;right:6%;background:#FFFFFF;border:2px solid #241E1A;border-radius:12px 12px 12px 3px;padding:5px 12px;font-size:11px;font-weight:700;box-shadow:3px 3px 0 #241E1A;animation:bob 2.8s ease-in-out infinite;animation-play-state:var(--play,running);">保存した!</div>
+      <div data-deco="hide-sm" style="position:absolute;top:22%;left:4%;animation:driftX 4.2s ease-in-out infinite;animation-play-state:var(--play,running);">
         <span style="display:block;width:0;height:0;border-left:10px solid transparent;border-right:10px solid transparent;border-bottom:19px solid #241E1A;transform:rotate(-36deg);"></span>
         <span style="display:inline-block;margin:2px 0 0 14px;background:#241E1A;color:#FFF6E9;border-radius:999px;font-size:9.5px;font-weight:700;padding:2px 9px;">クリック!</span>
       </div>
@@ -2980,8 +2990,8 @@ a:hover{color:var(--acc,#FF5C38);text-decoration-color:currentColor;}
     </div>
     <div style="position:relative;max-width:860px;margin:0 auto;">
       <div style="animation:fadeUp .8s cubic-bezier(.22,1,.36,1) .05s both;animation-duration:var(--adur,.8s);"><div style="display:inline-block;font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:13px;background:#B9E6FF;border:2px solid #241E1A;border-radius:999px;padding:5px 16px;box-shadow:3px 3px 0 #241E1A;transform:rotate(-2deg);">FOR DESIGNERS ・ はじめに</div></div>
-      <h1 style="font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:clamp(28px,3.6vw,44px);line-height:1.5;margin:18px 0 0;animation:fadeUp .9s cubic-bezier(.22,1,.36,1) .18s both;animation-duration:var(--adur,.9s);">なぜ、"あのデザイン"は<span style="background:linear-gradient(transparent 62%,#FFE066 62%);">効く</span>のか。<span style="display:block;font-size:clamp(16px,1.8vw,20px);color:#6B635C;margin-top:8px;">消費・検索行動の変化からトレンドの「理由」をひも解く、デザイナー向け解説+テッパンの作り方集</span></h1>
-      <p style="max-width:720px;margin:16px 0 0;font-size:14px;line-height:2;color:#4A433D;animation:fadeUp .9s cubic-bezier(.22,1,.36,1) .32s both;animation-duration:var(--adur,.9s);">今日の制作にそのまま足せる小ワザ〜ページ構成の実戦カタログ。<a href="#part6">デザイン編</a>のトレンドと<a href="#part7">業種別イメージ図</a>の手法に、「最近こういう傾向だから効く」というマーケ側の理由(<a href="#part1">第I〜IV部</a>)を1つずつ付けています。</p>
+      <h1 data-fv="h1" style="font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:clamp(28px,3.6vw,44px);line-height:1.5;margin:18px 0 0;animation:fadeUp .9s cubic-bezier(.22,1,.36,1) .18s both;animation-duration:var(--adur,.9s);">なぜ、"あのデザイン"は<span style="background:linear-gradient(transparent 62%,#FFE066 62%);">効く</span>のか。<span data-fv="sub" style="display:block;font-size:clamp(16px,1.8vw,20px);color:#6B635C;margin-top:8px;">消費・検索行動の変化からトレンドの「理由」をひも解く、デザイナー向け解説+テッパンの作り方集</span></h1>
+      <p data-fv="lead" style="max-width:720px;margin:16px 0 0;font-size:14px;line-height:2;color:#4A433D;animation:fadeUp .9s cubic-bezier(.22,1,.36,1) .32s both;animation-duration:var(--adur,.9s);">今日の制作にそのまま足せる小ワザ〜ページ構成の実戦カタログ。<a href="#part6">デザイン編</a>のトレンドと<a href="#part7">業種別イメージ図</a>の手法に、「最近こういう傾向だから効く」というマーケ側の理由(<a href="#part1">第I〜IV部</a>)を1つずつ付けています。</p>
       <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:24px;animation:fadeUp .9s cubic-bezier(.22,1,.36,1) .45s both;animation-duration:var(--adur,.9s);">
         <a href="#waza" style="text-decoration:none;font-size:12.5px;font-weight:700;color:#241E1A;background:#FFFFFF;border:1.5px solid #241E1A;border-radius:999px;padding:7px 15px;">01 効く小ワザ図鑑</a>
         <a href="#copy-formula" style="text-decoration:none;font-size:12.5px;font-weight:700;color:#241E1A;background:#FFFFFF;border:1.5px solid #241E1A;border-radius:999px;padding:7px 15px;">02 コピーの型</a>
