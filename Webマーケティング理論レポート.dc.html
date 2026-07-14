@@ -10,7 +10,7 @@
 <helmet>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
-<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@700;900&amp;family=Zen+Kaku+Gothic+New:wght@400;500;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@700;900&amp;family=Zen+Kaku+Gothic+New:wght@400;500;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;family=Shippori+Mincho:wght@600;700&amp;family=Zen+Old+Mincho:wght@700;900&amp;family=M+PLUS+Rounded+1c:wght@500;800&amp;family=Montserrat:wght@700;800&amp;display=swap" rel="stylesheet">
 <style>
 html,body{margin:0;padding:0;background:#FFF6E9;}
 body{font-family:'Zen Kaku Gothic New','Hiragino Kaku Gothic ProN',Meiryo,sans-serif;color:#241E1A;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;}
@@ -3287,6 +3287,156 @@ header nav button{font-size:11.5px !important;padding:7px 8px 5px !important;whi
 </div>
 </sc-if>
 
+<sc-if value="{{ is9 }}" hint-placeholder-val="{{ false }}">
+<div id="dz" data-screen-label="デザインに迷ったら" style="animation:fadeUp .6s cubic-bezier(.22,1,.36,1) both;animation-duration:var(--adur,.6s);">
+  <div style="position:relative;overflow:hidden;background:radial-gradient(rgba(36,30,26,.08) 1.5px,transparent 1.5px) 0 0/22px 22px,#FFF9EF;border-bottom:2px solid #241E1A;padding:70px 28px 44px;">
+    <div aria-hidden="true" style="position:absolute;inset:0;pointer-events:none;">
+      <span data-deco="hide-sm" style="position:absolute;top:16%;right:6%;font-family:'Shippori Mincho',serif;font-weight:600;font-size:30px;background:#FFFFFF;border:2px solid #241E1A;border-radius:12px;box-shadow:3px 3px 0 #241E1A;padding:6px 13px;transform:rotate(5deg);animation:bob 2.6s ease-in-out infinite;animation-play-state:var(--play,running);">あ</span>
+      <span data-deco="hide-sm" style="position:absolute;bottom:18%;right:13%;font-family:'M PLUS Rounded 1c',sans-serif;font-weight:800;font-size:24px;background:#FFE0EC;border:2px solid #241E1A;border-radius:50%;box-shadow:3px 3px 0 #241E1A;width:52px;height:52px;display:flex;align-items:center;justify-content:center;transform:rotate(-7deg);animation:wiggle 2.4s ease-in-out infinite;animation-play-state:var(--play,running);">あ</span>
+      <span data-deco="hide-sm" style="position:absolute;top:52%;right:3%;display:flex;gap:5px;animation:cue 2.4s ease-in-out infinite;animation-play-state:var(--play,running);"><span style="width:16px;height:16px;border-radius:50%;background:#A8874C;border:1.5px solid #241E1A;"></span><span style="width:16px;height:16px;border-radius:50%;background:#2B5EA7;border:1.5px solid #241E1A;"></span><span style="width:16px;height:16px;border-radius:50%;background:#F76F9F;border:1.5px solid #241E1A;"></span></span>
+      <span style="position:absolute;top:20%;left:3.5%;width:12px;height:12px;transform:rotate(45deg);background:#FFE066;border:1.5px solid #241E1A;animation:cue 2.1s ease-in-out infinite;animation-play-state:var(--play,running);"></span>
+      <span style="position:absolute;bottom:14%;left:5%;font-size:19px;color:var(--acc,#FF5C38);animation:wiggle 2.2s ease-in-out infinite;animation-play-state:var(--play,running);">✦</span>
+    </div>
+    <div style="position:relative;max-width:860px;margin:0 auto;">
+      <div style="animation:fadeUp .8s cubic-bezier(.22,1,.36,1) .05s both;animation-duration:var(--adur,.8s);"><div style="display:inline-block;font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:13px;background:#FFE066;border:2px solid #241E1A;border-radius:999px;padding:5px 16px;box-shadow:3px 3px 0 #241E1A;transform:rotate(-2deg);">DESIGN COMPASS ・ 迷ったらここ</div></div>
+      <h1 data-fv="h1" style="font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:clamp(28px,3.6vw,44px);line-height:1.5;margin:18px 0 0;animation:fadeUp .9s cubic-bezier(.22,1,.36,1) .18s both;animation-duration:var(--adur,.9s);">デザインに<span style="background:linear-gradient(transparent 62%,#FFE066 62%);">迷ったら</span>。<span data-fv="sub" style="display:block;font-size:clamp(16px,1.8vw,20px);color:#6B635C;margin-top:8px;">「与えたい印象」から逆引きする早見表+選ぶだけでサイトが組み上がるシミュレーター</span></h1>
+      <p data-fv="lead" style="max-width:720px;margin:16px 0 0;font-size:14px;line-height:2;color:#4A433D;animation:fadeUp .9s cubic-bezier(.22,1,.36,1) .32s both;animation-duration:var(--adur,.9s);">フォント・レイアウト・色・言葉……ぜんぶ「どんな印象を与えたいか」から逆算できます。まず7つの早見表で理由ごと押さえて、最後のシミュレーターで組み合わせを試してみてください。</p>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:24px;animation:fadeUp .9s cubic-bezier(.22,1,.36,1) .45s both;animation-duration:var(--adur,.9s);">
+        <a href="#dz-font" style="text-decoration:none;font-size:12.5px;font-weight:700;color:#241E1A;background:#FFFFFF;border:1.5px solid #241E1A;border-radius:999px;padding:7px 15px;">01 フォント</a>
+        <a href="#dz-fv" style="text-decoration:none;font-size:12.5px;font-weight:700;color:#241E1A;background:#FFFFFF;border:1.5px solid #241E1A;border-radius:999px;padding:7px 15px;">02 FVレイアウト</a>
+        <a href="#dz-deco" style="text-decoration:none;font-size:12.5px;font-weight:700;color:#241E1A;background:#FFFFFF;border:1.5px solid #241E1A;border-radius:999px;padding:7px 15px;">03 文字のあしらい</a>
+        <a href="#dz-tone" style="text-decoration:none;font-size:12.5px;font-weight:700;color:#241E1A;background:#FFFFFF;border:1.5px solid #241E1A;border-radius:999px;padding:7px 15px;">04 色のトーン</a>
+        <a href="#dz-photo" style="text-decoration:none;font-size:12.5px;font-weight:700;color:#241E1A;background:#FFFFFF;border:1.5px solid #241E1A;border-radius:999px;padding:7px 15px;">05 写真・動画</a>
+        <a href="#dz-icon" style="text-decoration:none;font-size:12.5px;font-weight:700;color:#241E1A;background:#FFFFFF;border:1.5px solid #241E1A;border-radius:999px;padding:7px 15px;">06 アイコン</a>
+        <a href="#dz-map" style="text-decoration:none;font-size:12.5px;font-weight:700;color:#241E1A;background:#FFFFFF;border:1.5px solid #241E1A;border-radius:999px;padding:7px 15px;">07 サイトマップ</a>
+        <a href="#dz-copy" style="text-decoration:none;font-size:12.5px;font-weight:700;color:#241E1A;background:#FFFFFF;border:1.5px solid #241E1A;border-radius:999px;padding:7px 15px;">08 コピー</a>
+        <a href="#dz-builder" style="text-decoration:none;font-size:12.5px;font-weight:900;color:#FFFFFF;background:var(--acc,#FF5C38);border:1.5px solid #241E1A;border-radius:999px;padding:7px 15px;box-shadow:2px 2px 0 #241E1A;">▶ シミュレーター</a>
+      </div>
+    </div>
+  </div>
+  <div style="max-width:860px;margin:0 auto;padding:20px 28px 60px;">
+
+    <sc-for list="{{ dzGuide }}" as="g" hint-placeholder-count="7">
+      <section id="{{ g.id }}" style="padding-top:64px;">
+        <div data-reveal="0">
+          <div style="display:inline-block;font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:12px;background:#FFE066;border:2px solid #241E1A;border-radius:8px;padding:2px 10px;">{{ g.no }}</div>
+          <h2 style="font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:clamp(21px,2.4vw,28px);line-height:1.6;margin:12px 0 0;">{{ g.title }}<span style="display:block;font-size:15px;color:#6B635C;margin-top:4px;">{{ g.lead }}</span></h2>
+        </div>
+        <div style="overflow-x:auto;margin:18px 0 0;">
+          <div style="min-width:780px;border:2px solid #241E1A;border-radius:16px;background:#FFFFFF;box-shadow:4px 4px 0 #241E1A;overflow:hidden;">
+            <div style="display:grid;grid-template-columns:104px 150px 1fr 1.3fr;gap:0 14px;background:#FFF3DF;border-bottom:2px solid #241E1A;padding:10px 16px;font-family:'Zen Maru Gothic',sans-serif;font-size:11.5px;font-weight:900;">
+              <span>与えたい印象</span><span>見本</span><span>おすすめ</span><span>なぜそう見える?</span>
+            </div>
+            <sc-for list="{{ g.rows }}" as="r" hint-placeholder-count="6">
+              <div style="display:grid;grid-template-columns:104px 150px 1fr 1.3fr;gap:0 14px;align-items:center;padding:12px 16px;border-top:1.5px solid #EDE6DA;font-size:13px;line-height:1.9;">
+                <span style="font-family:'Zen Maru Gothic',sans-serif;font-weight:900;">{{ r.imp }}</span>
+                <div aria-hidden="true" style="{{ r.spBox }}"><span style="{{ r.spA }}">{{ r.spAText }}</span><span style="{{ r.spB }}">{{ r.spBText }}</span></div>
+                <span style="{{ r.recStyle }}">{{ r.rec }}</span>
+                <span style="color:#4A433D;">{{ r.why }}</span>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      </section>
+    </sc-for>
+
+    <section id="dz-builder" style="padding-top:80px;">
+      <div data-reveal="0">
+        <div style="display:inline-block;font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:12px;color:#FFFFFF;background:var(--acc,#FF5C38);border:2px solid #241E1A;border-radius:8px;padding:2px 10px;">SIMULATOR</div>
+        <h2 style="font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:clamp(23px,2.6vw,31px);line-height:1.6;margin:12px 0 0;">印象を選ぶと、サイトが組み上がる<span style="display:block;font-size:16px;color:#6B635C;margin-top:4px;">まず「誰向け?」と「色相」を選び、あとは項目ごとに印象を選ぶだけ。色は選んだ色相×印象で、おすすめのトーンに自動で調整されます。ぜんぶ同じ印象なら王道、1〜2個だけ変えると今っぽくなります。</span></h2>
+      </div>
+      <div data-reveal="0" style="background:#FFFFFF;border:2px solid #241E1A;border-radius:16px;box-shadow:4px 4px 0 #241E1A;padding:18px 20px;margin:20px 0;">
+        <sc-for list="{{ dzCats }}" as="cat" hint-placeholder-count="7">
+          <div style="display:flex;flex-wrap:wrap;align-items:center;gap:6px 8px;padding:7px 0;border-bottom:1px dashed #E0D8C8;">
+            <span style="flex:none;width:104px;font-family:'Zen Maru Gothic',sans-serif;font-size:12px;font-weight:900;color:#4A433D;">{{ cat.label }}</span>
+            <sc-for list="{{ cat.options }}" as="op" hint-placeholder-count="6">
+              <button onClick="{{ op.pick }}" style="{{ op.style }}">{{ op.label }}</button>
+            </sc-for>
+          </div>
+        </sc-for>
+      </div>
+
+      <div data-reveal="0" style="position:relative;margin:72px 0 76px;">
+      <span style="{{ dzBubbleAStyle }}">{{ dzBubbleAText }}</span>
+      <span style="{{ dzBubbleBStyle }}">{{ dzBubbleBText }}</span>
+      <div style="border:2px solid #241E1A;border-radius:16px;overflow:hidden;box-shadow:5px 5px 0 #241E1A;background:#FFFFFF;">
+        <div style="display:flex;align-items:center;gap:6px;background:#F1EAE0;border-bottom:2px solid #241E1A;padding:8px 12px;">
+          <span style="width:9px;height:9px;border-radius:50%;background:#FF5C38;border:1px solid #241E1A;"></span><span style="width:9px;height:9px;border-radius:50%;background:#FFD43A;border:1px solid #241E1A;"></span><span style="width:9px;height:9px;border-radius:50%;background:#63D8B2;border:1px solid #241E1A;"></span>
+          <span style="flex:1;margin-left:8px;background:#FFFFFF;border:1px solid #C9BFB6;border-radius:999px;font-family:'IBM Plex Mono',monospace;font-size:9.5px;color:#8A817A;padding:2px 10px;">組み上がったサイトイメージ(ファーストビュー)</span>
+        </div>
+        <div style="{{ dzNavStyle }}">
+          <span style="{{ dzBrandStyle }}">{{ dzBrand }}</span>
+          <span style="flex:1;"></span>
+          <sc-for list="{{ dzMapItems }}" as="mi" hint-placeholder-count="5">
+            <span style="{{ dzNavItemStyle }}">{{ mi }}</span>
+          </sc-for>
+          <span style="{{ dzNavCtaStyle }}">{{ dzCta }}</span>
+        </div>
+        <div style="{{ dzFvStyle }}">
+          <sc-if value="{{ dzHasBadge }}" hint-placeholder-val="{{ false }}"><span style="{{ dzBadgeStyle }}">{{ dzBadgeText }}</span></sc-if>
+          <div style="{{ dzTextWrapStyle }}">
+            <div style="{{ dzKickerStyle }}">{{ dzKicker }}</div>
+            <div style="{{ dzH1Style }}">{{ dzTitle }}</div>
+            <p style="{{ dzSubStyle }}">{{ dzSub }}</p>
+            <sc-if value="{{ dzHasNums }}" hint-placeholder-val="{{ false }}">
+              <div style="display:flex;flex-wrap:wrap;gap:6px;margin:0 0 14px;">
+                <span style="{{ dzNumStyle }}">創業32年</span>
+                <span style="{{ dzNumStyle }}">取引先420社</span>
+                <span style="{{ dzNumStyle }}">継続率98%</span>
+              </div>
+            </sc-if>
+            <span style="{{ dzBtnStyle }}">{{ dzCta }}</span>
+          </div>
+          <sc-if value="{{ dzHasImg }}" hint-placeholder-val="{{ false }}"><div style="{{ dzImgStyle }}"><span style="{{ dzSceneA }}"></span><span style="{{ dzSceneB }}"></span><span style="{{ dzImgLabelStyle }}">{{ dzImgText }}</span></div></sc-if>
+          <sc-if value="{{ dzHasFullNote }}" hint-placeholder-val="{{ false }}"><span style="position:absolute;bottom:8px;left:12px;font-size:9.5px;opacity:.75;">背景画像: {{ dzImgText }}</span></sc-if>
+        </div>
+        <div style="{{ dzMediaStripStyle }}">
+          <sc-for list="{{ dzMediaTiles }}" as="mt" hint-placeholder-count="3">
+            <div style="{{ mt.style }}"><span style="{{ mt.playStyle }}">▶</span><span style="{{ mt.labelStyle }}">{{ mt.label }}</span></div>
+          </sc-for>
+        </div>
+        <div style="{{ dzBelowStyle }}">
+          <sc-for list="{{ dzBelowCards }}" as="bc" hint-placeholder-count="3">
+            <div style="{{ bc.style }}"><span style="{{ bc.iconStyle }}"></span><span style="{{ bc.titleStyle }}">{{ bc.title }}</span><span style="{{ bc.lineStyle }}"></span></div>
+          </sc-for>
+        </div>
+      </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin:20px 0 0;">
+        <div data-reveal="0" style="background:#FFFFFF;border:2px solid #241E1A;border-radius:16px;box-shadow:4px 4px 0 #241E1A;padding:20px 22px;">
+          <h4 style="margin:0 0 10px;font-family:'Zen Maru Gothic',sans-serif;font-size:15px;font-weight:900;">この組み合わせの発注メモ</h4>
+          <ul style="margin:0;padding-left:18px;font-size:13px;line-height:2;color:#4A433D;">
+            <li><strong>誰向け:</strong> {{ dzAudName }}</li>
+            <li><strong>フォント:</strong> {{ dzFontName }}</li>
+            <li><strong>配色:</strong> {{ dzToneName }}</li>
+            <li><strong>写真:</strong> {{ dzImgText }}</li>
+            <li><strong>アイコン:</strong> {{ dzIconText }}</li>
+            <li><strong>動画:</strong> {{ dzVideoText }}</li>
+            <li><strong>動き:</strong> {{ dzMotionText }}</li>
+          </ul>
+          <div style="display:flex;flex-wrap:wrap;gap:5px;margin-top:10px;">
+            <sc-for list="{{ dzMapItems }}" as="mi" hint-placeholder-count="5">
+              <span style="font-size:10.5px;font-weight:700;background:#FFF3DF;border:1.5px solid #241E1A;border-radius:999px;padding:3px 10px;">{{ mi }}</span>
+            </sc-for>
+          </div>
+        </div>
+        <div data-reveal="0" style="background:#FFFFFF;border:2px solid #241E1A;border-radius:16px;box-shadow:4px 4px 0 #241E1A;padding:20px 22px;">
+          <h4 style="margin:0 0 10px;font-family:'Zen Maru Gothic',sans-serif;font-size:15px;font-weight:900;">なぜこの見た目になる?</h4>
+          <ul style="margin:0;padding-left:18px;font-size:12.5px;line-height:1.95;color:#4A433D;">
+            <sc-for list="{{ dzReasons }}" as="r" hint-placeholder-count="7">
+              <li style="margin:4px 0;"><strong>{{ r.cat }}</strong> — {{ r.text }}</li>
+            </sc-for>
+          </ul>
+        </div>
+      </div>
+      <p style="font-size:12.5px;line-height:1.9;color:#8A817A;margin:16px 0 0;">※ 画像部分は「どんな画像を用意するか」の文字指定で示しています。ブランド名・コピーはサンプルです。</p>
+    </section>
+
+  </div>
+</div>
+</sc-if>
+
 <div style="max-width:1160px;margin:0 auto;padding:10px 28px 70px;">
   <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;border-top:2px solid #241E1A;padding-top:24px;">
     <sc-if value="{{ hasPrev }}" hint-placeholder-val="{{ false }}">
@@ -3308,7 +3458,7 @@ header nav button{font-size:11.5px !important;padding:7px 8px 5px !important;whi
   &quot;sourcesOpen&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: false, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;出典&quot;}
 }">
 class Component extends DCLogic {
-  state = { page: 8, spec: 0 };
+  state = { page: 8, spec: 0, dz: [1, 1, 1, 1, 1, 1, 1] };
 
   componentDidMount() {
     this._map = {
@@ -3322,7 +3472,8 @@ class Component extends DCLogic {
       part7: 7, 'sme-intro': 7, 'sme-koumuten': 7, 'sme-cafe': 7, 'sme-salon': 7, 'sme-factory': 7, 'sme-zeirishi': 7, 'sme-wagashi': 7, 'sme-saas': 7, 'sme-shosha': 7, 'sme-howto': 7
     };
     Object.assign(this._map, { intro: 8, waza: 8, 'copy-formula': 8, 'content-writing': 8, 'cv-structure': 8, 'section-layout': 8 });
-    this._topIds = { home: 1, part1: 1, part2: 1, part3: 1, part4: 1, part5: 1, part6: 1, part7: 1, intro: 1 };
+    Object.assign(this._map, { dz: 9, 'dz-font': 9, 'dz-fv': 9, 'dz-deco': 9, 'dz-tone': 9, 'dz-img': 9, 'dz-photo': 9, 'dz-icon': 9, 'dz-map': 9, 'dz-copy': 9, 'dz-builder': 9 });
+    this._topIds = { home: 1, part1: 1, part2: 1, part3: 1, part4: 1, part5: 1, part6: 1, part7: 1, intro: 1, dz: 1 };
     this._specLabels = ['ベントグリッドの見本', 'グラスモーフィズムの見本', 'オーロラグラデーションとグレインの見本', 'ネオブルータリズムの見本', '超大型タイポグラフィの見本', 'ダークSaaSデザインの見本', 'マキシマリズムの見本', 'バリアブルフォントの見本', 'ノイズ・グレイン質感の見本', '3D・WebGLの見本', 'スクロールテリングの見本', 'ダークモードの見本', 'AI生成っぽいビジュアルの見本', 'カスタムカーソルとマイクロインタラクションの見本'];
     this._specTitles = ['01 ベントグリッド', '02 グラスモーフィズム', '03 オーロラ+グレイン', '04 ネオブルータリズム', '05 超大型タイポ', '06 ダークSaaS', '07 マキシマリズム', '08 バリアブルフォント', '09 ノイズ・グレイン', '10 3D / WebGL', '11 スクロールテリング', '12 ダークモード', '13 AIルック(反面教師)', '14 カーソル/マイクロ'];
     this._onHash = () => this.route(false);
@@ -3442,15 +3593,591 @@ class Component extends DCLogic {
     });
   }
 
+  dzD() {
+    if (this._dzDC) return this._dzDC;
+    const imps = ['上品・洗練', '親しみ', 'かわいらしさ', '誠実・信頼', '伝統・格式', '先進・スタイリッシュ'];
+    const fonts = [
+      { name: 'しっぽり明朝・游明朝(細めのウェイト)', css: "'Shippori Mincho', serif", w: 600, why: '線が細く、ふところの締まった明朝は「余裕・教養・静けさ」の記号です。余白を広く取るほど高級感が増します。' },
+      { name: 'Zen Kaku Gothic New・Noto Sans JP(中太)', css: "'Zen Kaku Gothic New', sans-serif", w: 700, why: '角のとれたゴシックは声のトーンがやわらかく、日常の言葉と相性がよい書体です。太すぎない中太が親しみの適温。' },
+      { name: 'M PLUS Rounded 1c・Zen Maru Gothic(丸ゴシック)', css: "'M PLUS Rounded 1c', sans-serif", w: 800, why: '輪郭が丸い文字は「小さい・やわらかい・幼い」ものの連想につながります。丸ゴシックはそれ自体がかわいさの記号です。' },
+      { name: 'Noto Sans JP・游ゴシック(標準ウェイト)', css: "'Zen Kaku Gothic New', sans-serif", w: 500, why: 'クセのない骨格は「まじめ・事務的・公平」の印象。装飾を足さず、行間を広くとって説明的に組むのがコツです。' },
+      { name: 'Zen Old Mincho・筑紫明朝系(オールド明朝)', css: "'Zen Old Mincho', serif", w: 700, why: '古い活字の形を残したオールド明朝は、書物や活版印刷の記憶につながり、時間の重みを感じさせます。' },
+      { name: 'Montserrat / Inter系の欧文+角ゴシック', css: "'Montserrat', 'Zen Kaku Gothic New', sans-serif", w: 700, why: '幾何学的な欧文は「テック・国際的」の記号。太字を大きく、英語キッカーと組み合わせるのが定番の作法です。' }
+    ];
+    const layouts = [
+      { name: '余白広めの中央1カラム。写真は小さく、またはなし', dir: 'column', center: true, hasImg: false, why: '広い余白は「詰め込まなくても成立する」自信の表現。視線が1点に集まり、言葉が際立ちます。' },
+      { name: '左にコピー、右に角丸の写真(人物)', dir: 'row', hasImg: true, imgR: '18px', why: '人の顔+左から右への自然な視線の流れ。もっとも間口が広く、失敗しにくい定番の構図です。' },
+      { name: '丸トリミングの写真+ステッカーを散らす', dir: 'row', hasImg: true, imgR: '50%', why: '丸は角がない=攻撃性のない形。散らした小物が、にぎやかで楽しい空気を作ります。' },
+      { name: '左にコピー+実績数字の列、右に実写', dir: 'row', hasImg: true, imgR: '10px', nums: true, sharp: true, why: '言い切りの直後に数字で証明する構図。比較検討モードの読み手に最短で届きます。' },
+      { name: '縦書きの見出し+職人・素材の写真', dir: 'row-reverse', vert: true, hasImg: true, imgR: '8px', why: '縦書きは日本語にしかできない構図。それだけで「和」の空気になります。文字数は短く。' },
+      { name: '全面ダークな写真/CGの上にガラスのカード', dir: 'row', full: true, glass: true, hasImg: false, why: '暗い全面ビジュアルは没入感を生みます。ガラス越しの文字が「今っぽさ」の記号(DT.02参照)。' }
+    ];
+    const decos = [
+      { name: '字間を広くとる(+細い罫線)', kLS: '.3em', hLS: '.12em', why: 'ゆったりした字間は「急いでいない=高級」のサイン。細い線が繊細さを添えます。' },
+      { name: '蛍光マーカー風の下線', marker: true, why: '大事なところにマーカーを引く、あの手つき。「教えてもらっている」ような親近感が出ます。' },
+      { name: '傾けたステッカー風バッジ', badge: '♡ おすすめ', badgeRot: true, why: '少し傾いたバッジは、手で貼ったような不揃い感=かわいさ。きっちり水平にしないのがコツです。' },
+      { name: '見出し前の小さな角ラベル。装飾は最小限', prefix: '■ ', why: '資料や報告書の記号を借りることで「きちんと感」が出ます。飾らないことが飾りになります。' },
+      { name: '縦書き+落款(判子)風の赤い角版', badge: '匠', badgeSq: true, badgeBg: '#8C3A2B', badgeInk: '#FFFFFF', why: '書画の署名に押す判子の記憶につながり、格式と手仕事の気配を感じさせます。' },
+      { name: '欧文キッカー(大文字+広い字間)', upper: true, kLS: '.35em', why: '小さな英語の見出しを先に置くのは、海外テック系サイトの定番作法。画面が締まります。' }
+    ];
+    const tones = [
+      { name: '生成り×墨×金茶(低彩度・高明度)', bg: '#F7F4EC', ink: '#2B2722', accent: '#A8874C', soft: '#EBE4D2', why: '彩度を落とすほど「素材そのもの」の印象になります。金茶をひとさじで、品よく華やかに。' },
+      { name: 'クリーム×オレンジ(中彩度の暖色)', bg: '#FFF6E9', ink: '#241E1A', accent: '#F97B2F', soft: '#FFE9C7', why: '暖色は心理的な距離を縮める色。真っ赤ではなくオレンジに寄せると、圧がなく親しみやすい。' },
+      { name: 'ピンク×ミント(高明度のパステル)', bg: '#FFF3F7', ink: '#4A3A42', accent: '#F76F9F', soft: '#FFE0EC', why: '白をたくさん混ぜたパステルは「軽い・やわらかい・小さい」の連想。濃い色は文字だけに。' },
+      { name: '白×紺×青(低彩度の寒色)', bg: '#F4F7FB', ink: '#1E2A3A', accent: '#2B5EA7', soft: '#DCE7F5', why: '青は世界共通で「信頼・冷静」の色。銀行や官公庁のサイトが青い理由と同じです。' },
+      { name: '墨×深緑×朱(低明度・低彩度)', bg: '#F2EEE4', ink: '#2A241C', accent: '#8C3A2B', soft: '#E5DECE', why: '暗く、少し濁った色は時間の経過=歴史を感じさせます。朱は印や漆の色として効かせ役に。' },
+      { name: 'ダーク背景×ネオン1色', bg: '#12151D', ink: '#F2F4F8', accent: '#4FE0BE', soft: '#1C212D', line: 'rgba(255,255,255,.16)', btnInk: '#12151D', why: '暗い画面はディスプレイの発光を活かす「画面ネイティブ」な配色。光る1色だけを主役にします。' }
+    ];
+    const imgs = [
+      { img: '余白を大きくとった静物写真(自然光・低彩度)', icon: '細い線画アイコン(線幅1px・単色)', why: '情報より「間」を写します。低彩度・自然光が素材の良さを語ってくれます。' },
+      { img: 'スタッフの笑顔・接客中のスナップ写真(明るめ)', icon: '塗りつぶしの丸みのあるアイコン(2色まで)', why: '顔が見えるだけで、問い合わせのハードルはぐっと下がります。' },
+      { img: '手描きイラスト・キャラクター(パステル配色)', icon: '手書き風アイコン(線がゆらぐタッチ)', why: 'イラストは実写より自由に「世界観」を作れます。タッチを1種類にそろえるのが大事。' },
+      { img: 'オフィス・現場の実写(加工少なめ・広角)', icon: 'フラットな単色アイコン(角は直角寄り)', why: '加工の少ない実写は「見せられる現場がある」という証拠になります。' },
+      { img: '職人の手元・道具の接写(陰影深め・和紙や木の質感)', icon: '家紋・判子風のモノクロアイコン', why: '手元と道具の接写は、技術の証明写真。質感がそのまま信頼になります。' },
+      { img: '抽象的な3DCG・グラデーションのオブジェ', icon: '細い線+グラデーションのアイコン', why: '実体のないサービスは、抽象CGで「概念」を見せるのが定番です。' }
+    ];
+    const maps = [
+      { items: ['コンセプト', '商品', 'こだわり', '店舗', 'ご予約'], why: '項目を絞るほど高級に見えます。「よくある質問」より「こだわり」で語る構成に。' },
+      { items: ['はじめての方へ', 'メニューと料金', 'スタッフ', 'お客さまの声', 'ご予約'], why: '「はじめての方へ」が最初にあるだけで、入りやすさが変わります。' },
+      { items: ['わたしたちのこと', 'メニュー', 'ギャラリー', 'お知らせ', 'ご予約'], why: '「わたしたちのこと」のような一人称の項目名が、親密な空気を作ります。' },
+      { items: ['サービス', '料金', '実績・事例', '会社概要', 'お問い合わせ'], why: '「実績・事例」「会社概要」は必ず置きます。信頼は情報の開示量に比例します。' },
+      { items: ['ご挨拶', '商品のご案内', '歴史', '店舗のご案内', 'ご注文'], why: '「ご挨拶」「歴史」から始まる構成は、お店の人格と時間を先に見せる作法です。' },
+      { items: ['Product', 'Features', 'Pricing', 'Company', 'Contact'], why: '英語ラベル+料金の公開はSaaSの標準。透明性がそのまま信頼になります。' }
+    ];
+    const copies = [
+      { brand: 'SIRO', kicker: 'CONCEPT', title: '静けさを、纏う。', sub: '選び抜いた素材と、静かな時間だけをご用意しています。', cta: 'ご予約', why: '体言止め+句点の短文は余韻=品。説明しすぎないことが上品さです。' },
+      { brand: 'ひだまり食堂', kicker: 'ようこそ', title: 'きょうも、気軽にどうぞ。', sub: 'はじめてでも大丈夫。まずはのぞいてみてください。', cta: 'メニューを見る', why: '話しかける口調は距離を縮めます。「どうぞ」の一言で敷居が下がります。' },
+      { brand: 'ふわり', kicker: 'ちいさなごほうび', title: 'まいにちに、ちいさなごほうびを。', sub: 'ちょっと疲れた日も、ここでふわっとほどけますように。', cta: 'ギャラリーを見る', why: 'ひらがな多め+くり返しのリズムが、かわいらしさの正体です。' },
+      { brand: '誠和システム', kicker: '選ばれる理由', title: '数字で語れる仕事を。', sub: '創業32年・取引先420社。根拠のある提案だけをお届けします。', cta: '資料をもらう', why: '形容詞ではなく数字で語ること。検証できる言葉が信頼を作ります。' },
+      { brand: '菓匠 つきしろ', kicker: '御菓子司', title: '八十年、変わらぬ仕事。', sub: '受け継いだ製法を、今日もひとつずつ丁寧に。', cta: 'ご注文はこちら', why: '漢数字と「仕事」という言葉の重み。続いてきた時間の長さが価値になります。' },
+      { brand: 'FLOWLY', kicker: 'WORKFLOW, SIMPLIFIED', title: 'その業務、3クリックで。', sub: '面倒な作業は自動化して、本来の仕事に集中しよう。', cta: '無料で試す', why: '成果を短く言い切って、すぐ試せるCTAを添えるのがテック流です。' }
+    ];
+    const mk = (id, no, title, lead, rows) => ({ id, no, title, lead, rows });
+    const hid = { display: 'none' };
+    const boxBase = { display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '7px', height: '64px', background: '#FBF7F0', border: '1.5px solid #E0D8C8', borderRadius: '8px', padding: '4px 8px', boxSizing: 'border-box', overflow: 'hidden' };
+    const fontRows = fonts.map((f, i) => ({ imp: imps[i], rec: f.name, why: f.why, recStyle: { fontFamily: f.css, fontWeight: 700 },
+      spBox: boxBase, spA: { fontFamily: f.css, fontWeight: f.w, fontSize: '20px', color: '#241E1A' }, spAText: '永あ美A', spB: hid, spBText: '' }));
+    const layoutRows = layouts.map((l, i) => {
+      const dark = !!l.full;
+      const box = Object.assign({}, boxBase, { flexDirection: l.dir, background: dark ? '#1A1E28' : '#FBF7F0' });
+      let spA, spB = hid;
+      if (l.glass) {
+        spA = { width: '56px', height: '32px', borderRadius: '7px', background: 'rgba(255,255,255,.16)', border: '1px solid rgba(255,255,255,.45)', flex: 'none' };
+      } else if (l.vert) {
+        spA = { width: '24px', height: '44px', background: 'repeating-linear-gradient(90deg,#241E1A 0 3px,transparent 3px 9px)', flex: 'none' };
+      } else {
+        spA = { width: '44px', height: l.center ? '18px' : '27px', background: 'repeating-linear-gradient(#241E1A 0 3px,transparent 3px 9px)', flex: 'none' };
+      }
+      if (l.hasImg) spB = { width: '30px', height: '30px', borderRadius: l.imgR === '50%' ? '50%' : '5px', background: '#D8CCBB', border: '1px dashed #8A817A', flex: 'none', boxSizing: 'border-box' };
+      return { imp: imps[i], rec: l.name, why: l.why, recStyle: { fontWeight: 700 }, spBox: box, spA, spAText: '', spB, spBText: '' };
+    });
+    const decoRows = decos.map((d, i) => {
+      let spA = { fontFamily: fonts[i].css, fontWeight: 700, fontSize: '15px', color: '#241E1A', letterSpacing: d.hLS || '.02em' };
+      let spAText = (d.prefix || '') + '見出し';
+      let spB = hid, spBText = '';
+      if (i === 0) { spA.borderBottom = '1px solid #C9BFB6'; spA.paddingBottom = '5px'; }
+      if (d.upper) { spAText = 'ABOUT US'; spA = { fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: '11px', letterSpacing: '.35em', color: '#241E1A' }; }
+      if (d.marker) spA.backgroundImage = 'linear-gradient(transparent 62%, #FFE066 62%)';
+      if (d.badge) { spB = { background: d.badgeBg || '#FFFFFF', color: d.badgeInk || '#241E1A', border: '1.5px solid #241E1A', borderRadius: d.badgeSq ? '4px' : '999px', transform: d.badgeRot ? 'rotate(6deg)' : 'none', padding: d.badgeSq ? '5px 6px' : '2px 9px', fontSize: '10px', fontWeight: 700, flex: 'none' }; spBText = d.badge; }
+      return { imp: imps[i], rec: d.name, why: d.why, recStyle: { fontWeight: 700 }, spBox: boxBase, spA, spAText, spB, spBText };
+    });
+    const toneRows = tones.map((t, i) => ({ imp: imps[i], rec: t.name, why: t.why, recStyle: { fontWeight: 700 },
+      spBox: Object.assign({}, boxBase, { background: t.bg, border: '1.5px solid ' + (t.line || '#E0D8C8') }),
+      spA: { width: '24px', height: '24px', borderRadius: '50%', background: t.accent, border: '1px solid rgba(0,0,0,.15)', flex: 'none' }, spAText: '',
+      spB: { fontSize: '12px', fontWeight: 700, color: t.ink }, spBText: 'Aa あ' }));
+    const iconSp = [
+      { s: { width: '18px', height: '18px', border: '1.5px solid #241E1A', borderRadius: '50%', flex: 'none' }, t: '' },
+      { s: { width: '20px', height: '20px', borderRadius: '7px', background: '#F97B2F', flex: 'none' }, t: '' },
+      { s: { width: '20px', height: '20px', border: '1.5px dashed #4A3A42', borderRadius: '50%', transform: 'rotate(-8deg)', flex: 'none' }, t: '' },
+      { s: { width: '18px', height: '18px', background: '#2B5EA7', flex: 'none' }, t: '' },
+      { s: { width: '20px', height: '20px', background: '#2A241C', color: '#FFFFFF', fontSize: '11px', fontWeight: 700, display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '3px', flex: 'none' }, t: '紋' },
+      { s: { width: '20px', height: '20px', borderRadius: '50%', background: 'linear-gradient(135deg,#4FE0BE,#4D7CFE)', flex: 'none' }, t: '' }
+    ];
+    const imgRows = imgs.map((m, i) => ({ imp: imps[i], rec: '写真: ' + m.img + ' / アイコン: ' + m.icon, why: m.why, recStyle: {},
+      spBox: Object.assign({}, boxBase, { background: i === 5 ? '#1A1E28' : '#FBF7F0' }),
+      spA: { width: '38px', height: '38px', borderRadius: '6px', background: 'repeating-linear-gradient(45deg, ' + tones[i].soft + ' 0 6px, ' + tones[i].bg + ' 6px 12px)', border: '1px solid #C9BFB6', flex: 'none' }, spAText: '',
+      spB: iconSp[i].s, spBText: iconSp[i].t }));
+    const mapRows = maps.map((m, i) => ({ imp: imps[i], rec: m.items.join(' / '), why: m.why, recStyle: { fontWeight: 700 },
+      spBox: boxBase,
+      spA: { fontSize: '9.5px', fontWeight: 700, color: '#4A433D', textAlign: 'center', lineHeight: 1.9, padding: '0 4px' }, spAText: m.items.join(' ・ '),
+      spB: hid, spBText: '' }));
+    const copyRows = copies.map((c, i) => ({ imp: imps[i], rec: '「' + c.title + '」', why: c.why, recStyle: { fontWeight: 700 },
+      spBox: Object.assign({}, boxBase, { flexDirection: 'column', gap: '5px' }),
+      spA: { fontFamily: fonts[i].css, fontWeight: fonts[i].w, fontSize: '12.5px', color: '#241E1A', textAlign: 'center', lineHeight: 1.5 }, spAText: c.title,
+      spB: { background: tones[i].accent, color: tones[i].btnInk || '#FFFFFF', borderRadius: '999px', fontSize: '9px', fontWeight: 700, padding: '2px 10px', flex: 'none' }, spBText: c.cta }));
+    const guide = [
+      mk('dz-font', 'MAYOI.01', 'フォントの選び方', '同じ文章でも、書体で「声色」が変わります。', fontRows),
+      mk('dz-fv', 'MAYOI.02', 'ファーストビューのレイアウト', '最初の1画面の構図は、お店の店構えと同じです。', layoutRows),
+      mk('dz-deco', 'MAYOI.03', '文字のあしらい', '見出しまわりの小さな細工が、雰囲気の半分を決めます。', decoRows),
+      mk('dz-tone', 'MAYOI.04', '色のトーン(明度・彩度)', '色相より先に、明度と彩度で印象は決まります。', toneRows),
+      mk('dz-img', 'MAYOI.05', '写真・アイコンの選び方', '「どんな画像を用意してもらうか」の指示までがデザインです。', imgRows),
+      mk('dz-map', 'MAYOI.06', 'サイトマップ(ナビの項目名)', 'ナビの項目名は、接客の第一声です。', mapRows),
+      mk('dz-copy', 'MAYOI.07', 'コピーの雰囲気', '言葉の温度もデザインの一部です。', copyRows)
+    ];
+    this._dzDC = { imps, fonts, layouts, decos, tones, imgs, maps, copies, guide };
+    return this._dzDC;
+  }
+
+  dzVals() {
+    const D = this.dzD();
+    const dz = this.state.dz;
+    const pick = (ci, oi) => () => this.setState((s) => { const a = s.dz.slice(); a[ci] = oi; return { dz: a }; });
+    const catLabels = ['フォント', 'FVレイアウト', '文字のあしらい', '色のトーン', '画像・動画・アイコン', 'サイトマップ', 'コピーの雰囲気'];
+    const dzCats = catLabels.map((label, ci) => ({
+      label,
+      options: D.imps.map((im, oi) => ({
+        label: im,
+        pick: pick(ci, oi),
+        style: dz[ci] === oi
+          ? { appearance: 'none', cursor: 'pointer', background: '#241E1A', color: '#FFF6E9', border: '2px solid #241E1A', borderRadius: '999px', padding: '6px 13px', fontSize: '12px', fontWeight: 700, fontFamily: "'Zen Maru Gothic', sans-serif" }
+          : { appearance: 'none', cursor: 'pointer', background: '#FFFFFF', color: '#6B635C', border: '1.5px solid #C9BFB6', borderRadius: '999px', padding: '6px 13px', fontSize: '12px', fontWeight: 700, fontFamily: "'Zen Maru Gothic', sans-serif" }
+      }))
+    }));
+    const f = D.fonts[dz[0]], l = D.layouts[dz[1]], d = D.decos[dz[2]], t = D.tones[dz[3]], im = D.imgs[dz[4]], mp = D.maps[dz[5]], cp = D.copies[dz[6]];
+    const dark = !!l.full;
+    const ink = dark ? '#FFFFFF' : t.ink;
+    const line = t.line || (dark ? 'rgba(255,255,255,.16)' : 'rgba(36,30,26,.15)');
+    return {
+      dzCats,
+      dzBrand: cp.brand,
+      dzMapItems: mp.items,
+      dzNavStyle: { display: 'flex', alignItems: 'center', gap: '12px', flexWrap: 'wrap', padding: '10px 16px', background: dark ? t.soft : t.bg, borderBottom: '1.5px solid ' + line, color: dark ? '#F2F4F8' : t.ink },
+      dzBrandStyle: { fontFamily: f.css, fontWeight: f.w, fontSize: '13px', letterSpacing: d.hLS || '.02em' },
+      dzNavItemStyle: { fontSize: '10px', fontWeight: 700, opacity: .75 },
+      dzFvStyle: {
+        position: 'relative', display: 'flex', flexDirection: l.dir, alignItems: 'center',
+        justifyContent: 'center', gap: '20px', padding: '30px 24px', minHeight: '250px',
+        textAlign: l.center ? 'center' : 'left', color: ink,
+        background: dark
+          ? 'linear-gradient(rgba(10,12,18,.55),rgba(10,12,18,.62)), repeating-linear-gradient(45deg, ' + t.soft + ' 0 14px, ' + t.bg + ' 14px 28px)'
+          : t.bg
+      },
+      dzTextWrapStyle: l.glass
+        ? { background: 'rgba(255,255,255,.12)', backdropFilter: 'blur(9px)', WebkitBackdropFilter: 'blur(9px)', border: '1px solid rgba(255,255,255,.35)', borderRadius: '14px', padding: '18px 22px', maxWidth: '420px' }
+        : { maxWidth: '460px' },
+      dzKicker: (d.prefix || '') + cp.kicker,
+      dzKickerStyle: { fontSize: '10.5px', fontWeight: 700, letterSpacing: d.kLS || '.12em', color: t.accent, textTransform: d.upper ? 'uppercase' : 'none', fontFamily: d.upper ? "'Montserrat', sans-serif" : f.css },
+      dzTitle: cp.title,
+      dzH1Style: {
+        fontFamily: f.css, fontWeight: f.w, fontSize: l.vert ? '24px' : '27px', lineHeight: 1.55,
+        letterSpacing: d.hLS || '.01em', margin: '8px 0 10px', display: 'inline-block', color: 'inherit',
+        backgroundImage: d.marker ? 'linear-gradient(transparent 64%, #FFE066 64%)' : 'none',
+        writingMode: l.vert ? 'vertical-rl' : 'horizontal-tb', height: l.vert ? '175px' : 'auto'
+      },
+      dzSub: cp.sub,
+      dzSubStyle: { fontSize: '12px', lineHeight: 1.95, opacity: .85, margin: '0 0 14px', maxWidth: '340px' },
+      dzHasNums: !!l.nums,
+      dzNumStyle: { background: dark ? 'rgba(255,255,255,.12)' : t.soft, color: 'inherit', borderRadius: '8px', padding: '5px 10px', fontSize: '10.5px', fontWeight: 700 },
+      dzCta: cp.cta,
+      dzBtnStyle: { display: 'inline-block', background: t.accent, color: t.btnInk || '#FFFFFF', borderRadius: l.sharp ? '7px' : '999px', padding: '9px 20px', fontSize: '12px', fontWeight: 700, fontFamily: f.css },
+      dzHasImg: !!l.hasImg,
+      dzImgStyle: { width: '160px', height: '160px', flex: 'none', boxSizing: 'border-box', borderRadius: l.imgR || '12px', border: '1.5px dashed ' + t.accent, background: 'repeating-linear-gradient(45deg, ' + t.soft + ' 0 10px, ' + t.bg + ' 10px 20px)', display: 'flex', alignItems: 'center', justifyContent: 'center', textAlign: 'center', padding: '14px', fontSize: '10px', lineHeight: 1.8, color: t.ink },
+      dzImgText: im.img,
+      dzIconText: im.icon,
+      dzHasBadge: !!d.badge,
+      dzBadgeText: d.badge || '',
+      dzBadgeStyle: { position: 'absolute', top: '14px', right: '16px', background: d.badgeBg || '#FFFFFF', color: d.badgeInk || t.ink, border: '1.5px solid ' + (dark ? '#FFFFFF' : t.ink), borderRadius: d.badgeSq ? '4px' : '999px', transform: d.badgeRot ? 'rotate(6deg)' : 'none', padding: d.badgeSq ? '7px 8px' : '4px 11px', fontSize: '11px', fontWeight: 700, fontFamily: f.css },
+      dzHasFullNote: dark,
+      dzFontName: f.name,
+      dzToneName: t.name,
+      dzReasons: [
+        { cat: 'フォント', text: f.why }, { cat: 'レイアウト', text: l.why }, { cat: 'あしらい', text: d.why },
+        { cat: '色', text: t.why }, { cat: '写真・アイコン', text: im.why }, { cat: 'サイトマップ', text: mp.why }, { cat: 'コピー', text: cp.why }
+      ],
+      dzGuide: D.guide
+    };
+  }
+
+  dzData() {
+    if (this._dz2) return this._dz2;
+    const imps = ['上品・洗練', '親しみ', 'かわいらしさ', '誠実・信頼', '安心感', 'フォーマル', '伝統・格式', '先進'];
+    const auds = ['若者向け', 'ファミリー向け', 'シニア向け', '企業・BtoB向け'];
+    const hues = [
+      { name: '赤系', h: 5, note: '赤は情熱・食欲・エネルギーの色。強い色なので使う面積は絞るのがコツです。' },
+      { name: 'オレンジ系', h: 26, note: 'オレンジは元気と親近感の色。飲食・地域ビジネスと好相性です。' },
+      { name: '黄系', h: 46, note: '黄は楽しさと注意をひく色。子ども向け・カジュアル業態に向きます。' },
+      { name: '緑系', h: 150, note: '緑は自然・健康・安らぎの色。医療・食品・環境系の定番です。' },
+      { name: '青系', h: 214, note: '青は信頼と冷静の色。銀行や官公庁のサイトが青い理由です。' },
+      { name: '紫系', h: 276, note: '紫は高貴・神秘の色。美容・アート系で活きます。' },
+      { name: 'ピンク系', h: 336, note: 'ピンクはやさしさと華やぎの色。かわいい系の主役です。' }
+    ];
+    const fonts = [
+      { name: 'しっぽり明朝・游明朝(細めのウェイト)', css: "'Shippori Mincho', serif", w: 600, why: '線が細く、ふところの締まった明朝は「余裕・教養・静けさ」の記号です。余白を広く取るほど高級感が増します。' },
+      { name: 'Zen Kaku Gothic New・Noto Sans JP(中太)', css: "'Zen Kaku Gothic New', sans-serif", w: 700, why: '角のとれたゴシックは声のトーンがやわらかく、日常の言葉と相性のよい書体です。' },
+      { name: 'M PLUS Rounded 1c・丸ゴシック(太め)', css: "'M PLUS Rounded 1c', sans-serif", w: 800, why: '輪郭が丸い文字は「小さい・やわらかい」ものの連想につながります。丸ゴシックはそれ自体がかわいさの記号です。' },
+      { name: 'Noto Sans JP・游ゴシック(標準ウェイト)', css: "'Zen Kaku Gothic New', sans-serif", w: 500, why: 'クセのない骨格は「まじめ・公平」の印象。装飾を足さず、説明的に組むのがコツです。' },
+      { name: 'Zen Maru Gothic(標準〜中太)', css: "'Zen Maru Gothic', sans-serif", w: 700, why: '丸みのある書体を標準の太さで使うと、幼くならずに「やわらかくて頼れる」声になります。' },
+      { name: 'しっぽり明朝(太め)+字間広め', css: "'Shippori Mincho', serif", w: 700, why: '太めの明朝は式典の招待状の文字。姿勢を正した、あらたまった声になります。' },
+      { name: 'Zen Old Mincho・筑紫明朝系(オールド明朝)', css: "'Zen Old Mincho', serif", w: 700, why: '古い活字の形を残した明朝は、書物や活版印刷の記憶につながり、時間の重みを感じさせます。' },
+      { name: 'Montserrat / Inter系の欧文+角ゴシック', css: "'Montserrat', 'Zen Kaku Gothic New', sans-serif", w: 700, why: '幾何学的な欧文は「テック・国際的」の記号。太字を大きく使うのが定番の作法です。' }
+    ];
+    const layouts = [
+      { name: '余白広めの中央1カラム。写真は小さく、またはなし', dir: 'column', center: true, hasImg: false, why: '広い余白は「詰め込まなくても成立する」自信の表現です。' },
+      { name: '左にコピー、右に角丸の写真(人物)', dir: 'row', hasImg: true, imgR: '18px', why: '人の顔+左から右への自然な視線の流れ。もっとも失敗しにくい定番の構図です。' },
+      { name: '丸トリミングの写真+ステッカーを散らす', dir: 'row', hasImg: true, imgR: '50%', why: '丸は角がない=攻撃性のない形。散らした小物が楽しい空気を作ります。' },
+      { name: '左にコピー+実績数字の列、右に実写', dir: 'row', hasImg: true, imgR: '10px', nums: true, sharp: true, why: '言い切りの直後に数字で証明する構図。比較中の読み手に最短で届きます。' },
+      { name: '左にコピーと大きな相談ボタン、右に大きめの写真', dir: 'row', hasImg: true, imgR: '24px', bigCta: true, why: '「次に何をすればいいか」がひと目で分かることが、安心感の正体です。' },
+      { name: '中央寄せ+上下の細い罫線。写真は控えめ', dir: 'column', center: true, hasImg: false, rule: true, why: '左右対称の中央組みは、式次第や証書の構図。整列そのものが礼儀正しさに見えます。' },
+      { name: '縦書きの見出し+職人・素材の写真', dir: 'row-reverse', vert: true, hasImg: true, imgR: '8px', why: '縦書きは日本語にしかできない構図。それだけで「和」の空気になります。' },
+      { name: '全面ダークな写真/CGの上にガラスのカード', dir: 'row', full: true, glass: true, hasImg: false, why: '暗い全面ビジュアルは没入感を生みます。ガラス越しの文字が今っぽさの記号です。' }
+    ];
+    const decos = [
+      { name: '字間を広くとる(+細い罫線)', kLS: '.3em', hLS: '.12em', why: 'ゆったりした字間は「急いでいない=高級」のサインです。' },
+      { name: '蛍光マーカー風の下線', marker: true, why: '大事なところにマーカーを引く、あの手つき。「教えてもらっている」ような親近感が出ます。' },
+      { name: '傾けたステッカー風バッジ', badge: '♡ おすすめ', badgeRot: true, why: '少し傾いたバッジは、手で貼ったような不揃い感=かわいさです。' },
+      { name: '見出し前の小さな角ラベル。装飾は最小限', prefix: '■ ', why: '資料や報告書の記号を借りることで「きちんと感」。飾らないことが飾りになります。' },
+      { name: 'ゆるい波線の下線', wavy: true, why: '定規で引いていない線は、人の手の跡。かたくならない真面目さが出ます。' },
+      { name: '見出しの上下に細い罫線', hRule: true, kLS: '.25em', why: '罫線で区切る組み方は、公文書や招待状の作法です。' },
+      { name: '縦書き+落款(判子)風の赤い角版', badge: '匠', badgeSq: true, badgeBg: '#8C3A2B', badgeInk: '#FFFFFF', why: '書画の落款の記憶につながり、格式と手仕事の気配が出ます。' },
+      { name: '欧文キッカー(大文字+広い字間)', upper: true, kLS: '.35em', why: '英語の小見出しを先に置く、海外テック系の定番作法。画面が締まります。' }
+    ];
+    const toneLabels = ['低彩度・上品トーン', '明るい中彩度トーン', 'パステルトーン', 'クリアな信頼トーン', 'やわらかい安心トーン', '落ち着いたフォーマルトーン', '深い伝統トーン', 'ダーク×ネオントーン'];
+    const toneWhys = [
+      '彩度をぐっと落として明るく。「素材そのもの」の印象になります。',
+      '中くらいの彩度で明るく。圧がなく、話しかけやすい色になります。',
+      '白をたくさん混ぜたパステル。濃い色は文字だけにします。',
+      'にごりのない中間の彩度。「はっきり・でも派手すぎない」が誠実の色です。',
+      'やわらかい中間色。目に刺さらないことが、そのまま安心になります。',
+      '彩度を抑えて暗めに。制服やスーツの色使いと同じ理屈です。',
+      '暗く、少し濁った色は時間の経過=歴史を感じさせます。',
+      '暗い画面+光る1色。ディスプレイの発光を活かす配色です。'
+    ];
+    const tone = (i, h) => {
+      const r = [
+        { bg: [22, 96], ink: [18, 16], ac: [32, 42], so: [24, 90] },
+        { bg: [55, 95], ink: [25, 14], ac: [78, 53], so: [60, 88] },
+        { bg: [70, 96], ink: [25, 30], ac: [72, 66], so: [65, 90] },
+        { bg: [30, 96], ink: [30, 15], ac: [62, 40], so: [35, 89] },
+        { bg: [42, 95], ink: [22, 20], ac: [50, 46], so: [45, 88] },
+        { bg: [12, 97], ink: [15, 12], ac: [35, 32], so: [14, 90] },
+        { bg: [20, 92], ink: [25, 13], ac: [50, 34], so: [22, 84] },
+        null
+      ][i];
+      const hsl = (s, l) => 'hsl(' + h + ',' + s + '%,' + l + '%)';
+      if (!r) return { bg: hsl(28, 9), ink: hsl(15, 95), accent: hsl(85, 60), soft: hsl(25, 15), line: 'rgba(255,255,255,.16)', btnInk: hsl(30, 8), dark: true };
+      return { bg: hsl(r.bg[0], r.bg[1]), ink: hsl(r.ink[0], r.ink[1]), accent: hsl(r.ac[0], r.ac[1]), soft: hsl(r.so[0], r.so[1]) };
+    };
+    const imgs = [
+      { img: '余白を大きくとった静物写真(自然光・低彩度)', icon: '細い線画アイコン(線幅1px・単色)', why: '情報より「間」を写します。低彩度・自然光が素材の良さを語ってくれます。' },
+      { img: 'スタッフの笑顔・接客中のスナップ写真(明るめ)', icon: '塗りつぶしの丸みのあるアイコン(2色まで)', why: '顔が見えるだけで、問い合わせのハードルはぐっと下がります。' },
+      { img: '手描きイラスト・キャラクター(パステル配色)', icon: '手書き風アイコン(線がゆらぐタッチ)', why: 'イラストは実写より自由に世界観を作れます。タッチは1種類にそろえます。' },
+      { img: 'オフィス・現場の実写(加工少なめ・広角)', icon: 'フラットな単色アイコン(角は直角寄り)', why: '加工の少ない実写は「見せられる現場がある」という証拠になります。' },
+      { img: '相談中のスタッフと利用者の写真(明るい室内・目線あり)', icon: '角丸で太めの塗りアイコン', why: '「対応してくれる人」が写っているだけで、問い合わせ前の不安が下がります。' },
+      { img: '建物外観・応接室の写真(水平垂直をきっちり)', icon: '細い線の幾何学アイコン(単色・等間隔)', why: '水平垂直の通った写真は「管理が行き届いている」印象に直結します。' },
+      { img: '職人の手元・道具の接写(陰影深め・和紙や木の質感)', icon: '家紋・判子風のモノクロアイコン', why: '手元と道具の接写は、技術の証明写真。質感がそのまま信頼になります。' },
+      { img: '抽象的な3DCG・グラデーションのオブジェ', icon: '細い線+グラデーションのアイコン', why: '実体のないサービスは、抽象CGで「概念」を見せるのが定番です。' }
+    ];
+    const videos = [
+      '湯気や光がゆれる、静物のシネマグラフ',
+      '店内のにぎわいをゆっくりパンする動画',
+      '手描きアニメのループ動画',
+      'オフィス・現場を歩くウォークスルー動画',
+      'スタッフが案内するあいさつ動画',
+      '建物外観を定点で撮ったタイムラプス',
+      '職人の手元のスローモーション動画',
+      '3DCGが回転するループ動画'
+    ];
+    const motions = [
+      'ふわっと1秒かけて浮かび上がるフェード',
+      'ぽよんと弾むボタンホバー',
+      'ステッカーがゆらゆら揺れる動き',
+      '実績の数字がカウントアップする動き',
+      'スクロールに合わせて1つずつやさしく現れる動き',
+      '動きは最小限、静かなフェードのみ',
+      '墨がにじむようなゆっくりしたフェード',
+      'スクロール連動のパララックスと、動くグラデーション'
+    ];
+    const iconWhys = [
+      '線が細いほど、静かで高級に見えます。',
+      '塗りの丸アイコンは表情がやわらかく、押しやすそうに見えます。',
+      '線がゆらぐ手書きタッチは、それだけで世界観になります。',
+      '直角寄りのフラットアイコンは、事務的で正確な印象です。',
+      '角丸で太めの塗りは、遠目にも分かりやすいことが安心につながります。',
+      '等間隔・同じ線幅。整っていること自体が礼儀です。',
+      '家紋や判子のモノクロは、和の記号として強力です。',
+      'グラデーションの細い線アイコンは、テック系の定番です。'
+    ];
+    const pspec = [
+      'linear-gradient(160deg,#F4EFE6,#D9CDB8)',
+      'linear-gradient(160deg,#FFE3C2,#F9A15F)',
+      'linear-gradient(160deg,#FFE9F3,#FFB7D5)',
+      'linear-gradient(160deg,#DCE7F5,#7FA3D4)',
+      'linear-gradient(160deg,#DFF2E8,#8CC7A8)',
+      'linear-gradient(160deg,#EDEDF0,#B8BCC6)',
+      'linear-gradient(160deg,#EFE7D4,#8C6A4A)',
+      'linear-gradient(160deg,#1B2340,#4FE0BE)'
+    ];
+    const audFlavor = ['同世代の若いモデル・スタッフの写真', '家族連れのシーンの写真', '年配のお客さまと一緒の写真', 'ビジネスの現場感がある写真'];
+    const audSubject = ['被写体は同世代の若いモデル・スタッフ', '被写体は家族連れ・親子のシーン', '被写体は年配のお客さまと寄り添うスタッフ', '被写体は打ち合わせ・現場のチーム'];
+    const audIconNote = ['小さめでもOK。ホバーの動きで補う', 'ラベル文字を添えて意味をはっきり', '大きめ・高コントラストで見やすく', '数を絞って等間隔に、資料調で'];
+    const audMotionNote = ['テンポ速めでOK。スクロールに機敏に反応させる', '動きは楽しく、でも文字が読み終わるのを待ってから', 'ゆっくりめ+動く範囲は小さく。急な動きは避ける', '控えめに。数字や実績まわりだけ動かすと効果的'];
+    const audVideoNote = ['縦型・ショート動画のテンポで', '子どもの声や生活音が伝わる明るいトーンで', '字幕を大きく、カメラはゆっくり', 'テロップで実績・工程を補足する構成で'];
+    const maps = [
+      { casual: ['ABOUT', 'MENU', 'GALLERY', 'NEWS', '予約する'], trust: ['はじめての方へ', 'メニュー', '料金', '口コミ', '予約'], premium: ['コンセプト', 'メニュー', 'ギャラリー', 'お知らせ', 'ご予約'], tech: ['About', 'Menu', 'Gallery', 'News', 'Reserve'] },
+      { casual: ['はじめてガイド', 'メニューと料金', '店内のようす', 'みんなの声', '予約する'], trust: ['はじめての方へ', 'メニューと料金', '店内・設備', 'お客さまの声', 'ご予約'], premium: ['当店について', 'お品書き', '店内のご案内', 'お知らせ', 'ご予約'], tech: ['サービス', '料金プラン', '設備', 'お知らせ', 'Web予約'] },
+      { casual: ['ごあんない', 'メニュー', '料金', 'みなさまの声', 'ご予約'], trust: ['ご挨拶', 'サービスのご案内', '料金のご案内', 'よくあるご質問', 'お電話・ご予約'], premium: ['ご挨拶', 'お品書き', '店のあゆみ', '店舗のご案内', 'ご予約'], tech: ['サービス案内', '料金', 'サポート', '会社案内', 'お問い合わせ'] },
+      { casual: ['できること', '料金', '事例', 'ブログ', '相談する'], trust: ['サービス', '料金', '実績・事例', '会社概要', 'お問い合わせ'], premium: ['ごあいさつ', '事業内容', '沿革', '会社概要', 'お問い合わせ'], tech: ['Product', 'Features', 'Pricing', 'Company', 'Contact'] }
+    ];
+    const copies = [
+      { brand: 'SIRO', kicker: 'CONCEPT', title: '静けさを、纏う。', why: '体言止め+句点の短文は余韻=品。説明しすぎないことが上品さです。' },
+      { brand: 'ひだまり食堂', kicker: 'ようこそ', title: 'きょうも、気軽にどうぞ。', why: '話しかける口調は距離を縮めます。「どうぞ」の一言で敷居が下がります。' },
+      { brand: 'ふわり', kicker: 'ちいさなごほうび', title: 'まいにちに、ちいさなごほうびを。', why: 'ひらがな多め+くり返しのリズムが、かわいらしさの正体です。' },
+      { brand: '誠和システム', kicker: '選ばれる理由', title: '数字で語れる仕事を。', why: '形容詞ではなく数字で語ること。検証できる言葉が信頼を作ります。' },
+      { brand: 'そらまめ調剤薬局', kicker: 'いつでも相談', title: '「聞いてよかった」を、いちばん近くに。', why: '相手のせりふを先に言ってあげる書き方。安心は共感から始まります。' },
+      { brand: '青柳法律事務所', kicker: 'GREETING', title: 'ご依頼に、誠意をもって。', why: '「誠意」「所存」など、あらたまった語彙が姿勢を伝えます。' },
+      { brand: '菓匠 つきしろ', kicker: '御菓子司', title: '八十年、変わらぬ仕事。', why: '漢数字と「仕事」という言葉の重み。続いてきた時間が価値になります。' },
+      { brand: 'FLOWLY', kicker: 'WORKFLOW, SIMPLIFIED', title: 'その業務、3クリックで。', why: '成果を短く言い切って、すぐ試せるCTAを添えるのがテック流です。' }
+    ];
+    const subs = [
+      { casual: 'いい感じの毎日、ここから。気になったら今すぐチェック。', trust: 'はじめてでも迷わないように、料金も口コミもぜんぶ載せています。', premium: '流行より、長く好きでいられるものを。', tech: '登録は30秒。今日からすぐ使えます。' },
+      { casual: '子ども連れでも大丈夫。みんなでゆっくりどうぞ。', trust: 'ご家族で安心して使えるよう、料金と設備を先にご案内します。', premium: '家族の節目に、きちんとした時間を。', tech: '家族の予定に合わせて、スマホでかんたん予約。' },
+      { casual: 'ゆっくり、ていねいに。いつでもお立ち寄りください。', trust: 'わかりにくいことは、お電話でもご説明します。どうぞご安心ください。', premium: '永年のご愛顧に、変わらぬ品質でお応えします。', tech: '操作はかんたん。大きな文字の画面でご案内します。' },
+      { casual: 'まずは気軽に、15分だけ話しませんか。', trust: '導入420社・継続率98%。根拠のある提案だけをお届けします。', premium: '貴社の信頼に、実績でお応えいたします。', tech: '面倒な作業は自動化して、本来の仕事に集中しよう。' }
+    ];
+    const ctas = [
+      { casual: '今すぐ予約', trust: '空きをみる', premium: 'ご予約', tech: '無料で試す' },
+      { casual: 'かんたん予約', trust: '見学を予約する', premium: 'ご予約', tech: 'Webで予約' },
+      { casual: 'お電話はこちら', trust: 'お電話で相談する', premium: 'ご予約・ご注文', tech: 'お問い合わせ' },
+      { casual: '相談してみる', trust: '資料をもらう', premium: 'お問い合わせ', tech: '無料で試す' }
+    ];
+    const audWhys = [
+      '若い読み手はスマホ前提+スピード重視。英語ラベルや短い言葉が心地よい層です。',
+      '家族の意思決定は「安心材料」の確認から。設備・料金・声を先に出します。',
+      '大きめの文字・電話の導線・ていねいな言い回し。読み急がせないことが親切です。',
+      '会社の買い物は複数人の稟議で決まります。開示情報と実績が武器になります。'
+    ];
+    const grp = (i) => (i === 1 || i === 2) ? 'casual' : ((i === 3 || i === 4) ? 'trust' : (i === 7 ? 'tech' : 'premium'));
+    const lspec = [
+      'linear-gradient(#241E1A,#241E1A) 50% 34%/44% 4px no-repeat, linear-gradient(#C9BFB6,#C9BFB6) 50% 56%/28% 3px no-repeat, #FFFFFF',
+      'linear-gradient(#241E1A,#241E1A) 16% 32%/30% 4px no-repeat, linear-gradient(#C9BFB6,#C9BFB6) 14% 54%/24% 3px no-repeat, radial-gradient(circle 13px at 78% 50%, #F0B285 97%, transparent), #FFFFFF',
+      'radial-gradient(circle 14px at 72% 46%, #FFC7DC 97%, transparent), radial-gradient(circle 4px at 90% 24%, #F76F9F 97%, transparent), linear-gradient(#241E1A,#241E1A) 16% 42%/28% 4px no-repeat, #FFFFFF',
+      'linear-gradient(#241E1A,#241E1A) 14% 26%/28% 4px no-repeat, linear-gradient(#2B5EA7,#2B5EA7) 10% 58%/8% 7px no-repeat, linear-gradient(#2B5EA7,#2B5EA7) 22% 58%/8% 7px no-repeat, linear-gradient(#DCE7F5,#DCE7F5) 76% 50%/28% 66% no-repeat, #FFFFFF',
+      'linear-gradient(#241E1A,#241E1A) 15% 28%/26% 4px no-repeat, linear-gradient(#3B8C6E,#3B8C6E) 18% 62%/24% 13px no-repeat, linear-gradient(#D9EDE3,#D9EDE3) 76% 50%/30% 68% no-repeat, #FFFFFF',
+      'linear-gradient(#8A817A,#8A817A) 50% 12%/60% 1.5px no-repeat, linear-gradient(#241E1A,#241E1A) 50% 42%/40% 4px no-repeat, linear-gradient(#8A817A,#8A817A) 50% 84%/60% 1.5px no-repeat, #FFFFFF',
+      'linear-gradient(#241E1A,#241E1A) 86% 50%/4px 60% no-repeat, linear-gradient(#E5DECE,#E5DECE) 30% 50%/40% 70% no-repeat, #FFFFFF',
+      'linear-gradient(rgba(255,255,255,.28),rgba(255,255,255,.28)) 50% 50%/52% 56% no-repeat, #12151D'
+    ];
+    const dspec = [
+      { text: 'み だ し', style: { letterSpacing: '.32em', fontWeight: 700, borderBottom: '1px solid #241E1A', paddingBottom: '3px', fontFamily: "'Shippori Mincho', serif" } },
+      { text: 'たいせつな話', style: { fontWeight: 900, backgroundImage: 'linear-gradient(transparent 62%, #FFE066 62%)' } },
+      { text: '♡ おすすめ', style: { display: 'inline-block', transform: 'rotate(5deg)', background: '#FFFFFF', border: '1.5px solid #241E1A', borderRadius: '999px', padding: '2px 10px', fontSize: '11.5px', fontWeight: 700, boxShadow: '2px 2px 0 #241E1A' } },
+      { text: '■ ごあいさつ', style: { fontWeight: 700 } },
+      { text: 'やさしい下線', style: { fontWeight: 700, textDecorationLine: 'underline', textDecorationStyle: 'wavy', textDecorationColor: '#F97B2F', textUnderlineOffset: '4px' } },
+      { text: 'ご 挨 拶', style: { display: 'inline-block', letterSpacing: '.25em', fontWeight: 700, borderTop: '1px solid #241E1A', borderBottom: '1px solid #241E1A', padding: '3px 2px', fontFamily: "'Shippori Mincho', serif" } },
+      { text: '匠', style: { display: 'inline-block', background: '#8C3A2B', color: '#FFFFFF', borderRadius: '4px', padding: '5px 8px', fontFamily: "'Zen Old Mincho', serif", fontWeight: 700 } },
+      { text: 'ABOUT US', style: { letterSpacing: '.35em', fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: '11px' } }
+    ];
+    const ispec = [
+      { border: '1.2px solid #241E1A', borderRadius: '6px', background: 'transparent' },
+      { border: '1.5px solid #241E1A', borderRadius: '50%', background: '#F97B2F' },
+      { border: '1.5px dashed #241E1A', borderRadius: '50%', background: '#FFE0EC' },
+      { border: '1.5px solid #241E1A', borderRadius: '3px', background: '#2B5EA7' },
+      { border: '1.5px solid #241E1A', borderRadius: '9px', background: '#63D8B2' },
+      { border: '1.2px solid #241E1A', borderRadius: '0', background: 'transparent' },
+      { border: '1.5px solid #241E1A', borderRadius: '3px', background: '#8C3A2B' },
+      { border: '1.5px solid #241E1A', borderRadius: '8px', background: 'linear-gradient(135deg,#4FE0BE,#4D7CFE)' }
+    ];
+    const mapRecs = [
+      '項目を絞る(5つ前後)。「こだわり」「コンセプト」で語る',
+      '「はじめての方へ」「みんなの声」など、話しかける項目名',
+      'ひらがな多めの項目名。「ご予約」はいつも右端に',
+      '「実績・事例」「会社概要」を必ず置く。情報の開示量=信頼',
+      '「よくあるご質問」「お電話でのご相談」を目立つ位置に',
+      '「ごあいさつ」「会社概要」など、あらたまった定型の項目名',
+      '「ご挨拶」「歴史」「店のあゆみ」から始める構成',
+      '英語ラベル+料金公開(Pricing)。透明性が信頼になります'
+    ];
+    const mapWhy = [
+      '選択肢が少ないほど「選ばされていない」感じ=高級に見えます。',
+      '接客の第一声と同じ。呼びかける言葉が距離を縮めます。',
+      'やわらかい文字面が、そのまま世界観になります。',
+      '会社の実在感は、開示されている情報の量で判断されます。',
+      '「困ったときの行き先」が先に見えていることが安心です。',
+      '定型どおりであること自体が、礼儀正しさの表現です。',
+      '人格と時間を先に見せる、老舗の作法です。',
+      '海外SaaSの標準に合わせると、それだけで先進的に見えます。'
+    ];
+    const mapChip = ['コンセプト', 'はじめての方へ', 'みんなの声', '実績・事例', 'よくあるご質問', 'ごあいさつ', '店のあゆみ', 'Pricing'];
+    const mapEx = [
+      'コンセプト / メニュー / ギャラリー / お知らせ / ご予約',
+      'はじめてガイド / メニューと料金 / 店内のようす / みんなの声 / 予約する',
+      'ごあんない / メニュー / 料金 / みなさまの声 / ご予約',
+      'サービス / 料金 / 実績・事例 / 会社概要 / お問い合わせ',
+      'ご挨拶 / サービスのご案内 / 料金のご案内 / よくあるご質問 / お電話・ご予約',
+      'ごあいさつ / 事業内容 / 沿革 / 会社概要 / お問い合わせ',
+      'ご挨拶 / お品書き / 店のあゆみ / 店舗のご案内 / ご予約',
+      'Product / Features / Pricing / Company / Contact'
+    ];
+    const chipStyle = { display: 'inline-block', fontSize: '10.5px', fontWeight: 700, background: '#FFF3DF', border: '1.5px solid #241E1A', borderRadius: '999px', padding: '3px 9px', whiteSpace: 'nowrap' };
+    const dh = [214, 26, 336, 214, 150, 214, 5, 160];
+    const hid = { display: 'none' };
+    const rowBox = { display: 'flex', alignItems: 'center', minHeight: '34px' };
+    const guide = [
+      { id: 'dz-font', no: 'MAYOI.01', title: 'フォントの選び方', lead: '同じ文章でも、書体で「声色」が変わります。', rows: imps.map((imn, i) => ({ imp: imn, spBox: rowBox, spA: { fontFamily: fonts[i].css, fontWeight: fonts[i].w, fontSize: '19px', lineHeight: 1.3 }, spAText: 'あア永 Aa', spB: hid, spBText: '', rec: fonts[i].name, recStyle: { fontWeight: 700 }, why: fonts[i].why })) },
+      { id: 'dz-fv', no: 'MAYOI.02', title: 'ファーストビューのレイアウト', lead: '最初の1画面の構図は、お店の店構えと同じです。', rows: imps.map((imn, i) => ({ imp: imn, spBox: { display: 'block', width: '100%', maxWidth: '128px', height: '46px', border: '1.5px solid #241E1A', borderRadius: '6px', background: lspec[i] }, spA: hid, spAText: '', spB: hid, spBText: '', rec: layouts[i].name, recStyle: { fontWeight: 700 }, why: layouts[i].why })) },
+      { id: 'dz-deco', no: 'MAYOI.03', title: '文字のあしらい', lead: '見出しまわりの小さな細工が、雰囲気の半分を決めます。', rows: imps.map((imn, i) => ({ imp: imn, spBox: rowBox, spA: dspec[i].style, spAText: dspec[i].text, spB: hid, spBText: '', rec: decos[i].name, recStyle: { fontWeight: 700 }, why: decos[i].why })) },
+      { id: 'dz-tone', no: 'MAYOI.04', title: '色のトーン(明度・彩度)', lead: '色相はお好みでOK。先に明度と彩度で印象が決まります(見本は一例の色相)。', rows: imps.map((imn, i) => { const tt = tone(i, dh[i]); return { imp: imn, spBox: { display: 'block', width: '100%', maxWidth: '128px', height: '26px', borderRadius: '6px', border: '1.5px solid #241E1A', background: 'linear-gradient(90deg,' + tt.bg + ' 0 34%,' + tt.soft + ' 34% 67%,' + tt.accent + ' 67% 100%)' }, spA: hid, spAText: '', spB: hid, spBText: '', rec: toneLabels[i], recStyle: { fontWeight: 700 }, why: toneWhys[i] }; }) },
+      { id: 'dz-photo', no: 'MAYOI.05', title: '写真・背景画像・動画の選び方', lead: 'いまのWebは画像と動画が主役。「どんな素材を用意してもらうか」の指示までがデザインです。', rows: imps.map((imn, i) => ({ imp: imn, spBox: { position: 'relative', display: 'block', width: '100%', maxWidth: '128px', height: '42px', borderRadius: '8px', border: '1.5px solid #241E1A', background: pspec[i], overflow: 'hidden' }, spA: { position: 'absolute', left: '10px', top: '11px', display: 'flex', alignItems: 'center', justifyContent: 'center', width: '20px', height: '20px', borderRadius: '50%', background: 'rgba(36,30,26,.72)', color: '#FFFFFF', fontSize: '8px' }, spAText: '▶', spB: hid, spBText: '', rec: '写真: ' + imgs[i].img + ' / 動画: ' + videos[i], recStyle: {}, why: imgs[i].why })) },
+      { id: 'dz-icon', no: 'MAYOI.06', title: 'アイコンの選び方', lead: 'アイコンの線の太さと角の形は、書体と同じ「声色」です。', rows: imps.map((imn, i) => ({ imp: imn, spBox: rowBox, spA: { display: 'inline-block', flex: 'none', width: '22px', height: '22px', border: ispec[i].border, borderRadius: ispec[i].borderRadius, background: ispec[i].background }, spAText: '', spB: { fontSize: '9.5px', fontWeight: 700, color: '#8A817A', marginLeft: '7px' }, spBText: '形と線の見本', rec: imgs[i].icon, recStyle: { fontWeight: 700 }, why: iconWhys[i] })) },
+      { id: 'dz-map', no: 'MAYOI.07', title: 'サイトマップ(ナビの項目名)', lead: 'ナビの項目名は、接客の第一声です(誰向けかで語彙が変わります)。', rows: imps.map((imn, i) => ({ imp: imn, spBox: rowBox, spA: chipStyle, spAText: mapChip[i], spB: hid, spBText: '', rec: mapRecs[i] + '。例: ' + mapEx[i], recStyle: { fontWeight: 700 }, why: mapWhy[i] })) },
+      { id: 'dz-copy', no: 'MAYOI.08', title: 'コピーの雰囲気', lead: '言葉の温度もデザインの一部です。', rows: imps.map((imn, i) => ({ imp: imn, spBox: rowBox, spA: { fontFamily: fonts[i].css, fontWeight: fonts[i].w, fontSize: '12.5px', lineHeight: 1.6 }, spAText: copies[i].title, spB: hid, spBText: '', rec: '「' + copies[i].title + '」', recStyle: { fontWeight: 700 }, why: copies[i].why })) }
+    ];
+    this._dz2 = { imps, auds, hues, fonts, layouts, decos, tone, toneLabels, toneWhys, imgs, videos, motions, audFlavor, audSubject, audIconNote, audMotionNote, audVideoNote, maps, copies, subs, ctas, audWhys, grp, guide };
+    return this._dz2;
+  }
+
+  dzVals() {
+    const D = this.dzData();
+    const dz = this.state.dz;
+    const aud = this.state.dzAud === undefined ? 1 : this.state.dzAud;
+    const hue = this.state.dzHue === undefined ? 4 : this.state.dzHue;
+    const selOn = { appearance: 'none', cursor: 'pointer', background: '#241E1A', color: '#FFF6E9', border: '2px solid #241E1A', borderRadius: '999px', padding: '6px 13px', fontSize: '12px', fontWeight: 700, fontFamily: "'Zen Maru Gothic', sans-serif" };
+    const selOff = { appearance: 'none', cursor: 'pointer', background: '#FFFFFF', color: '#6B635C', border: '1.5px solid #C9BFB6', borderRadius: '999px', padding: '6px 13px', fontSize: '12px', fontWeight: 700, fontFamily: "'Zen Maru Gothic', sans-serif" };
+    const audRow = { label: '誰向け?', options: D.auds.map((a, oi) => ({ label: a, pick: () => this.setState({ dzAud: oi }), style: aud === oi ? Object.assign({}, selOn, { background: 'var(--acc,#FF5C38)', color: '#FFFFFF' }) : selOff })) };
+    const hueRow = { label: '色相', options: D.hues.map((hh, oi) => ({ label: hh.name, pick: () => this.setState({ dzHue: oi }), style: hue === oi ? Object.assign({}, selOn, { background: 'hsl(' + hh.h + ',60%,42%)', color: '#FFFFFF' }) : selOff })) };
+    const pick = (ci, oi) => () => this.setState((s) => { const a = s.dz.slice(); a[ci] = oi; return { dz: a }; });
+    const catLabels = ['フォント', 'FVレイアウト', '文字のあしらい', '色のトーン', '画像・動画・アイコン', 'サイトマップ', 'コピーの雰囲気'];
+    const dzCats = [audRow, hueRow].concat(catLabels.map((label, ci) => ({
+      label,
+      options: D.imps.map((im, oi) => ({ label: im, pick: pick(ci, oi), style: dz[ci] === oi ? selOn : selOff }))
+    })));
+    const H = D.hues[hue];
+    const f = D.fonts[dz[0]], l = D.layouts[dz[1]], d = D.decos[dz[2]], t = D.tone(dz[3], H.h), im = D.imgs[dz[4]];
+    const cp = D.copies[dz[6]];
+    const sub = D.subs[aud][D.grp(dz[6])];
+    const cta = D.ctas[aud][D.grp(dz[6])];
+    const mapItems = D.maps[aud][D.grp(dz[5])];
+    const dark = !!l.full || !!t.dark;
+    const ink = l.full ? '#FFFFFF' : t.ink;
+    const line = t.line || 'rgba(36,30,26,.15)';
+    const sc = (i) => {
+      const base = { position: 'absolute', display: 'block' };
+      switch (i) {
+        case 0: return { box: 'radial-gradient(circle at 30% 22%, rgba(255,255,255,.9), transparent 55%), linear-gradient(180deg,' + t.soft + ',' + t.bg + ')',
+          a: Object.assign({}, base, { width: '34px', height: '52px', left: '50%', top: '48%', transform: 'translate(-50%,-55%)', borderRadius: '10px 10px 14px 14px', background: t.accent, opacity: .85 }),
+          b: Object.assign({}, base, { width: '64px', height: '10px', left: '50%', top: '70%', transform: 'translateX(-50%)', borderRadius: '50%', background: 'rgba(0,0,0,.14)' }) };
+        case 1: { const hair = aud === 2 ? '#DCD3C4' : '#EBC49E'; return { box: 'linear-gradient(180deg,' + t.soft + ',' + t.bg + ')',
+          a: Object.assign({}, base, { width: '34px', height: '34px', left: '50%', top: '24%', transform: 'translateX(-50%)', borderRadius: '50%', background: hair, boxShadow: aud === 1 ? '30px 16px 0 -10px ' + hair : 'none' }),
+          b: Object.assign({}, base, { width: '68px', height: '38px', left: '50%', top: '50%', transform: 'translateX(-50%)', borderRadius: '26px 26px 6px 6px', background: aud === 3 ? t.ink : t.accent }) }; }
+        case 2: return { box: 'linear-gradient(180deg,#FFFFFF,' + t.soft + ')',
+          a: Object.assign({}, base, { width: '46px', height: '42px', left: '50%', top: '32%', transform: 'translateX(-50%)', borderRadius: '50% 50% 46% 54%', background: t.accent, opacity: .85 }),
+          b: Object.assign({}, base, { width: '8px', height: '8px', left: '28%', top: '26%', borderRadius: '50%', background: t.accent, boxShadow: '38px -6px 0 ' + t.accent + ', 20px 42px 0 ' + t.accent }) };
+        case 3: return { box: 'linear-gradient(180deg,' + t.soft + ' 0 62%, ' + t.accent + ' 62% 100%)',
+          a: Object.assign({}, base, { left: '12%', right: '12%', bottom: '38%', height: '34%', background: 'linear-gradient(90deg,' + t.ink + ' 0 18%, transparent 18% 26%, ' + t.ink + ' 26% 52%, transparent 52% 60%, ' + t.ink + ' 60% 84%, transparent 84% 100%)', opacity: .7 }),
+          b: Object.assign({}, base, { width: '16px', height: '16px', right: '18%', top: '13%', borderRadius: '50%', background: '#FFFFFF', opacity: .85 }) };
+        case 4: { const hair = aud === 2 ? '#DCD3C4' : '#EBC49E'; return { box: 'linear-gradient(180deg,' + t.soft + ',' + t.bg + ')',
+          a: Object.assign({}, base, { width: '28px', height: '28px', left: '28%', top: '34%', borderRadius: '50%', background: hair, boxShadow: aud === 1 ? '0 32px 0 -6px ' + hair + ', 26px 18px 0 -9px ' + hair : '0 32px 0 -6px ' + hair }),
+          b: Object.assign({}, base, { width: '28px', height: '28px', left: '54%', top: '34%', borderRadius: '50%', background: aud === 3 ? t.ink : t.accent, boxShadow: '0 32px 0 -6px ' + (aud === 3 ? t.ink : t.accent) }) }; }
+        case 5: return { box: 'linear-gradient(180deg,' + t.soft + ' 0 78%, ' + t.ink + ' 78% 100%)',
+          a: Object.assign({}, base, { width: '46%', height: '52%', left: '50%', top: '52%', transform: 'translate(-50%,-50%)', background: 'repeating-linear-gradient(0deg,' + t.ink + ' 0 4px, transparent 4px 10px), ' + t.accent, opacity: .85 }),
+          b: Object.assign({}, base, { display: 'none' }) };
+        case 6: return { box: 'repeating-linear-gradient(90deg, rgba(0,0,0,.08) 0 2px, transparent 2px 14px), linear-gradient(180deg,' + t.soft + ',' + t.bg + ')',
+          a: Object.assign({}, base, { width: '52px', height: '52px', left: '50%', top: '50%', transform: 'translate(-50%,-50%) rotate(45deg)', background: t.ink, opacity: .85 }),
+          b: Object.assign({}, base, { width: '26px', height: '26px', left: '50%', top: '50%', transform: 'translate(-50%,-50%)', borderRadius: '50%', background: t.accent }) };
+        default: return { box: 'radial-gradient(circle at 60% 40%, ' + t.accent + ' 0%, transparent 55%), #12151D',
+          a: Object.assign({}, base, { width: '48px', height: '48px', left: '50%', top: '44%', transform: 'translate(-50%,-50%)', borderRadius: '50%', background: 'radial-gradient(circle at 34% 30%, rgba(255,255,255,.35), transparent 60%), linear-gradient(135deg,' + t.accent + ', #4D7CFE)' }),
+          b: Object.assign({}, base, { display: 'none' }) };
+      }
+    };
+    const scene = sc(dz[4]);
+    const roundIcon = (dz[4] === 1 || dz[4] === 2 || dz[4] === 4);
+    const vid = D.videos[dz[4]], mo = D.motions[dz[4]], fl = D.audFlavor[aud];
+    const tlabel = { position: 'absolute', left: '6px', bottom: '5px', maxWidth: 'calc(100% - 12px)', boxSizing: 'border-box', fontSize: '8.5px', fontWeight: 700, background: 'rgba(36,30,26,.78)', color: '#FFF6E9', borderRadius: '999px', padding: '2px 8px', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' };
+    const tile = (k) => ({ position: 'relative', flex: '1', minWidth: 0, height: '58px', borderRadius: '8px', border: '1.5px solid ' + line, background: 'linear-gradient(' + (140 + k * 50) + 'deg,' + t.soft + ',' + t.accent + ')', overflow: 'hidden' });
+    const play = { position: 'absolute', left: '50%', top: '40%', transform: 'translate(-50%,-50%)', width: '20px', height: '20px', borderRadius: '50%', background: 'rgba(255,255,255,.92)', color: '#1B2030', fontSize: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center' };
+    const hidP = { display: 'none' };
+    return {
+      dzCats,
+      dzBrand: cp.brand,
+      dzMapItems: mapItems,
+      dzNavStyle: { display: 'flex', alignItems: 'center', gap: '12px', flexWrap: 'wrap', padding: '10px 16px', background: t.soft, borderBottom: '1.5px solid ' + line, color: t.ink },
+      dzBrandStyle: { fontFamily: f.css, fontWeight: f.w, fontSize: '13px', letterSpacing: d.hLS || '.02em' },
+      dzNavItemStyle: { fontSize: '10px', fontWeight: 700, opacity: .75 },
+      dzNavCtaStyle: { background: t.accent, color: t.btnInk || '#FFFFFF', borderRadius: l.sharp ? '6px' : '999px', padding: '4px 12px', fontSize: '10px', fontWeight: 700 },
+      dzFvStyle: {
+        position: 'relative', display: 'flex', flexDirection: l.dir, alignItems: 'center',
+        justifyContent: 'center', gap: '20px', padding: '30px 24px', minHeight: '250px',
+        textAlign: l.center ? 'center' : 'left', color: ink,
+        background: l.full
+          ? 'linear-gradient(rgba(10,12,18,.55),rgba(10,12,18,.62)), ' + scene.box
+          : t.bg
+      },
+      dzTextWrapStyle: l.glass
+        ? { background: 'rgba(255,255,255,.12)', backdropFilter: 'blur(9px)', WebkitBackdropFilter: 'blur(9px)', border: '1px solid rgba(255,255,255,.35)', borderRadius: '14px', padding: '18px 22px', maxWidth: '420px' }
+        : (l.rule ? { maxWidth: '460px', borderTop: '1px solid ' + line, borderBottom: '1px solid ' + line, padding: '18px 8px' } : { maxWidth: '460px' }),
+      dzKicker: (d.prefix || '') + cp.kicker,
+      dzKickerStyle: { fontSize: '10.5px', fontWeight: 700, letterSpacing: d.kLS || '.12em', color: t.accent, textTransform: d.upper ? 'uppercase' : 'none', fontFamily: d.upper ? "'Montserrat', sans-serif" : f.css },
+      dzTitle: cp.title,
+      dzH1Style: {
+        fontFamily: f.css, fontWeight: f.w, fontSize: l.vert ? '24px' : '27px', lineHeight: 1.55,
+        letterSpacing: d.hLS || '.01em', margin: '8px 0 10px', display: 'inline-block', color: 'inherit',
+        backgroundImage: d.marker ? 'linear-gradient(transparent 64%, #FFE066 64%)' : 'none',
+        textDecorationLine: d.wavy ? 'underline' : 'none', textDecorationStyle: d.wavy ? 'wavy' : 'solid', textDecorationColor: t.accent, textUnderlineOffset: '7px',
+        borderTop: d.hRule ? '1px solid ' + line : 'none', borderBottom: d.hRule ? '1px solid ' + line : 'none', padding: d.hRule ? '9px 0' : '0',
+        writingMode: l.vert ? 'vertical-rl' : 'horizontal-tb', height: l.vert ? '175px' : 'auto'
+      },
+      dzSub: sub,
+      dzSubStyle: { fontSize: '12px', lineHeight: 1.95, opacity: .85, margin: '0 0 14px', maxWidth: '340px' },
+      dzHasNums: !!l.nums,
+      dzNumStyle: { background: dark ? 'rgba(255,255,255,.14)' : t.soft, color: 'inherit', borderRadius: '8px', padding: '5px 10px', fontSize: '10.5px', fontWeight: 700 },
+      dzCta: cta,
+      dzBtnStyle: { display: 'inline-block', background: t.accent, color: t.btnInk || '#FFFFFF', borderRadius: l.sharp ? '7px' : '999px', padding: l.bigCta ? '12px 28px' : '9px 20px', fontSize: l.bigCta ? '13.5px' : '12px', fontWeight: 700, fontFamily: f.css },
+      dzHasImg: !!l.hasImg,
+      dzImgStyle: { position: 'relative', overflow: 'hidden', width: '172px', height: '172px', flex: 'none', boxSizing: 'border-box', borderRadius: l.imgR || '12px', border: '1.5px solid ' + (dark ? 'rgba(255,255,255,.4)' : t.ink), background: scene.box },
+      dzSceneA: scene.a,
+      dzSceneB: scene.b,
+      dzImgLabelStyle: { position: 'absolute', left: '50%', bottom: '9px', transform: 'translateX(-50%)', whiteSpace: 'nowrap', maxWidth: '90%', overflow: 'hidden', textOverflow: 'ellipsis', fontSize: '8.5px', fontWeight: 700, background: 'rgba(36,30,26,.78)', color: '#FFF6E9', borderRadius: '999px', padding: '3px 9px' },
+      dzImgText: D.audSubject[aud] + '。撮り方: ' + im.img,
+      dzIconText: im.icon + '(' + D.audIconNote[aud] + ')',
+      dzVideoText: vid + '(' + D.audVideoNote[aud] + ')',
+      dzMotionText: mo + '(' + D.audMotionNote[aud] + ')',
+      dzMediaStripStyle: { display: 'flex', gap: '8px', padding: '10px 16px 0', background: t.bg, alignItems: 'stretch' },
+      dzMediaTiles: [
+        { isVideo: false, label: fl, style: Object.assign({}, tile(0), { background: 'linear-gradient(140deg,' + t.soft + ' 30%,' + (aud === 3 ? t.ink : t.accent) + ')' }), labelStyle: tlabel, playStyle: hidP },
+        { isVideo: false, label: '寄りのカット: ' + im.img + '。' + D.audSubject[aud], style: tile(1), labelStyle: tlabel, playStyle: hidP },
+        { isVideo: true, label: '動画: ' + vid + '。' + D.audVideoNote[aud], style: Object.assign({}, tile(2), { background: 'linear-gradient(140deg,#1B2030,#3A4664)' }), labelStyle: tlabel, playStyle: play }
+      ],
+      dzBubbleAStyle: { position: 'absolute', right: '4px', bottom: '100%', marginBottom: '10px', maxWidth: '340px', background: '#FFFFFF', border: '2px solid #241E1A', borderRadius: '14px 14px 3px 14px', boxShadow: '3px 3px 0 #241E1A', padding: '8px 12px', fontSize: '11px', fontWeight: 700, lineHeight: 1.7, transform: 'rotate(1deg)', zIndex: 2 },
+      dzBubbleAText: '✦ 見出しやカードは「' + mo + '」で現れるイメージ。' + D.audMotionNote[aud],
+      dzBubbleBStyle: { position: 'absolute', left: '4px', top: '100%', marginTop: '10px', maxWidth: '340px', background: '#FFFFFF', border: '2px solid #241E1A', borderRadius: '3px 14px 14px 14px', boxShadow: '3px 3px 0 #241E1A', padding: '8px 12px', fontSize: '11px', fontWeight: 700, lineHeight: 1.7, transform: 'rotate(-1deg)', zIndex: 2 },
+      dzBubbleBText: '▶ 背景や帯では「' + vid + '」が流れるイメージ。' + D.audVideoNote[aud],
+      dzHasBadge: !!d.badge,
+      dzBadgeText: d.badge || '',
+      dzBadgeStyle: { position: 'absolute', top: '14px', right: '16px', background: d.badgeBg || '#FFFFFF', color: d.badgeInk || t.ink, border: '1.5px solid ' + (dark ? '#FFFFFF' : t.ink), borderRadius: d.badgeSq ? '4px' : '999px', transform: d.badgeRot ? 'rotate(6deg)' : 'none', padding: d.badgeSq ? '7px 8px' : '4px 11px', fontSize: '11px', fontWeight: 700, fontFamily: f.css },
+      dzHasFullNote: !!l.full,
+      dzBelowStyle: { display: 'flex', gap: '10px', padding: '12px 16px 16px', background: t.bg, borderTop: '1.5px solid ' + line, color: t.ink },
+      dzBelowCards: mapItems.slice(1, 4).map((title) => ({
+        title,
+        style: { flex: '1', minWidth: 0, background: dark ? 'rgba(255,255,255,.07)' : '#FFFFFF', border: '1.5px solid ' + line, borderRadius: l.sharp ? '8px' : '12px', padding: '10px 12px', display: 'flex', flexDirection: 'column', gap: '6px' },
+        iconStyle: { width: '20px', height: '20px', flex: 'none', borderRadius: roundIcon ? '50%' : '5px', background: t.accent, display: 'block' },
+        titleStyle: { fontFamily: f.css, fontWeight: 700, fontSize: '11px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' },
+        lineStyle: { display: 'block', height: '4px', width: '72%', borderRadius: '2px', background: dark ? 'rgba(255,255,255,.18)' : t.soft }
+      })),
+      dzAudName: D.auds[aud],
+      dzFontName: f.name,
+      dzToneName: H.name + '×' + D.toneLabels[dz[3]],
+      dzReasons: [
+        { cat: '誰向け', text: D.audWhys[aud] },
+        { cat: 'フォント', text: f.why }, { cat: 'レイアウト', text: l.why }, { cat: 'あしらい', text: d.why },
+        { cat: '色', text: D.toneWhys[dz[3]] + ' ' + H.note },
+        { cat: '写真・動画', text: im.why + ' ' + fl + 'を混ぜると「誰向けか」がひと目で伝わります。' },
+        { cat: '動き', text: '動きにも声色があります。この組み合わせなら「' + mo + '」くらいが適温です。' + D.auds[aud] + 'なら、' + D.audMotionNote[aud] + 'のがコツです。' },
+        { cat: 'サイトマップ', text: D.maps ? '「' + mapItems[0] + '」から始まる並び。' + (aud === 3 ? '開示情報の多さが信頼になります。' : '入り口の言葉が接客の第一声になります。') : '' },
+        { cat: 'コピー', text: cp.why }
+      ],
+      dzGuide: D.guide
+    };
+  }
+
   renderVals() {
     const p = this.state.page;
     const s = this.state.spec;
-    const ids = ['home', 'part1', 'part2', 'part3', 'part4', 'part5', 'part6', 'part7', 'intro'];
-    const labels = ['ホーム', '第I部 基本理論編', '第II部 大手の最新研究', '第III部 消費のいま', '第IV部 BtoB編', 'まとめ — 5つの流れ', 'デザイン編', '業種別イメージ図', 'はじめに — なぜ効く?'];
-    const order = [8, 0, 1, 2, 3, 4, 5, 6, 7];
+    const ids = ['home', 'part1', 'part2', 'part3', 'part4', 'part5', 'part6', 'part7', 'intro', 'dz'];
+    const labels = ['ホーム', '第I部 基本理論編', '第II部 大手の最新研究', '第III部 消費のいま', '第IV部 BtoB編', 'まとめ — 5つの流れ', 'デザイン編', '業種別イメージ図', 'はじめに — なぜ効く?', 'デザインに迷ったら'];
+    const order = [8, 0, 1, 2, 3, 4, 5, 6, 7, 9];
     const pos = order.indexOf(p);
     const mk = (i) => () => this.jump(ids[i]);
-    const navItems = [[8, 'はじめに'], [0, 'ホーム'], [1, '第I部'], [2, '第II部'], [3, '第III部'], [4, '第IV部'], [5, 'まとめ'], [6, 'デザイン'], [7, '業種例']].map((pair) => ({
+    const navItems = [[8, 'はじめに'], [0, 'ホーム'], [1, '第I部'], [2, '第II部'], [3, '第III部'], [4, '第IV部'], [5, 'まとめ'], [6, 'デザイン'], [7, '業種例'], [9, '迷ったら']].map((pair) => ({
       label: pair[1],
       go: mk(pair[0]),
       color: p === pair[0] ? '#241E1A' : '#8A817A',
@@ -3471,6 +4198,8 @@ class Component extends DCLogic {
       goPrev: () => { if (pos > 0) this.jump(ids[order[pos - 1]]); },
       goNext: () => { if (pos < order.length - 1) this.jump(ids[order[pos + 1]]); },
       progressRef: (el) => { this._progress = el; },
+      is9: p === 9,
+      ...this.dzVals(),
       specClick: (e) => {
         const el = e.target && e.target.closest ? e.target.closest('[aria-label]') : null;
         if (!el) return;
